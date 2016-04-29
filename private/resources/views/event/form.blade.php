@@ -491,8 +491,6 @@
         <!-- end: CORE JAVASCRIPTS  -->
         <script>
             jQuery(document).ready(function() {
-                Main.init();
-                SVExamples.init();
                 FormWizard.init();
             });
         </script>

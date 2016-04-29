@@ -12,7 +12,7 @@
                         <h1>Certivy</h1>
                         <h5>The Best Application ever made in the world for your certificate validation</h5>      
                         <p style="margin-top:100px">
-                            <a href="{{ url('/register') }}" class="btn btn-green">
+                            <a href="{{ url('/event') }}" class="btn btn-green">
                                 GET STARTED <i class="fa fa-arrow-circle-right"></i>
                             </a>
                         </p>

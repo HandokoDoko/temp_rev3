@@ -45,7 +45,6 @@
     <link rel="shortcut icon" href="favicon.ico" />
 
     <!--     Fonts and icons     -->
-    <link href="../maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
     <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
     <link href="assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
@@ -168,65 +167,35 @@
                             <i class="fa fa-bars"></i>
                         </a>
                         <!-- start: LOGO -->
-                        <a class="navbar-brand" href="index-2.html">
+                        <a class="navbar-brand" href="{{ url('/') }}">
                             <img src="assets/images/logo.png" alt="Certivy"/>
                         </a>
                         <!-- end: LOGO -->
                     </div>
                     <div class="topbar-tools">
                         <!-- start: TOP NAVIGATION MENU -->
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-
-                        
-                        <!--<ul class="nav navbar-right">
-                             start: USER DROPDOWN -->
-
-
-                            <!--<li class="dropdown current-user">
+                        <ul class="nav navbar-right">
+                             <!--start: USER DROPDOWN -->
+                            <li class="dropdown current-user">
                                 <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
-                                    <img src="assets/images/avatar-1-small.jpg" class="img-circle" alt=""> <span class="username hidden-xs">{{ Auth::user()->name }}</span> <i class="fa fa-caret-down "></i>
+                                    <img src="assets/img/avatar-1-small.jpg" class="img-circle" alt="">
+                                    <span class="username hidden-xs">{{ Auth::user()->name }}</span> 
+                                    <i class="fa fa-caret-down "></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-dark">
                                     <li>
-                                        <a href="pages_user_profile.html">
+                                        <a href="{{ url('/home') }}">
                                             My Profile
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="pages_calendar.html">
-                                            My Calendar
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="pages_messages.html">
-                                            My Messages (3)
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="login_lock_screen.html">
-                                            Lock Screen
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="login_login.html">
+                                        <a href="{{ url('/logout') }}">
                                             Log Out
                                         </a>
                                     </li>
                                 </ul>
                             </li>
-                        </ul>-->
+                        </ul>
                         <!-- end: TOP NAVIGATION MENU -->
                     </div>
                 </div>
@@ -1237,6 +1206,8 @@
                 PagesUserProfile.init();
             });
         </script>
+
+        @yield('script')
     </body>
     <!-- end: BODY -->
 </html>

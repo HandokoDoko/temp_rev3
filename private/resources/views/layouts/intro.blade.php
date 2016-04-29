@@ -237,7 +237,7 @@
                     @else
                         <li class="dropdown current-user">
                             <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
-                                <img src="assets/images/avatar-1-small.jpg" class="img-circle" alt="">
+                                <img src="assets/img/avatar-1-small.jpg" class="img-circle" alt="">
                                 <span class="username hidden-xs">{{ Auth::user()->name }}</span> 
                                 <i class="fa fa-caret-down "></i>
                             </a>
@@ -245,21 +245,6 @@
                                 <li>
                                     <a href="{{ url('/home') }}">
                                         My Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pages_calendar.html">
-                                        My Calendar
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pages_messages.html">
-                                        My Messages (3)
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="login_lock_screen.html">
-                                        Lock Screen
                                     </a>
                                 </li>
                                 <li>
