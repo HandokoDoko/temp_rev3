@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.intro')
 
 
 @section('subtitle')
@@ -22,7 +22,7 @@
 @endsection
 
 @section('content')
-<div class="section margin-top-70">
+<div class="section">
     <!-- start: MAIN CONTAINER -->
             <div class="main-container inner">
                 <!-- start: PAGE -->

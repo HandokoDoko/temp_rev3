@@ -1,48 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-        <link href="assets/css/bootstrap.css" rel="stylesheet" />
-        <link href="assets/css/rubick_pres.css" rel="stylesheet"/>
+        <title>Certivy</title>
+
+        <link href="{{ asset('') }}assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="{{ asset('') }}assets/css/rubick_pres.css" rel="stylesheet"/>
 
         <!-- use rapido -->
         <!-- start: MAIN CSS -->
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,200,100,800' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/plugins/iCheck/skins/all.css">
-        <link rel="stylesheet" href="assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
-        <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/iCheck/skins/all.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/animate.css/animate.min.css">
         <!-- end: MAIN CSS -->
         <!-- start: CSS REQUIRED FOR SUBVIEW CONTENTS -->
-        <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-        <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.theme.css">
-        <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.transitions.css">
-        <link rel="stylesheet" href="assets/plugins/summernote/dist/summernote.css">
-        <link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar/fullcalendar.css">
-        <link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css">
-        <link rel="stylesheet" href="assets/plugins/bootstrap-select/bootstrap-select.min.css">
-        <link rel="stylesheet" href="assets/plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
-        <link rel="stylesheet" href="assets/plugins/DataTables/media/css/DT_bootstrap.css">
-        <link rel="stylesheet" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css">
-        <link rel="stylesheet" href="assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.theme.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.transitions.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/summernote/dist/summernote.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/fullcalendar/fullcalendar/fullcalendar.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/toastr/toastr.min.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-select/bootstrap-select.min.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/DataTables/media/css/DT_bootstrap.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
         <!-- end: CSS REQUIRED FOR THIS SUBVIEW CONTENTS-->
         <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
-        <link rel="stylesheet" href="assets/plugins/weather-icons/css/weather-icons.min.css">
-        <link rel="stylesheet" href="assets/plugins/nvd3/nv.d3.min.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/weather-icons/css/weather-icons.min.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/plugins/nvd3/nv.d3.min.css">
         <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
         <!-- start: CORE CSS -->
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="stylesheet" href="assets/css/styles-responsive.css">
-        <link rel="stylesheet" href="assets/css/plugins.css">
-        <link rel="stylesheet" href="assets/css/themes/theme-default.css" type="text/css" id="skin_color">
-        <link rel="stylesheet" href="assets/css/print.css" type="text/css" media="print"/>
+        <link rel="stylesheet" href="{{ asset('') }}assets/css/styles.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/css/styles-responsive.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/css/plugins.css">
+        <link rel="stylesheet" href="{{ asset('') }}assets/css/themes/theme-default.css" type="text/css" id="skin_color">
+        <link rel="stylesheet" href="{{ asset('') }}assets/css/print.css" type="text/css" media="print"/>
         <!-- end: CORE CSS -->
         <link rel="shortcut icon" href="favicon.ico" />
 
         <!--     Fonts and icons     -->
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-        <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
-        <link href="assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
+        <link href="{{ asset('') }}assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+        <link href="{{ asset('') }}assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
 
         <style>
             .section-header .separator {
@@ -206,10 +211,14 @@
             .margin-top-min20 {
                 margin-top:-20px;
             }
+
+            .margin-bottom-min20 {
+                margin-bottom:-20px;
+            }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-default " role="navigation">
+        <nav class="navbar navbar-default margin-bottom-min20" role="navigation">
             <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
             <div class="container">
                 <div class="navbar-header">
@@ -240,7 +249,7 @@
                     @else
                         <li class="dropdown current-user">
                             <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
-                                <img src="assets/img/avatar-1-small.jpg" class="img-circle" alt="">
+                                <img src="{{ asset('') }}assets/img/avatar-1-small.jpg" class="img-circle" alt="">
                                 <span class="username hidden-xs">{{ Auth::user()->name }}</span> 
                                 <i class="fa fa-caret-down "></i>
                             </a>
@@ -320,19 +329,61 @@
 
         </div> <!-- end wrapper -->
     </body>
-    <!--   core js files    -->
-    <script src="assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap.js" type="text/javascript"></script>
-    <!--   file for adding vertical points where we activate the elements animation   -->
-    <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
-    <!--  js library for devices recognition -->
-    <script type="text/javascript" src="assets/js/modernizr.js"></script>
-    <!--  script for google maps   -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-    <!--   file where we handle all the script from the Rubik page   -->
-    <script type="text/javascript" src="assets/js/rubick_pres.js"></script>
-
-
+        <!-- start: MAIN JAVASCRIPTS -->
+        <!--[if lt IE 9]>
+        <script src="{{ asset('') }}assets/plugins/respond.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/excanvas.min.js"></script>
+        <script type="text/javascript" src="{{ asset('') }}assets/plugins/jQuery/jquery-1.11.1.min.js"></script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+        <script src="{{ asset('') }}assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
+        <!--<![endif]-->
+        <script src="{{ asset('') }}assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/blockUI/jquery.blockUI.js"></script>
+        <script src="{{ asset('') }}assets/plugins/iCheck/jquery.icheck.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/moment/min/moment.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
+        <script src="{{ asset('') }}assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootbox/bootbox.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery.appear/jquery.appear.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+        <script src="{{ asset('') }}assets/plugins/velocity/jquery.velocity.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/TouchSwipe/jquery.touchSwipe.min.js"></script>
+        <!-- end: MAIN JAVASCRIPTS -->
+        <!-- start: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
+        <script src="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery-mockjax/jquery.mockjax.js"></script>
+        <script src="{{ asset('') }}assets/plugins/toastr/toastr.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+        <script src="{{ asset('') }}assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/DataTables/media/js/DT_bootstrap.js"></script>
+        <script src="{{ asset('') }}assets/plugins/truncate/jquery.truncate.js"></script>
+        <script src="{{ asset('') }}assets/plugins/summernote/dist/summernote.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="{{ asset('') }}assets/js/subview.js"></script>
+        <!-- end: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
+        <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+        <script src="{{ asset('') }}assets/plugins/jquery.pulsate/jquery.pulsate.min.js"></script>
+        <script src="{{ asset('') }}assets/js/pages-user-profile.js"></script>
+        <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+        <!-- start: CORE JAVASCRIPTS  -->
+        <script src="{{ asset('') }}assets/js/main.js"></script>
+        <!-- end: CORE JAVASCRIPTS  -->
+        <script>
+            jQuery(document).ready(function() {
+                Main.init();
+                PagesUserProfile.init();
+            });
+        </script>
     @yield('script')
 
 
