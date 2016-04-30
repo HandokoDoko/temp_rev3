@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,6 +50,57 @@
 
     </head>
     <!-- start: BODY -->
+=======
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Certivy</title>
+
+    <link href="{{ asset('') }}assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- use rapido -->
+    <!-- start: MAIN CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,200,100,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/iCheck/skins/all.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/animate.css/animate.min.css">
+    <!-- end: MAIN CSS -->
+    <!-- start: CSS REQUIRED FOR SUBVIEW CONTENTS -->
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/summernote/dist/summernote.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/fullcalendar/fullcalendar/fullcalendar.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/DataTables/media/css/DT_bootstrap.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
+    <!-- end: CSS REQUIRED FOR THIS SUBVIEW CONTENTS-->
+    <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/weather-icons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/nvd3/nv.d3.min.css">
+    <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+    <!-- start: CORE CSS -->
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/styles.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/styles-responsive.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/plugins.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/themes/theme-default.css" type="text/css" id="skin_color">
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/print.css" type="text/css" media="print"/>
+    <!-- end: CORE CSS -->
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!--     Fonts and icons     -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link href="{{ asset('') }}assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="{{ asset('') }}assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
+
+</head>
+<!-- start: BODY -->
+>>>>>>> 0034159d192b34dfcdec0fc4275964c1607713e1
     <body>
         <!-- start: SLIDING BAR (SB) -->
         <div id="slidingbar-area">
