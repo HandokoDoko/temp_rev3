@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('subtitle')
-    Beranda
     <small>
         <ol class="breadcrumb">
             <li>
