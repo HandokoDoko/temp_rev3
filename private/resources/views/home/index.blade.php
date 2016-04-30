@@ -438,7 +438,7 @@
                 </div>
                 <div id="panel_events" class="tab-pane fade">
                     <div>
-                        <a href="{{ url('/event') }}" style="margin-bottom:10px" class="btn btn-green pull-right">Create Event</a>
+                        <a href="{{ url('/event/create') }}" style="margin-bottom:10px" class="btn btn-green pull-right">Create Event</a>
                     </div>
                     <table class="table table-striped table-bordered table-hover" id="projects">
                         <thead>
