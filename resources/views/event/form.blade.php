@@ -2,7 +2,6 @@
 
 
 @section('subtitle')
-    Create Event
     <small>
         <ol class="breadcrumb">
             <li>
