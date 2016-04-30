@@ -7,47 +7,45 @@
 
     <title>Certivy</title>
 
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- <link href="assets/css/rubick_pres.css" rel="stylesheet"/>-->
-
+    <link href="{{ asset('') }}assets/css/bootstrap.css" rel="stylesheet" />
     <!-- use rapido -->
     <!-- start: MAIN CSS -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,200,100,800' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/iCheck/skins/all.css">
-    <link rel="stylesheet" href="assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/iCheck/skins/all.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/animate.css/animate.min.css">
     <!-- end: MAIN CSS -->
     <!-- start: CSS REQUIRED FOR SUBVIEW CONTENTS -->
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.theme.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.transitions.css">
-    <link rel="stylesheet" href="assets/plugins/summernote/dist/summernote.css">
-    <link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar/fullcalendar.css">
-    <link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css">
-    <link rel="stylesheet" href="assets/plugins/bootstrap-select/bootstrap-select.min.css">
-    <link rel="stylesheet" href="assets/plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
-    <link rel="stylesheet" href="assets/plugins/DataTables/media/css/DT_bootstrap.css">
-    <link rel="stylesheet" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css">
-    <link rel="stylesheet" href="assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/summernote/dist/summernote.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/fullcalendar/fullcalendar/fullcalendar.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/DataTables/media/css/DT_bootstrap.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
     <!-- end: CSS REQUIRED FOR THIS SUBVIEW CONTENTS-->
     <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
-    <link rel="stylesheet" href="assets/plugins/weather-icons/css/weather-icons.min.css">
-    <link rel="stylesheet" href="assets/plugins/nvd3/nv.d3.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/weather-icons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/nvd3/nv.d3.min.css">
     <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
     <!-- start: CORE CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/styles-responsive.css">
-    <link rel="stylesheet" href="assets/css/plugins.css">
-    <link rel="stylesheet" href="assets/css/themes/theme-default.css" type="text/css" id="skin_color">
-    <link rel="stylesheet" href="assets/css/print.css" type="text/css" media="print"/>
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/styles.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/styles-responsive.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/plugins.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/themes/theme-default.css" type="text/css" id="skin_color">
+    <link rel="stylesheet" href="{{ asset('') }}assets/css/print.css" type="text/css" media="print"/>
     <!-- end: CORE CSS -->
     <link rel="shortcut icon" href="favicon.ico" />
 
     <!--     Fonts and icons     -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-    <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
-    <link href="assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
+    <link href="{{ asset('') }}assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="{{ asset('') }}assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
 
 </head>
 <!-- start: BODY -->
@@ -93,34 +91,34 @@
                         <div class="blog-photo-stream margin-bottom-30">
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image01_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image01_th.jpg"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image02_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image02_th.jpg"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image03_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image03_th.jpg"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image04_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image04_th.jpg"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image05_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image05_th.jpg"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image06_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image06_th.jpg"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image07_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image07_th.jpg"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image08_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image08_th.jpg"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image09_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image09_th.jpg"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img alt="" src="assets/images/image10_th.jpg"></a>
+                                    <a href="#"><img alt="" src="{{ asset('') }}assets/images-sample/image10_th.jpg"></a>
                                 </li>
                             </ul>
                         </div>
@@ -168,7 +166,8 @@
                         </a>
                         <!-- start: LOGO -->
                         <a class="navbar-brand" href="{{ url('/') }}">
-                            <img src="assets/images/logo.png" alt="Certivy"/>
+                            {{--<img src="{{ asset('') }}assets/images-sample/logo.png" alt="Certivy"/>--}}
+                            Certivy
                         </a>
                         <!-- end: LOGO -->
                     </div>
@@ -178,7 +177,7 @@
                              <!--start: USER DROPDOWN -->
                             <li class="dropdown current-user">
                                 <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
-                                    <img src="assets/img/avatar-1-small.jpg" class="img-circle" alt="">
+                                    <img src="{{ asset('') }}assets/img/avatar-1-small.jpg" class="img-circle" alt="">
                                     <span class="username hidden-xs">{{ Auth::user()->name }}</span> 
                                     <i class="fa fa-caret-down "></i>
                                 </a>
@@ -224,7 +223,7 @@
                                     <li class="media">
                                         <a href="#">
                                             <i class="fa fa-circle status-online"></i>
-                                            <img alt="..." src="assets/images/avatar-2.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-2.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Nicole Bell</h4>
                                                 <span> Content Designer </span>
@@ -237,7 +236,7 @@
                                                 <span class="label label-default">3</span>
                                             </div>
                                             <i class="fa fa-circle status-online"></i>
-                                            <img alt="..." src="assets/images/avatar-3.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-3.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Steven Thompson</h4>
                                                 <span> Visual Designer </span>
@@ -247,7 +246,7 @@
                                     <li class="media">
                                         <a href="#">
                                             <i class="fa fa-circle status-online"></i>
-                                            <img alt="..." src="assets/images/avatar-4.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-4.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Ella Patterson</h4>
                                                 <span> Web Editor </span>
@@ -257,7 +256,7 @@
                                     <li class="media">
                                         <a href="#">
                                             <i class="fa fa-circle status-online"></i>
-                                            <img alt="..." src="assets/images/avatar-5.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-5.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Kenneth Ross</h4>
                                                 <span> Senior Designer </span>
@@ -269,7 +268,7 @@
                                 <ul class="media-list">
                                     <li class="media">
                                         <a href="#">
-                                            <img alt="..." src="assets/images/avatar-6.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-6.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Nicole Bell</h4>
                                                 <span> Content Designer </span>
@@ -281,7 +280,7 @@
                                             <div class="user-label">
                                                 <span class="label label-default">3</span>
                                             </div>
-                                            <img alt="..." src="assets/images/avatar-7.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-7.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Steven Thompson</h4>
                                                 <span> Visual Designer </span>
@@ -290,7 +289,7 @@
                                     </li>
                                     <li class="media">
                                         <a href="#">
-                                            <img alt="..." src="assets/images/avatar-8.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-8.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Ella Patterson</h4>
                                                 <span> Web Editor </span>
@@ -299,7 +298,7 @@
                                     </li>
                                     <li class="media">
                                         <a href="#">
-                                            <img alt="..." src="assets/images/avatar-9.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-9.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Kenneth Ross</h4>
                                                 <span> Senior Designer </span>
@@ -308,7 +307,7 @@
                                     </li>
                                     <li class="media">
                                         <a href="#">
-                                            <img alt="..." src="assets/images/avatar-10.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-10.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Ella Patterson</h4>
                                                 <span> Web Editor </span>
@@ -317,7 +316,7 @@
                                     </li>
                                     <li class="media">
                                         <a href="#">
-                                            <img alt="..." src="assets/images/avatar-5.jpg" class="media-object">
+                                            <img alt="..." src="{{ asset('') }}assets/images-sample/avatar-5.jpg" class="media-object">
                                             <div class="media-body">
                                                 <h4 class="media-heading">Kenneth Ross</h4>
                                                 <span> Senior Designer </span>
@@ -343,7 +342,7 @@
                                 <ol class="discussion sidebar-content">
                                     <li class="other">
                                         <div class="avatar">
-                                            <img src="assets/images/avatar-4.jpg" alt="">
+                                            <img src="{{ asset('') }}assets/images-sample/avatar-4.jpg" alt="">
                                         </div>
                                         <div class="messages">
                                             <p>
@@ -354,7 +353,7 @@
                                     </li>
                                     <li class="self">
                                         <div class="avatar">
-                                            <img src="assets/images/avatar-1.jpg" alt="">
+                                            <img src="{{ asset('') }}assets/images-sample/avatar-1.jpg" alt="">
                                         </div>
                                         <div class="messages">
                                             <p>
@@ -365,7 +364,7 @@
                                     </li>
                                     <li class="other">
                                         <div class="avatar">
-                                            <img src="assets/images/avatar-4.jpg" alt="">
+                                            <img src="{{ asset('') }}assets/images-sample/avatar-4.jpg" alt="">
                                         </div>
                                         <div class="messages">
                                             <p>
@@ -525,26 +524,26 @@
                                 10 Predefined Color Schemes
                             </div>
                             <div class="images icons-color">
-                                <a href="#" id="default"><img src="assets/images/color-1.png" alt="" class="active"></a>
-                                <a href="#" id="style2"><img src="assets/images/color-2.png" alt=""></a>
-                                <a href="#" id="style3"><img src="assets/images/color-3.png" alt=""></a>
-                                <a href="#" id="style4"><img src="assets/images/color-4.png" alt=""></a>
-                                <a href="#" id="style5"><img src="assets/images/color-5.png" alt=""></a>
-                                <a href="#" id="style6"><img src="assets/images/color-6.png" alt=""></a>
-                                <a href="#" id="style7"><img src="assets/images/color-7.png" alt=""></a>
-                                <a href="#" id="style8"><img src="assets/images/color-8.png" alt=""></a>
-                                <a href="#" id="style9"><img src="assets/images/color-9.png" alt=""></a>
-                                <a href="#" id="style10"><img src="assets/images/color-10.png" alt=""></a>
+                                <a href="#" id="default"><img src="{{ asset('') }}assets/images-sample/color-1.png" alt="" class="active"></a>
+                                <a href="#" id="style2"><img src="{{ asset('') }}assets/images-sample/color-2.png" alt=""></a>
+                                <a href="#" id="style3"><img src="{{ asset('') }}assets/images-sample/color-3.png" alt=""></a>
+                                <a href="#" id="style4"><img src="{{ asset('') }}assets/images-sample/color-4.png" alt=""></a>
+                                <a href="#" id="style5"><img src="{{ asset('') }}assets/images-sample/color-5.png" alt=""></a>
+                                <a href="#" id="style6"><img src="{{ asset('') }}assets/images-sample/color-6.png" alt=""></a>
+                                <a href="#" id="style7"><img src="{{ asset('') }}assets/images-sample/color-7.png" alt=""></a>
+                                <a href="#" id="style8"><img src="{{ asset('') }}assets/images-sample/color-8.png" alt=""></a>
+                                <a href="#" id="style9"><img src="{{ asset('') }}assets/images-sample/color-9.png" alt=""></a>
+                                <a href="#" id="style10"><img src="{{ asset('') }}assets/images-sample/color-10.png" alt=""></a>
                             </div>
                             <div class="box-title">
                                 Backgrounds for Boxed Version
                             </div>
                             <div class="images boxed-patterns">
-                                <a href="#" id="bg_style_1"><img src="assets/images/bg.png" alt=""></a>
-                                <a href="#" id="bg_style_2"><img src="assets/images/bg_2.png" alt=""></a>
-                                <a href="#" id="bg_style_3"><img src="assets/images/bg_3.png" alt=""></a>
-                                <a href="#" id="bg_style_4"><img src="assets/images/bg_4.png" alt=""></a>
-                                <a href="#" id="bg_style_5"><img src="assets/images/bg_5.png" alt=""></a>
+                                <a href="#" id="bg_style_1"><img src="{{ asset('') }}assets/images-sample/bg.png" alt=""></a>
+                                <a href="#" id="bg_style_2"><img src="{{ asset('') }}assets/images-sample/bg_2.png" alt=""></a>
+                                <a href="#" id="bg_style_3"><img src="{{ asset('') }}assets/images-sample/bg_3.png" alt=""></a>
+                                <a href="#" id="bg_style_4"><img src="{{ asset('') }}assets/images-sample/bg_4.png" alt=""></a>
+                                <a href="#" id="bg_style_5"><img src="{{ asset('') }}assets/images-sample/bg_5.png" alt=""></a>
                             </div>
                             <div class="style-options">
                                 <a href="#" class="clear_style">
@@ -629,7 +628,7 @@
                                                                 <a href="javascript:;" class="unread">
                                                                     <div class="clearfix">
                                                                         <div class="thread-image">
-                                                                            <img src="assets/images/avatar-2.jpg" alt="">
+                                                                            <img src="{{ asset('') }}assets/images-sample/avatar-2.jpg" alt="">
                                                                         </div>
                                                                         <div class="thread-content">
                                                                             <span class="author">Nicole Bell</span>
@@ -643,7 +642,7 @@
                                                                 <a href="javascript:;" class="unread">
                                                                     <div class="clearfix">
                                                                         <div class="thread-image">
-                                                                            <img src="assets/images/avatar-3.jpg" alt="">
+                                                                            <img src="{{ asset('') }}assets/images-sample/avatar-3.jpg" alt="">
                                                                         </div>
                                                                         <div class="thread-content">
                                                                             <span class="author">Steven Thompson</span>
@@ -657,7 +656,7 @@
                                                                 <a href="javascript:;">
                                                                     <div class="clearfix">
                                                                         <div class="thread-image">
-                                                                            <img src="assets/images/avatar-5.jpg" alt="">
+                                                                            <img src="{{ asset('') }}assets/images-sample/avatar-5.jpg" alt="">
                                                                         </div>
                                                                         <div class="thread-content">
                                                                             <span class="author">Kenneth Ross</span>
@@ -800,7 +799,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <div class="avatar-note"><img src="assets/images/avatar-2-small.jpg" alt="">
+                                    <div class="avatar-note"><img src="{{ asset('') }}assets/images-sample/avatar-2-small.jpg" alt="">
                                     </div>
                                     <span class="author-note">Nicole Bell</span>
                                     <time class="timestamp" title="2014-02-18T00:00:00-05:00">
@@ -834,7 +833,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <div class="avatar-note"><img src="assets/images/avatar-3-small.jpg" alt="">
+                                    <div class="avatar-note"><img src="{{ asset('') }}assets/images-sample/avatar-3-small.jpg" alt="">
                                     </div>
                                     <span class="author-note">Steven Thompson</span>
                                     <time class="timestamp" title="2014-02-18T00:00:00-05:00">
@@ -864,7 +863,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <div class="avatar-note"><img src="assets/images/avatar-4-small.jpg" alt="">
+                                    <div class="avatar-note"><img src="{{ asset('') }}assets/images-sample/avatar-4-small.jpg" alt="">
                                     </div>
                                     <span class="author-note">Ella Patterson</span>
                                     <time class="timestamp" title="2014-02-18T00:00:00-05:00">
@@ -1077,7 +1076,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="fileupload fileupload-new contributor-avatar" data-provides="fileupload">
-                                        <div class="fileupload-new thumbnail"><img src="assets/images/anonymous.jpg" alt="" width="50" height="50"/>
+                                        <div class="fileupload-new thumbnail"><img src="{{ asset('') }}assets/images-sample/anonymous.jpg" alt="" width="50" height="50"/>
                                         </div>
                                         <div class="fileupload-preview fileupload-exists thumbnail"></div>
                                         <div class="contributor-avatar-options">
@@ -1151,53 +1150,53 @@
         </div>
         <!-- start: MAIN JAVASCRIPTS -->
         <!--[if lt IE 9]>
-        <script src="assets/plugins/respond.min.js"></script>
-        <script src="assets/plugins/excanvas.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/jQuery/jquery-1.11.1.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/respond.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/excanvas.min.js"></script>
+        <script type="text/javascript" src="{{ asset('') }}assets/plugins/jQuery/jquery-1.11.1.min.js"></script>
         <![endif]-->
         <!--[if gte IE 9]><!-->
-        <script src="assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
         <!--<![endif]-->
-        <script src="assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
-        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/plugins/blockUI/jquery.blockUI.js"></script>
-        <script src="assets/plugins/iCheck/jquery.icheck.min.js"></script>
-        <script src="assets/plugins/moment/min/moment.min.js"></script>
-        <script src="assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
-        <script src="assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
-        <script src="assets/plugins/bootbox/bootbox.min.js"></script>
-        <script src="assets/plugins/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-        <script src="assets/plugins/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
-        <script src="assets/plugins/jquery.appear/jquery.appear.js"></script>
-        <script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
-        <script src="assets/plugins/velocity/jquery.velocity.min.js"></script>
-        <script src="assets/plugins/TouchSwipe/jquery.touchSwipe.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/blockUI/jquery.blockUI.js"></script>
+        <script src="{{ asset('') }}assets/plugins/iCheck/jquery.icheck.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/moment/min/moment.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
+        <script src="{{ asset('') }}assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootbox/bootbox.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery.appear/jquery.appear.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+        <script src="{{ asset('') }}assets/plugins/velocity/jquery.velocity.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/TouchSwipe/jquery.touchSwipe.min.js"></script>
         <!-- end: MAIN JAVASCRIPTS -->
         <!-- start: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
-        <script src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-        <script src="assets/plugins/jquery-mockjax/jquery.mockjax.js"></script>
-        <script src="assets/plugins/toastr/toastr.js"></script>
-        <script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
-        <script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
-        <script src="assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
-        <script src="assets/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
-        <script src="assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
-        <script src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-        <script src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
-        <script src="assets/plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
-        <script src="assets/plugins/DataTables/media/js/DT_bootstrap.js"></script>
-        <script src="assets/plugins/truncate/jquery.truncate.js"></script>
-        <script src="assets/plugins/summernote/dist/summernote.min.js"></script>
-        <script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-        <script src="assets/js/subview.js"></script>
-        <script src="assets/js/subview-examples.js"></script>
+        <script src="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery-mockjax/jquery.mockjax.js"></script>
+        <script src="{{ asset('') }}assets/plugins/toastr/toastr.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+        <script src="{{ asset('') }}assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/DataTables/media/js/DT_bootstrap.js"></script>
+        <script src="{{ asset('') }}assets/plugins/truncate/jquery.truncate.js"></script>
+        <script src="{{ asset('') }}assets/plugins/summernote/dist/summernote.min.js"></script>
+        <script src="{{ asset('') }}assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="{{ asset('') }}assets/js/subview.js"></script>
+        <script src="{{ asset('') }}assets/js/subview-examples.js"></script>
         <!-- end: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
         <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-        <script src="assets/plugins/jquery.pulsate/jquery.pulsate.min.js"></script>
-        <script src="assets/js/pages-user-profile.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jquery.pulsate/jquery.pulsate.min.js"></script>
+        <script src="{{ asset('') }}assets/js/pages-user-profile.js"></script>
         <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
         <!-- start: CORE JAVASCRIPTS  -->
-        <script src="assets/js/main.js"></script>
+        <script src="{{ asset('') }}assets/js/main.js"></script>
         <!-- end: CORE JAVASCRIPTS  -->
         <script>
             jQuery(document).ready(function() {

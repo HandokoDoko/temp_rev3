@@ -22,8 +22,13 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function event()
+    public function index()
+    {
+        return view('event/index');
+    }
+    protected function create()
     {
         return view('event/form');
     }
+
 }

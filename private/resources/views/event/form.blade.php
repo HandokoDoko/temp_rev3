@@ -2,16 +2,21 @@
 
 
 @section('subtitle')
-    Form Wizard
+    Create Event
     <small>
         <ol class="breadcrumb">
             <li>
-                <a href="#">
+                <a href="{{ url('/home')}}">
                     Dashboard
                 </a>
             </li>
+            <li>
+                <a href="{{ url('/event')}}">
+                    Event
+                </a>
+            </li>
             <li class="active">
-                Form Wizard
+                Create Form
             </li>
         </ol>
     </small>
@@ -58,7 +63,7 @@
                                 <!-- start: FORM WIZARD PANEL -->
                                 <div class="panel panel-white">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title">Form <span class="text-bold">Wizard</span></h4>
+                                        <h4 class="panel-title">Create Form <span class="text-bold">Event</span></h4>
                                         <div class="panel-tools">
                                             <div class="dropdown">
                                                 <a data-toggle="dropdown" class="btn btn-xs dropdown-toggle btn-transparent-grey">
@@ -481,19 +486,14 @@
 
 
 @section('script')
-        <!-- end: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
         <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-        <script src="assets/plugins/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
-        <script src="assets/js/form-wizard.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+        <script src="{{ asset('') }}assets/js/form-wizard.js"></script>
         <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-        <!-- start: CORE JAVASCRIPTS  -->
-        <script src="assets/js/main.js"></script>
-        <!-- end: CORE JAVASCRIPTS  -->
         <script>
             jQuery(document).ready(function() {
                 FormWizard.init();
             });
         </script>
-
 @endsection
 

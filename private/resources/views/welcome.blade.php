@@ -3,7 +3,7 @@
 @section('content')
 <div class="section section-header">
     <div class="parallax pattern-image" style="background: rgb(255, 143, 94) none repeat scroll 0% 0%;">
-<!--                    <img src="https://ununsplash.imgix.net/photo-1427434846691-47fc561d1179?fit=crop&amp;fm=jpg&amp;h=700&amp;q=75&amp;w=1050"/>
+<!--     <img src="https://ununsplash.imgix.net/photo-1427434846691-47fc561d1179?fit=crop&amp;fm=jpg&amp;h=700&amp;q=75&amp;w=1050"/>
          <img src="/assets/img/header6.jpg"/> -->
         <div class="container">
             <div class="content">
@@ -353,6 +353,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
              $('.navbar').addClass('navbar-transparent');
+             $('.navbar').addClass('navbar-fixed-top');
         });
 
         $(window).on('scroll',function(){

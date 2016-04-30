@@ -361,6 +361,9 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 .navbar {
   border: 0;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
   font-size: 16px;
 }
 .navbar .navbar-brand {

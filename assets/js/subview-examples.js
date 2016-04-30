@@ -524,7 +524,7 @@ var SVExamples = function() {
             gender: 'M',
             permits: 'View and Edit',
             password: 'password',
-            avatar: "assets/images/avatar-1.jpg"
+            avatar: "assets/images-sample/avatar-1.jpg"
         }, {
             firstName: 'Nicole',
             lastName: 'Bell',
@@ -532,7 +532,7 @@ var SVExamples = function() {
             gender: 'F',
             permits: 'View and Edit',
             password: 'password',
-            avatar: "assets/images/avatar-2.jpg"
+            avatar: "assets/images-sample/avatar-2.jpg"
         }, {
             firstName: 'Steven',
             lastName: 'Thompson',
@@ -540,7 +540,7 @@ var SVExamples = function() {
             gender: 'M',
             permits: 'View Only',
             password: 'password',
-            avatar: "assets/images/avatar-3.jpg"
+            avatar: "assets/images-sample/avatar-3.jpg"
         }, {
             firstName: 'Ella',
             lastName: 'Patterson',
@@ -548,7 +548,7 @@ var SVExamples = function() {
             gender: 'F',
             permits: 'View Only',
             password: 'password',
-            avatar: "assets/images/avatar-4.jpg"
+            avatar: "assets/images-sample/avatar-4.jpg"
         }, {
             firstName: 'Kenneth',
             lastName: 'Ross',
@@ -556,7 +556,7 @@ var SVExamples = function() {
             gender: 'M',
             permits: 'View and Edit',
             password: 'password',
-            avatar: "assets/images/avatar-5.jpg"
+            avatar: "assets/images-sample/avatar-5.jpg"
         }];
     };
 

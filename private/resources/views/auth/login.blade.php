@@ -1,7 +1,7 @@
 @extends('layouts.intro')
 
 @section('content')
-<div class="section section-regist margin-top-70">
+<div class="section section-regist margin-top-min20">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">

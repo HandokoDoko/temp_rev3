@@ -40,7 +40,6 @@
         <link rel="shortcut icon" href="favicon.ico" />
 
         <!--     Fonts and icons     -->
-        <link href="../maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
         <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
         <link href="assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
@@ -203,10 +202,14 @@
             .margin-top-70 {
                 margin-top:70px;
             }
+
+            .margin-top-min20 {
+                margin-top:-20px;
+            }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-default " role="navigation">
             <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
             <div class="container">
                 <div class="navbar-header">

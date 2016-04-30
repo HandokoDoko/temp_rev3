@@ -14,19 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-/*Route::get('/signup', function()
-{
-    return view('login');
-});
-Route::get('/panitia', function()
-{
-    return view('panitia');
-});
-
-Route::get('/signup', 'signupController@signUp');*/
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/event', 'EventController@event');
+Route::get('/event', 'EventController@index');
+
+Route::get('/event/create', 'EventController@create');
