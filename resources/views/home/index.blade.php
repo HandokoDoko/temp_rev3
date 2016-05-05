@@ -49,6 +49,8 @@
                                             </div>
                                         </div>
                                     </div>
+<<<<<<< HEAD
+=======
                                     <hr />
                                     <div class="social-icons block">
                                         <ul>
@@ -80,41 +82,28 @@
                                         </ul>
                                     </div>
                                     <hr>
+>>>>>>> b333a688f093e7ad66d9e0d959a4fe83ee9f1e1c
                                 </div>
                                 <table class="table table-condensed table-hover">
                                     <thead>
                                         <tr>
-                                            <th colspan="3">Contact Information</th>
+                                            <th colspan="3">Organization Information</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>url</td>
-                                            <td>
-                                            <a href="#">
-                                                www.example.com
-                                            </a></td>
+                                            <td>Name</td>
+                                            <td>{{ Auth::user()->orgName }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>email:</td>
-                                            <td>
-                                            <a href="#">
-                                                peter@example.com
-                                            </a></td>
+                                            <td>email : </td>
+                                            <td>{{ Auth::user()->orgEmail }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>phone:</td>
-                                            <td>(641)-734-4763</td>
-                                            <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>skye</td>
-                                            <td>
-                                            <a href="#">
-                                                peterclark82
-                                            </a></td>
+                                            <td>phone : </td>
+                                            <td>{{ Auth::user()->orgPhone }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                     </tbody>
@@ -122,7 +111,7 @@
                                 <table class="table table-condensed table-hover">
                                     <thead>
                                         <tr>
-                                            <th colspan="3">General information</th>
+                                            <th colspan="3">Personal </th>
                                         </tr>
                                     </thead>
                                     <tbody>
