@@ -63,12 +63,12 @@
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>email : </td>
+                                            <td>email</td>
                                             <td>{{ Auth::user()->orgEmail }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>phone : </td>
+                                            <td>phone</td>
                                             <td>{{ Auth::user()->orgPhone }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
