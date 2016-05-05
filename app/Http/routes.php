@@ -15,10 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::resource('/home','CertivyController',['only' => [
+    'index', 'show'
+	]]);
 
-Route::get('/event', 'EventController@index');
+Route::resource('/event','EventController');
 
-Route::get('/event/create', 'EventController@create');

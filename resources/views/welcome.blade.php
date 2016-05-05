@@ -1,5 +1,11 @@
 @extends('layouts.intro')
 
+
+@section('css')
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/weather-icons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="{{ asset('') }}assets/plugins/nvd3/nv.d3.min.css">
+@endsection
+
 @section('content')
 <div class="section section-header">
     <div class="parallax pattern-image" style="background: rgb(255, 143, 94) none repeat scroll 0% 0%;">

@@ -2,33 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use Illuminate\Http\Request;
+
+use App\Http\Requests;
 
 class EventController extends Controller
 {
+
     /**
-     * Create a new controller instance.
+     * Display a listing of the resource.
      *
-     * @return void
+     * @return \Illuminate\Http\ResConse
      */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('event/index');
+    public function create(){
+    	return view('event.form');
     }
-    protected function create()
-    {
-        return view('event/form');
-    }
-
 }
