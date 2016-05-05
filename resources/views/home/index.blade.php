@@ -49,40 +49,6 @@
                                             </div>
                                         </div>
                                     </div>
-<<<<<<< HEAD
-=======
-                                    <hr />
-                                    <div class="social-icons block">
-                                        <ul>
-                                            <li data-placement="top" data-original-title="Twitter" class="social-twitter tooltips">
-                                                <a href="http://www.twitter.com/" target="_blank">
-                                                    Twitter
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="Facebook" class="social-facebook tooltips">
-                                                <a href="http://facebook.com/" target="_blank">
-                                                    Facebook
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="Google" class="social-google tooltips">
-                                                <a href="http://google.com/" target="_blank">
-                                                    Google+
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="LinkedIn" class="social-linkedin tooltips">
-                                                <a href="http://linkedin.com/" target="_blank">
-                                                    LinkedIn
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="Github" class="social-github tooltips">
-                                                <a href="#" target="_blank">
-                                                    Github
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <hr>
->>>>>>> b333a688f093e7ad66d9e0d959a4fe83ee9f1e1c
                                 </div>
                                 <table class="table table-condensed table-hover">
                                     <thead>
