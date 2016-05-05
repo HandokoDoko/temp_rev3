@@ -193,7 +193,7 @@
                             </div>
 
                             <!-- start: DYNAMIC TABLE PANEL -->
-                            {!! coolRowBox_Begin('list') !!}
+                            {!! coolRowBox_Begin('List', 'Events') !!}
                                 <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
                                     <thead>
                                         <tr>

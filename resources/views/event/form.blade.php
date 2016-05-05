@@ -24,56 +24,56 @@
 @section('content')
 <div class="container">
     <!-- start: PAGE CONTENT -->
-<div class="section section-regist margin-top-70">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel-body">
-                {!! coolRowBox_Begin('Form Create Certificate') !!}
-                <form class="form-horizontal" role="form" method="POST" action="{{ url('/event/create') }}">
-                    {!! csrf_field() !!}
+    <div class="section section-regist">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel-body">
+                    {!! coolRowBox_Begin('Create Certificate','Form') !!}
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/event/create') }}">
+                        {!! csrf_field() !!}
 
-                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">E-Mail Address</label>
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">E-Mail Address</label>
 
-                        <div class="col-md-6">
-                            <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
 
-                            @if ($errors->has('email'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('email') }}</strong>
-                                </span>
-                            @endif
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                        <label class="col-md-4 control-label">Password</label>
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Password</label>
 
-                        <div class="col-md-6">
-                            <input type="password" class="form-control" name="password">
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" name="password">
 
-                            @if ($errors->has('password'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('password') }}</strong>
-                                </span>
-                            @endif
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="col-md-6 col-md-offset-4">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-btn fa-sign-in"></i> Create
-                            </button>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-btn fa-sign-in"></i> Create
+                                </button>
+                            </div>
                         </div>
-                    </div>
 
-                </form>
-                {!! coolRowBox_End() !!}
+                    </form>
+                    {!! coolRowBox_End() !!}
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
@@ -84,7 +84,6 @@
     <!-- end: PAGE CONTENT-->
 </div>
 @endsection
-
 
 
 
