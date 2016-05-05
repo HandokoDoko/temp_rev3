@@ -52,12 +52,19 @@ var FormWizard = function () {
             },
             ignore: ':hidden',
             rules: {
+                orgName: {
+                    minlength: 2,
+                    required: true
+                },
                 username: {
                     minlength: 2,
                     required: true
                 },
                 email: {
                     required: true,
+                    email: true
+                },
+                orgEmail: {
                     email: true
                 },
                 password: {
@@ -86,6 +93,9 @@ var FormWizard = function () {
                     required: true
                 },
                 country: {
+                    required: true
+                },
+                orgCountry: {
                     required: true
                 },
                 card_name: {

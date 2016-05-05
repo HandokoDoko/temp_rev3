@@ -15,7 +15,16 @@
     </small>
 @endsection
 
+
+
+@section('css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}assets/plugins/select2/select2.css" />
+@endsection
+
+
+
 @section('content')
+<div class="container">
 <div class="row">
     <div class="col-sm-12">
         <div class="tabbable">
@@ -25,11 +34,10 @@
                         <div class="col-sm-5 col-md-4">
                             <div class="user-left">
                                 <div class="center">
-                                    <h4>Peter Clark</h4>
+                                    <h4>{{ Auth::user()->name }}</h4>
                                     <div class="fileupload fileupload-new" data-provides="fileupload">
                                         <div class="user-image">
-                                            <div class="fileupload-new thumbnail"><img src="assets/images/avatar-1-xl.jpg" alt="">
-                                            </div>
+                                            <div class="fileupload-new thumbnail"><img src="{{ asset('') }}assets/img/avatar-1-xl.jpg" alt=""></div>
                                             <div class="fileupload-preview fileupload-exists thumbnail"></div>
                                             <div class="user-image-buttons">
                                                 <span class="btn btn-azure btn-file btn-sm"><span class="fileupload-new"><i class="fa fa-pencil"></i></span><span class="fileupload-exists"><i class="fa fa-pencil"></i></span>
@@ -41,72 +49,27 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <hr>
-                                    <div class="social-icons block">
-                                        <ul>
-                                            <li data-placement="top" data-original-title="Twitter" class="social-twitter tooltips">
-                                                <a href="http://www.twitter.com/" target="_blank">
-                                                    Twitter
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="Facebook" class="social-facebook tooltips">
-                                                <a href="http://facebook.com/" target="_blank">
-                                                    Facebook
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="Google" class="social-google tooltips">
-                                                <a href="http://google.com/" target="_blank">
-                                                    Google+
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="LinkedIn" class="social-linkedin tooltips">
-                                                <a href="http://linkedin.com/" target="_blank">
-                                                    LinkedIn
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="Github" class="social-github tooltips">
-                                                <a href="#" target="_blank">
-                                                    Github
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <hr>
                                 </div>
                                 <table class="table table-condensed table-hover">
                                     <thead>
                                         <tr>
-                                            <th colspan="3">Contact Information</th>
+                                            <th colspan="3">Organization Information</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>url</td>
-                                            <td>
-                                            <a href="#">
-                                                www.example.com
-                                            </a></td>
+                                            <td>Name</td>
+                                            <td>{{ Auth::user()->orgName }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>email:</td>
-                                            <td>
-                                            <a href="#">
-                                                peter@example.com
-                                            </a></td>
+                                            <td>email : </td>
+                                            <td>{{ Auth::user()->orgEmail }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>phone:</td>
-                                            <td>(641)-734-4763</td>
-                                            <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>skye</td>
-                                            <td>
-                                            <a href="#">
-                                                peterclark82
-                                            </a></td>
+                                            <td>phone : </td>
+                                            <td>{{ Auth::user()->orgPhone }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                     </tbody>
@@ -114,7 +77,7 @@
                                 <table class="table table-condensed table-hover">
                                     <thead>
                                         <tr>
-                                            <th colspan="3">General information</th>
+                                            <th colspan="3">Personal </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -169,14 +132,375 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="col-sm-7 col-md-8">
-                        <!-- content -->
-                        <a href="{{ url('event/create') }}" class="btn btn-green btn-lg">Create Event</a>
 
+                        <div class="col-sm-7 col-md-8">
+                            <!-- content -->
+                            <div class=" alert alert-info" style="margin-top: 30px;">
+                                <div class="row">
+                                    <div class="col-xs-8 col-xs-offset-1">
+                                        <strong>Everything is Awesome!</strong> Everything is cool when you part of the team!
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <a href="{{ url('/event/create') }}" class="btn btn-green pull-right">Create Event</a>
+                                    </div>
+                                    <span style="clear:both"></span>
+                                </div>
+                            </div>
+
+                            <!-- start: DYNAMIC TABLE PANEL -->
+                            {!! coolRowBox_Begin('list') !!}
+                                <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+                                    <thead>
+                                        <tr>
+                                            <th>Browser</th>
+                                            <th class="hidden-xs">Creator</th>
+                                            <th>Cost (USD)</th>
+                                            <th class="hidden-xs"> Software license</th>
+                                            <th>Current
+                                            layout engine</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Amaya</td>
+                                            <td class="hidden-xs">W3C,
+                                            INRIA</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">W3C</td>
+                                            <td>Amaya</td>
+                                        </tr>
+                                        <tr>
+                                            <td>AOL Explorer</td>
+                                            <td class="hidden-xs">America Online, Inc</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Trident</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arora</td>
+                                            <td class="hidden-xs">Benjamin C. Meyer</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Avant</td>
+                                            <td class="hidden-xs">Avant Force</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Tri-engine</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Camino</td>
+                                            <td class="hidden-xs">The Camino Project</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">tri-license</td>
+                                            <td>Gecko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chromium</td>
+                                            <td class="hidden-xs">Google</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">BSD</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dillo</td>
+                                            <td class="hidden-xs">The Dillo team</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>Dillo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dooble</td>
+                                            <td class="hidden-xs">Dooble Team</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ELinks</td>
+                                            <td class="hidden-xs">Baudis, Fonseca, <i>et al.</i></td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>built-in</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Web</td>
+                                            <td class="hidden-xs">Marco Pesenti Gritti</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Flock</td>
+                                            <td class="hidden-xs">Flock Inc</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Galeon</td>
+                                            <td class="hidden-xs">Marco Pesenti Gritti</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>Gecko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Google Chrome</td>
+                                            <td class="hidden-xs">Google</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Google Chrome Terms of Service</td>
+                                            <td>Blink</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GNU IceCat</td>
+                                            <td class="hidden-xs">GNU</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">MPL</td>
+                                            <td>Gecko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>iCab</td>
+                                            <td class="hidden-xs">Alexander Clauss</td>
+                                            <td>$20 (Pro)</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet Explorer</td>
+                                            <td class="hidden-xs">Microsoft,
+                                            <br>
+                                            Spyglass</td>
+                                            <td>comes with Windows</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Trident</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Internet Explorer for Mac (terminated)</td>
+                                            <td class="hidden-xs">Microsoft</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Tasman</td>
+                                        </tr>
+                                        <tr>
+                                            <td>K-Meleon</td>
+                                            <td class="hidden-xs">Dorian, KKO, <i>et al.</i></td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>Gecko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Konqueror</td>
+                                            <td class="hidden-xs">KDE</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>KHTML</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Links</td>
+                                            <td class="hidden-xs">Patocka, <i>et al.</i></td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>built-in</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lunascape</td>
+                                            <td class="hidden-xs">Lunascape Corporation</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Tri-engine</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lynx</td>
+                                            <td class="hidden-xs">Montulli, Grobe, Rezac, <i>et al.</i></td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>built-in</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Maxthon</td>
+                                            <td class="hidden-xs">Maxthon International Limited</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Trident</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Midori</td>
+                                            <td class="hidden-xs">Christian Dywan, et al.</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">LGPL</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mosaic</td>
+                                            <td class="hidden-xs">Marc Andreessen and
+                                            Eric Bina,
+                                            NCSA</td>
+                                            <td>non-commercial use</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>built-in</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mozilla Application Suite</td>
+                                            <td class="hidden-xs">Mozilla Foundation</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">tri-license</td>
+                                            <td>Gecko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mozilla Firefox</td>
+                                            <td class="hidden-xs">Mozilla Foundation</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">MPL</td>
+                                            <td>Gecko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Netscape (v.6-7) </td>
+                                            <td class="hidden-xs">Netscape Communications Corporation,
+                                            AOL</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Gecko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Netscape Browser (v.8)[note 2]</td>
+                                            <td class="hidden-xs">Mercurial Communications for
+                                            AOL</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Gecko, Trident</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Netscape Communicator (v.4)[note 2]</td>
+                                            <td class="hidden-xs">Netscape Communications</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Mosaic</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Netscape Navigator (v.1-4)[note 2]</td>
+                                            <td class="hidden-xs">Netscape Communications</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Mosaic</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Netscape Navigator 9[note 2]</td>
+                                            <td class="hidden-xs">Netscape Communications
+                                            <br>
+                                            (division of AOL)</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Gecko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NetSurf</td>
+                                            <td class="hidden-xs">The NetSurf Developers</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GPL</td>
+                                            <td>NetSurf built-in</td>
+                                        </tr>
+                                        <tr>
+                                            <td>OmniWeb</td>
+                                            <td class="hidden-xs">The Omni Group</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Opera</td>
+                                            <td class="hidden-xs">Opera Software</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Presto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Opera Mobile</td>
+                                            <td class="hidden-xs">Opera Software</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Presto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Origyn Web Browser</td>
+                                            <td class="hidden-xs">Sand-labs</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">BSD</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>QupZilla</td>
+                                            <td class="hidden-xs">David Rosca</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GNU GPLv3</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Safari</td>
+                                            <td class="hidden-xs">Apple Inc.</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SeaMonkey</td>
+                                            <td class="hidden-xs">SeaMonkey Council</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">tri-license</td>
+                                            <td>Gecko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shiira</td>
+                                            <td class="hidden-xs">Happy Macintosh Developing Team</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">BSD</td>
+                                            <td>WebKit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sleipnir</td>
+                                            <td class="hidden-xs">Fenrir Inc.</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Trident</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Torch Browser</td>
+                                            <td class="hidden-xs">Torch Media</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Proprietary</td>
+                                            <td>Webkit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Uzbl</td>
+                                            <td class="hidden-xs">Dieter Plaetinck</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">GNU GPLv3</td>
+                                            <td>Webkit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WorldWideWeb (Later renamed Nexus)</td>
+                                            <td class="hidden-xs">Tim Berners-Lee</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">Public domain</td>
+                                            <td>NeXTSTEP built-in</td>
+                                        </tr>
+                                        <tr>
+                                            <td>w3m</td>
+                                            <td class="hidden-xs">Akinori Ito</td>
+                                            <td>Free</td>
+                                            <td class="hidden-xs">MIT</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            {!! coolRowBox_End() !!}
+                            <!-- end: DYNAMIC TABLE PANEL -->
 
                         </div>
                     </div>
                 </div>
+
                 <div id="panel_edit_account" class="tab-pane fade">
                     <form action="#" role="form" id="form">
                         <div class="row">
@@ -324,7 +648,7 @@
                                         Image Upload
                                     </label>
                                     <div class="fileupload fileupload-new" data-provides="fileupload">
-                                        <div class="fileupload-new thumbnail"><img src="assets/images/avatar-1-xl.jpg" alt="">
+                                        <div class="fileupload-new thumbnail"><img src="{{ asset('') }}assets/img/avatar-1-xl.jpg" alt="">
                                         </div>
                                         <div class="fileupload-preview fileupload-exists thumbnail"></div>
                                         <div class="user-edit-image-buttons">
@@ -428,5 +752,21 @@
         </div>
     </div>
 </div>
+</div>
+
+@endsection
+
+
+
+@section('script')
+        <script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+        <script type="text/javascript" src="assets/js/table-data.js"></script>
+        <script>
+            jQuery(document).ready(function() {
+                Main.init();
+                TableData.init();
+            });
+        </script>
+
 
 @endsection

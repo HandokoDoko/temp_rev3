@@ -2023,8 +2023,8 @@ textarea, select, input[type="text"], input[type="password"], input[type="dateti
   background-color: #FFFFFF;
   border: 1px solid #E6E8E8;
   border-radius: 0 0 0 0 !important;
-  color: #8b91a0;
-  font-family: inherit;
+  color: #8b91a0 !important;
+  font-family: inherit !important;
   font-size: 14px;
   line-height: 1.2;
   padding: 5px 4px;
@@ -3031,7 +3031,7 @@ td.small-width {
 }
 
 .panel-tabs, .tabbable {
-  background-color: #E6E8E8;
+  /*--background-color: #E6E8E8;*/
   padding: 1px;
   margin-bottom: 15px;
 }
@@ -4532,9 +4532,11 @@ Social Icons
 /* ---------------------------------------------------------------------- */
 /*  User profile
 /* ---------------------------------------------------------------------- */
-.user-left {
-  border-right: 1px solid #DDDDDD;
-  padding-right: 15px;
+@media (min-width: 900px){
+  .user-left {
+    border-right: 1px solid #DDDDDD;
+    padding-right: 15px;
+  }
 }
 
 .user-left a:hover, .user-left a:focus {
@@ -6828,4 +6830,9 @@ body.error-full-page {
 
 .isMobile ul.main-navigation-menu li:not(.open) a:hover {
   background: inherit !important;
+}
+
+.stepContainer .StepTitle {
+  font-weight: bold;
+  text-transform: uppercase;
 }
