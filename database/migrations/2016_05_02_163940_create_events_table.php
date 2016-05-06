@@ -17,6 +17,7 @@ class CreateEventsTable extends Migration
             $table->string('eventName');
             $table->string('EventSpeaking')->nullable();
             $table->string('Date');
+            $table->boolean('confirm');
             $table->bigInteger('template');
             $table->string('Signature')->nullable();
             $table->string('EnrolKey');
@@ -31,6 +32,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('events');
+        
     }
 }
