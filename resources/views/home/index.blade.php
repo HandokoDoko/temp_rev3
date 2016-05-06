@@ -49,40 +49,6 @@
                                             </div>
                                         </div>
                                     </div>
-<<<<<<< HEAD
-=======
-                                    <hr />
-                                    <div class="social-icons block">
-                                        <ul>
-                                            <li data-placement="top" data-original-title="Twitter" class="social-twitter tooltips">
-                                                <a href="http://www.twitter.com/" target="_blank">
-                                                    Twitter
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="Facebook" class="social-facebook tooltips">
-                                                <a href="http://facebook.com/" target="_blank">
-                                                    Facebook
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="Google" class="social-google tooltips">
-                                                <a href="http://google.com/" target="_blank">
-                                                    Google+
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="LinkedIn" class="social-linkedin tooltips">
-                                                <a href="http://linkedin.com/" target="_blank">
-                                                    LinkedIn
-                                                </a>
-                                            </li>
-                                            <li data-placement="top" data-original-title="Github" class="social-github tooltips">
-                                                <a href="#" target="_blank">
-                                                    Github
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <hr>
->>>>>>> b333a688f093e7ad66d9e0d959a4fe83ee9f1e1c
                                 </div>
                                 <table class="table table-condensed table-hover">
                                     <thead>
@@ -97,12 +63,12 @@
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>email : </td>
+                                            <td>email</td>
                                             <td>{{ Auth::user()->orgEmail }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>phone : </td>
+                                            <td>phone</td>
                                             <td>{{ Auth::user()->orgPhone }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
@@ -182,7 +148,7 @@
                             </div>
 
                             <!-- start: DYNAMIC TABLE PANEL -->
-                            {!! coolRowBox_Begin('list') !!}
+                            {!! coolRowBox_Begin('List', 'Events') !!}
                                 <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
                                     <thead>
                                         <tr>

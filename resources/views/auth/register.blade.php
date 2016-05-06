@@ -6,7 +6,7 @@
 <div class="section section section-regist margin-top-min20 container">
     <!-- start: MAIN CONTAINER -->
     <div class="panel-body">
-        <form action="{{ url('/register') }}" role="form" class="smart-wizard form-horizontal" id="form" method="POST">
+        <form action="{{ url('/register') }}" role="form" class="smart-wizard form-horizontal" id="form" method="POST" autocomplete="off">
             <div id="wizard" class="swMain">
                 <ul>
                     <li>
@@ -75,6 +75,50 @@
                         </div>
                     </div>
 
+                    <div class="form-group{{ $errors->has('orgAddress') ? ' has-error' : '' }}">
+                        <label class="col-sm-3 control-label">
+                            Address
+                        </label>
+                        <div class="col-sm-7">
+                            <textarea cols="4" rows="3" class="form-control" id="orgAddress" name="orgAddress">{{ old('orgAddress') }}</textarea>
+                            @if ($errors->has('orgAddress'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgAddress') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                     <!--<div class="form-group{{ $errors->has('orgCountry') ? ' has-error' : '' }}">
+                        <label class="col-md-3 control-label">
+                            Country <span class="symbol required"></span>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" name="orgCountry" value = "{{ old('orgCountry') }}">
+                        
+                            @if ($errors->has('orgCountry'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgCountry') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>-->
+
+                     <div class="form-group{{ $errors->has('orgCity') ? ' has-error' : '' }}">
+                        <label class="col-md-3 control-label">
+                            City
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" name="orgCity" value = "{{ old('orgCity') }}">
+
+                            @if ($errors->has('orgCity'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgCity') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
                     <div class="form-group{{ $errors->has('orgEmail') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
                             Email Address
@@ -100,38 +144,6 @@
                             @if ($errors->has('orgPhone'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('orgPhone') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>
-
-                     <div class="form-group{{ $errors->has('') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">
-                            Country
-                        </label>
-                        <div class="col-md-7">
-                            <input type="text" class="form-control" name="orgCountry" value = "{{ old('orgCountry') }}">
-                        </div>
-                    </div>
-
-                     <div class="form-group{{ $errors->has('') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">
-                            City
-                        </label>
-                        <div class="col-md-7">
-                            <input type="text" class="form-control" name="orgCity" value = "{{ old('orgCity') }}">
-                        </div>
-                    </div>
-
-                    <div class="form-group{{ $errors->has('orgAddress') ? ' has-error' : '' }}">
-                        <label class="col-sm-3 control-label">
-                            Address
-                        </label>
-                        <div class="col-sm-7">
-                            <textarea cols="4" rows="3" class="form-control" id="orgAddress" name="orgAddress">{{ old('orgAddress') }}</textarea>
-                            @if ($errors->has('orgAddress'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('orgAddress') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -164,12 +176,34 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('') ? ' has-error' : '' }}">
+                    <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
-                            Phone Number
+                            Phone Number <span class="symbol required"></span>
                         </label>
                         <div class="col-md-7">
                             <input type="text" class="form-control" name="phone" value="{{ old('phone') }}">
+
+                            @if ($errors->has('phone'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('name') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">
+                            Gender <span class="symbol required"></span>
+                        </label>
+                        <div class="col-sm-7">
+                            <label class="radio-inline">
+                                <input type="radio" class="grey" value="f" name="gender" id="gender_female" >
+                                Female
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" class="grey" value="m" name="gender"  id="gender_male">
+                                Male
+                            </label>
                         </div>
                     </div>
 
@@ -228,7 +262,7 @@
                             </label>
 
                             <div class="col-md-7">
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" id="password">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -271,7 +305,7 @@
                 </div>
 
                 <div id="step-4">
-                    <h3 class="StepTitle">Step</h2>
+                    <h3 class="StepTitle">Summary</h2>
                     <h3>Account</h3>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">

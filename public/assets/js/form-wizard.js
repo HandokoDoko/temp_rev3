@@ -56,7 +56,7 @@ var FormWizard = function () {
                     minlength: 2,
                     required: true
                 },
-                username: {
+                userName: {
                     minlength: 2,
                     required: true
                 },
@@ -71,12 +71,16 @@ var FormWizard = function () {
                     minlength: 6,
                     required: true
                 },
-                password_again: {
+                password_confirmation: {
                     required: true,
                     minlength: 5,
                     equalTo: "#password"
                 },
                 full_name: {
+                    required: true,
+                    minlength: 2,
+                },
+                name: {
                     required: true,
                     minlength: 2,
                 },
