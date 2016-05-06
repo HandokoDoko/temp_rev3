@@ -27,7 +27,8 @@ class CertivyController extends Controller
     public function index()
     {
         $events = Home::all();
-        return view('home.index', ['events' => $events]);
+        $a = 0;
+        return view('home.index', ['events' => $events,'no' => $a]);
     }
     /**
      * Show the form for creating a new resource.

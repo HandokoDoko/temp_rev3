@@ -156,22 +156,34 @@
                                             <th class="hidden-xs">Event Name</th>
                                             <th>Date</th>
                                             <th class="hidden-xs">Speaker</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
+                                            <th class="hidden-xs" >Status</th>
+                                            <th width="150">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach($events as $event)
                                         @if( $event->idUser === Auth::user()->id )
                                             <tr>
-                                                <th>1</th>
+                                                <th> {{ $no+=1 }}</th>
                                                 <th>{{ $event->eventName }}</th>
-                                                <th>{{ $event->eventName }}</th>
-                                                <th>{{ $event->eventName }}</th>
-                                                <th>{{ $event->eventName }}</th>
-                                                <th>{{ $event->eventName }}</th>
+                                                <th>{{ $event->Date }}</th>
+                                                <th>{{ $event->EventSpeaking }}</th>
+                                                <th> 
+                                                    @if( $event->confirm === 1)
+                                                        <span class="label label-sm label-success">Approved</span>
+                                                    @else
+                                                        <span class="label label-sm label-danger">Pending</span>
+                                                    @endif
+                                                </th>
+                                                <th>
+                                                    <p>
+                                                        <a class="btn btn-red" href="#"><i class="fa fa-times fa fa-white" width="10"></i></a>
+                                                        <a class="btn btn-blue" href="event/{{ $event->id}}/edit"><i class="fa fa-info-circle"></i></a>
+                                                    </p>
+                                                </th>
 
                                             </tr>
+
                                         @endif
                                         @endforeach
                                     </tbody>
