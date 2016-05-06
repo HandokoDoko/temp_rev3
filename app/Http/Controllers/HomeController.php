@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
+use App\Home;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
@@ -24,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $events = DB::table('events')->get();
+        return view('home.index', ['events' => $events]);
     }
 }
