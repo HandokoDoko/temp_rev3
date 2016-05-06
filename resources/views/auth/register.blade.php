@@ -1,7 +1,6 @@
 @extends('layouts.intro')
 
 
-
 @section('content')
 <div class="section section section-regist margin-top-min20 container">
     <!-- start: MAIN CONTAINER -->
@@ -58,7 +57,7 @@
                 {!! csrf_field() !!}
 
                 <div id="step-1">
-                    <h3 class="StepTitle">Organization Profile</h2>
+                    <h3 class="StepTitle">Organization Profile</h3>
 
                     <div class="form-group{{ $errors->has('orgName') ? ' has-error' : '' }}">
                         <label class="col-sm-3 control-label">
@@ -159,7 +158,7 @@
                 </div>
 
                 <div id="step-2">
-                    <h3 class="StepTitle">Personal Data</h2>
+                    <h3 class="StepTitle">Personal Data</h3>
                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
                             Full Name <span class="symbol required"></span>
@@ -222,7 +221,7 @@
                 </div>
              
                 <div id="step-3">
-                    <h3 class="StepTitle">Account</h2>
+                    <h3 class="StepTitle">Account</h3>
                     <div class="form-group">
                         <div class="form-group{{ $errors->has('userName') ? ' has-error' : '' }}">
                             <label class="col-md-3 control-label">
@@ -305,7 +304,7 @@
                 </div>
 
                 <div id="step-4">
-                    <h3 class="StepTitle">Summary</h2>
+                    <h3 class="StepTitle">Summary</h3>
                     <h3>Account</h3>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
@@ -477,8 +476,8 @@
 
 @section('script')
         <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-        <script src="assets/plugins/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
-        <script src="assets/js/form-wizard.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+        <script src="{{ asset('') }}assets/js/form-wizard.js"></script>
         <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
         <script>
             jQuery(document).ready(function() {
