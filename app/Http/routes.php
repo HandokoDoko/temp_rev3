@@ -22,5 +22,8 @@ Route::resource('/home','CertivyController',['only' => [
     'index', 'show'
 	]]);
 
-Route::resource('/event','EventController');
+Route::group(['middleware'=>['web']],function(){
+	Route::resource('/event','EventController');
+});
+
 

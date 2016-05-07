@@ -166,8 +166,8 @@
                                             <tr>
                                                 <th> {{ $no+=1 }}</th>
                                                 <th>{{ $event->eventName }}</th>
-                                                <th>{{ $event->Date }}</th>
-                                                <th>{{ $event->EventSpeaking }}</th>
+                                                <th>{{ $event->date }}</th>
+                                                <th>{{ $event->eventSpeaking }}</th>
                                                 <th> 
                                                     @if( $event->confirm === 1)
                                                         <span class="label label-sm label-success">Approved</span>

@@ -87,7 +87,63 @@
 
                     <div id="step-1">
                         <h3 class="StepTitle">Event Detail</h3>
+                        <div class="form-group{{ $errors->has('eventName') ? ' has-error' : '' }}">
+                            <label class="col-sm-3 control-label">
+                                Event Name <span class="symbol required"></span>
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="eventName" name="eventName" value="{{ old('orgName') }}">
 
+                                @if ($errors->has('eventName'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('orgName') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('eventSpeaking') ? ' has-error' : '' }}">
+                            <label class="col-sm-3 control-label">
+                                Event Speaker <span class="symbol required"></span>
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="eventSpeaking" name="eventSpeaking" value="{{ old('orgName') }}">
+
+                                @if ($errors->has('eventSpeaking'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('eventSpeaking') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('date') ? ' has-error' : '' }}">
+                            <label class="col-sm-3 control-label">
+                                Event Date <span class="symbol required"></span>
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="date" class="form-control" id="date" name="date" value="{{ old('orgName') }}">
+
+                                @if ($errors->has('date'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('date') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('enrollKey') ? ' has-error' : '' }}">
+                            <label class="col-sm-3 control-label">
+                                Enroll Key <span class="symbol required"></span>
+                            </label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="enrollKey" name="enrollKey" value="{{ old('orgName') }} ">
+
+                                @if ($errors->has('enrollKey'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('enrollKey') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-sm-2 col-sm-offset-8">
                                 <button class="btn btn-blue next-step btn-block">

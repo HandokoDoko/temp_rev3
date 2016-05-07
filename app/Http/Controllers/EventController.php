@@ -20,17 +20,26 @@ class EventController extends Controller
     }
 
     public function index(){
-        return view('event.index');
+        return redirect('/home');
     }
 
     public function create(){
     	return view('event.form');
+    }
+    public function store(Request $request)
+    {
+        /*this->validate($request,[
+            'eventName'=>'required',
+            'eventSpeaking'=>'required',
+
+            ]);*/
+
     }
     public function edit($id){
         $events=Home::find($id);
         if(!$events){
             abort(404);
         }
-        return view('event.edit')->with('events',$events);
+        return view('event.index')->with('events',$events);
     }
 }
