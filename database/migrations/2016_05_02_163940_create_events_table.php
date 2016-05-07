@@ -17,11 +17,12 @@ class CreateEventsTable extends Migration
             $table->string('eventName');
             $table->string('EventSpeaking')->nullable();
             $table->string('Date');
-            $table->boolean('confirm');
             $table->bigInteger('template');
             $table->string('Signature')->nullable();
             $table->string('EnrolKey');
             $table->bigInteger('idUser');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -32,6 +33,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        
+        Schema::drop('events');
     }
 }

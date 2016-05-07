@@ -96,12 +96,6 @@ var FormWizard = function () {
                 city: {
                     required: true
                 },
-                country: {
-                    required: true
-                },
-                orgCountry: {
-                    required: true
-                },
                 card_name: {
                     required: true
                 },

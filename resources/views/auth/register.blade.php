@@ -75,50 +75,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group{{ $errors->has('orgAddress') ? ' has-error' : '' }}">
-                        <label class="col-sm-3 control-label">
-                            Address
-                        </label>
-                        <div class="col-sm-7">
-                            <textarea cols="4" rows="3" class="form-control" id="orgAddress" name="orgAddress">{{ old('orgAddress') }}</textarea>
-                            @if ($errors->has('orgAddress'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('orgAddress') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>
-
-                     <!--<div class="form-group{{ $errors->has('orgCountry') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">
-                            Country <span class="symbol required"></span>
-                        </label>
-                        <div class="col-md-7">
-                            <input type="text" class="form-control" name="orgCountry" value = "{{ old('orgCountry') }}">
-                        
-                            @if ($errors->has('orgCountry'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('orgCountry') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>-->
-
-                     <div class="form-group{{ $errors->has('orgCity') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">
-                            City
-                        </label>
-                        <div class="col-md-7">
-                            <input type="text" class="form-control" name="orgCity" value = "{{ old('orgCity') }}">
-
-                            @if ($errors->has('orgCity'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('orgCity') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>
-
                     <div class="form-group{{ $errors->has('orgEmail') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
                             Email Address
@@ -144,6 +100,50 @@
                             @if ($errors->has('orgPhone'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('orgPhone') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                     <div class="form-group{{ $errors->has('orgCountry') ? ' has-error' : '' }}">
+                        <label class="col-md-3 control-label">
+                            Country
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" name="orgCountry" value = "{{ old('orgCountry') }}">
+                        
+                            @if ($errors->has('orgCountry'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgCountry') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                     <div class="form-group{{ $errors->has('orgCity') ? ' has-error' : '' }}">
+                        <label class="col-md-3 control-label">
+                            City
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" name="orgCity" value = "{{ old('orgCity') }}">
+
+                            @if ($errors->has('orgCity'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgCity') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                     <div class="form-group{{ $errors->has('orgAddress') ? ' has-error' : '' }}">
+                        <label class="col-sm-3 control-label">
+                            Address
+                        </label>
+                        <div class="col-sm-7">
+                            <textarea cols="4" rows="3" class="form-control" id="orgAddress" name="orgAddress">{{ old('orgAddress') }}</textarea>
+                            @if ($errors->has('orgAddress'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgAddress') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -197,11 +197,11 @@
                         </label>
                         <div class="col-sm-7">
                             <label class="radio-inline">
-                                <input type="radio" class="grey" value="f" name="gender" id="gender_female" >
+                                <input type="radio" class="grey" value="Female" name="gender" id="gender_female" >
                                 Female
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" class="grey" value="m" name="gender"  id="gender_male">
+                                <input type="radio" class="grey" value="Male" name="gender"  id="gender_male">
                                 Male
                             </label>
                         </div>
@@ -374,9 +374,10 @@
                             Phone Number :
                         </label>
                         <div class="col-sm-7">
-                            <p class="form-control-static display-value" data-display="phone"></p>
+                            <p class="form-control-static display-value" data-display="phone" | '-'></p>
                         </div>
                     </div>
+                    <input type="hidden" name = "photo" value="assets/img/profile/anonymous.jpg"></input>
                     <div class="form-group">
                         <div class="col-md-2 col-md-offset-8">
                             <button type="submit" class="btn btn-primary">

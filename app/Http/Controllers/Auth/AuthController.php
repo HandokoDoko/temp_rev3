@@ -50,10 +50,10 @@ class AuthController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'orgName' => 'required|max:255|unique:users',
-            'userName' => 'required|max:255',
+            'orgName' => 'required|max:255',
+            'userName' => 'required|max:255|unique:users',
             'email' => 'required|email|max:255|unique:users',
-            'orgEmail' => 'required|email|max:255|unique:users',
+            'orgEmail' => 'email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
         ]);
     }
@@ -78,6 +78,8 @@ class AuthController extends Controller
             'orgCountry' => $data['orgCountry'],
             'orgCity' => $data['orgCity'],
             'orgAddress' => $data['orgAddress'],
+            'photo' => $data['photo'],
+            'gender' => $data['gender'],
         ]);
     }
 }

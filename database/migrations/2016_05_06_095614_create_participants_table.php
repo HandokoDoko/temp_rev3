@@ -12,12 +12,14 @@ class CreateParticipantsTable extends Migration
      */
     public function up()
     {
-        Schema::create('participants', function (Blueprint $table) {
+         Schema::create('participants', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('grade')->nullable();
             $table->string('QrCode');
             $table->bigInteger('idEvent');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -28,6 +30,6 @@ class CreateParticipantsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('participants');
+         Schema::drop('participants');
     }
 }
