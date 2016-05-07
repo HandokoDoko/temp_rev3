@@ -15,12 +15,12 @@ class CreateEventsTable extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('eventName');
-            $table->string('EventSpeaking')->nullable();
-            $table->string('Date');
+            $table->string('eventSpeaking')->nullable();
+            $table->string('date');
             $table->boolean('confirm');
             $table->bigInteger('template');
-            $table->string('Signature')->nullable();
-            $table->string('EnrolKey');
+            $table->string('signature')->nullable();
+            $table->string('enrollKey');
             $table->bigInteger('idUser');
         });
     }
@@ -32,6 +32,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        
+        Schema::drop('events');
     }
 }

@@ -120,7 +120,7 @@
 
                     <div class="form-group{{ $errors->has('orgEmail') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
-                            Email Address
+                            Email Address <span class="symbol required"></span>
                         </label>
                         <div class="col-md-7">
                             <input type="email" class="form-control" name="orgEmail" value="{{ old('orgEmail') }}">
@@ -308,7 +308,7 @@
                     <h3>Account</h3>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Username :
+                            Username
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="userName"></p>
@@ -318,7 +318,7 @@
                     <h3>Organization</h3>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Name :
+                            Name
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="orgName"></p>
@@ -327,7 +327,7 @@
 
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Email :
+                            Email
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="orgEmail"></p>
@@ -335,7 +335,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Phone Number :
+                            Phone Number
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="orgPhone"></p>
@@ -343,7 +343,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Address :
+                            Address
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="orgAddress"></p>
@@ -354,7 +354,7 @@
                     <h3>Personal</h3>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Full Name :
+                            Full Name
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="name"></p>
@@ -362,7 +362,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Email :
+                            Email
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="email"></p>
@@ -370,7 +370,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Phone Number :
+                            Phone Number
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="phone"></p>

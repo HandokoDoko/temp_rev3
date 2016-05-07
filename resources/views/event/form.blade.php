@@ -33,6 +33,10 @@
         display: block !important;
         text-align:left !important;
         width: auto !important;
+        padding-left: 20px;
+    }
+    .swMain > ul li .stepDesc {
+        text-align: left !important;
     }
 </style>
 
@@ -44,26 +48,26 @@
     <div class="section section-regist">
         <div class="panel-body">
         {!! coolRowBox_Begin('Create Certificate','Form') !!}
-        <form action="{{ url('/register') }}" role="form" class="smart-wizard form-horizontal" id="form" method="POST" autocomplete="off">
+        <form action="{{ url('/event/create') }}" role="form" class="smart-wizard form-horizontal" id="form" method="POST" autocomplete="off">
             {!! csrf_field() !!}
             <div id="wizard" class="swMain row">
                 <ul class="col-sm-3" style="margin-top: 26px;">
                     <li>
                         <a href="#step-1">
                             <span class="stepDesc">
-                                <small>Your Organization</small> </span>
+                                <small>Event Detail</small> </span>
                         </a>
                     </li>
                     <li>
                         <a href="#step-2">
                             <span class="stepDesc">
-                                <small>Your Own Profile</small> </span>
+                                <small>Choose Template</small> </span>
                         </a>
                     </li>
                     <li>
                         <a href="#step-3">
                             <span class="stepDesc">
-                                <small>Your Authentication</small> </span>
+                                <small>Preview Template (Skip aja)</small> </span>
                         </a>
                     </li>
                     <li>
@@ -82,15 +86,49 @@
                     </div>
 
                     <div id="step-1">
-                        <h3 class="StepTitle">Organization Profile</h3>
+                        <h3 class="StepTitle">Event Detail</h3>
+
+                        <div class="form-group">
+                            <div class="col-sm-2 col-sm-offset-8">
+                                <button class="btn btn-blue next-step btn-block">
+                                    Next <i class="fa fa-arrow-circle-right"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="step-2">
-                        <h3 class="StepTitle">Personal Data</h3>
+                        <h3 class="StepTitle">Choose Template</h3>
+
+                        <div class="form-group">
+                            <div class="col-sm-2 col-sm-offset-3">
+                                <button class="btn btn-light-grey back-step btn-block">
+                                    <i class="fa fa-circle-arrow-left"></i> Back
+                                </button>
+                            </div>
+                            <div class="col-sm-2 col-sm-offset-3">
+                                <button class="btn btn-blue next-step btn-block">
+                                    Next <i class="fa fa-arrow-circle-right"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                  
                     <div id="step-3">
-                        <h3 class="StepTitle">Account</h3>
+                        <h3 class="StepTitle">Preview Template</h3>
+
+                        <div class="form-group">
+                            <div class="col-sm-2 col-sm-offset-3">
+                                <button class="btn btn-light-grey back-step btn-block">
+                                    <i class="fa fa-circle-arrow-left"></i> Back
+                                </button>
+                            </div>
+                            <div class="col-sm-2 col-sm-offset-3">
+                                <button class="btn btn-blue next-step btn-block">
+                                    Next <i class="fa fa-arrow-circle-right"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="step-4">
@@ -169,7 +207,7 @@
                         <div class="form-group">
                             <div class="col-md-2 col-md-offset-8">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Register
+                                    <i class="fa fa-btn fa-user"></i>Finish
                                 </button>
                             </div>
                         </div>

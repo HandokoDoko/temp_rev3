@@ -65,6 +65,7 @@ var FormWizard = function () {
                     email: true
                 },
                 orgEmail: {
+                    required: true,
                     email: true
                 },
                 password: {
