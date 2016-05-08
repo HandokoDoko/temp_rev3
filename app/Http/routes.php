@@ -18,13 +18,16 @@ Route::get('/', function () {
 
 Route::auth();
 
-Route::group(['middleware' => ['web']], function () {
+/*Route::group(['middleware' => ['web']], function () {
     Route::resource('/home','CertivyController',['only' => [
     'index', 'show'
 	]]);
+});*/
+
+Route::group(['middleware'=>['web']],function(){
+	Route::resource('/home','CertivyController');
 });
 
-//Route::resource('/home','CertivyController');
 
 
 Route::group(['middleware'=>['web']],function(){

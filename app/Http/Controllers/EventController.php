@@ -20,11 +20,13 @@ class EventController extends Controller
     }
 
     public function index(){
-        return redirect('/home');
+        $events = Home::all();
+        $a = 0;
+        return view('event.index', ['events' => $events,'no' => $a]);
     }
 
     public function create(){
-    	return view('event.form');
+        return view('event.form');
     }
     public function store(Request $request)
     {
@@ -34,12 +36,13 @@ class EventController extends Controller
 
             ]);*/
 
+
     }
     public function edit($id){
         $events=Home::find($id);
         if(!$events){
             abort(404);
         }
-        return view('event.index')->with('events',$events);
+        return view('event.edit')->with('events',$events);
     }
 }

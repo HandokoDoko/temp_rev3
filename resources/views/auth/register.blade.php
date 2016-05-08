@@ -133,20 +133,6 @@
                             @endif
                         </div>
                     </div>
-                    <div class="form-group{{ $errors->has('orgEmail') ? ' has-error' : '' }}">
-                        <label class="col-md-3 control-label">
-                            Email Address <span class="symbol required"></span>
-                        </label>
-                        <div class="col-md-7">
-                            <input type="email" class="form-control" name="orgEmail" value="{{ old('orgEmail') }}">
-
-                            @if ($errors->has('orgEmail'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('orgEmail') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-                    </div>
 
                     <div class="form-group{{ $errors->has('orgPhone') ? ' has-error' : '' }}">
                         <label class="col-sm-3 control-label">

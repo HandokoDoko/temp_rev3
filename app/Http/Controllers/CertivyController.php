@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Home;
 use App\User;
 use App\Http\Requests;
-use app\model;
+use App\UserProfile;
 use Image;
 
 class CertivyController extends Controller
@@ -84,9 +84,8 @@ class CertivyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
 
-        $user = User::find($id);
+        $user = UserProfile::find($id);
 
         if($request->hasFile('photo'))
         {
@@ -114,11 +113,6 @@ class CertivyController extends Controller
 
         $user->save();
         return redirect('home');
-    }
-
-    public function updateImage(Request $request, $id)
-    {
-        //
     }
 
     /**

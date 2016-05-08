@@ -16,7 +16,7 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id');
             $table->string('eventName');
             $table->string('eventSpeaking')->nullable();
-            $table->string('date');
+            $table->date('eventDate');
             $table->boolean('confirm');
             $table->bigInteger('template');
             $table->string('signature')->nullable();

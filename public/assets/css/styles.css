@@ -6836,3 +6836,7 @@ body.error-full-page {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+body > .wrapper > .container {
+  min-height: 550px;
+}

@@ -37,10 +37,15 @@
                                     <h4>{{ Auth::user()->name }}</h4>
                                     <div class="fileupload fileupload-new" data-provides="fileupload">
                                         <div class="user-image">
-                                            <div class="fileupload-new thumbnail"><img src="images/{{ Auth::user()->photo  }}" alt=""></div>
+                                            <div class="fileupload-new thumbnail"><img src="{{ asset('') }}assets/img/avatar-1-xl.jpg" alt=""></div>
                                             <div class="fileupload-preview fileupload-exists thumbnail"></div>
                                             <div class="user-image-buttons">
-                                                <a href="#panel_edit_account" class="show-tab btn btn-azure btn-file btn-sm"><i class="fa fa-pencil edit-user-info"></i></a>
+                                                <span class="btn btn-azure btn-file btn-sm"><span class="fileupload-new"><i class="fa fa-pencil"></i></span><span class="fileupload-exists"><i class="fa fa-pencil"></i></span>
+                                                    <input type="file">
+                                                </span>
+                                                <a href="#" class="btn fileupload-exists btn-red btn-sm" data-dismiss="fileupload">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -48,80 +53,81 @@
                                 <table class="table table-condensed table-hover">
                                     <thead>
                                         <tr>
-                                            <th colspan="3">Organization Info</th>
+                                            <th colspan="3">Organization Information</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                           <td>Name</td>
+                                            <td>Name</td>
                                             <td>{{ Auth::user()->orgName }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>Email  </td>
+                                            <td>email</td>
                                             <td>{{ Auth::user()->orgEmail }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>Phone </td>
+                                            <td>phone</td>
                                             <td>{{ Auth::user()->orgPhone }}</td>
-                                            <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Country </td>
-                                            <td>{{ Auth::user()->orgCountry }}</td>
-                                            <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>City </td>
-                                            <td>{{ Auth::user()->orgCity }}</td>
-                                            <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>address </td>
-                                            <td>{{ Auth::user()->orgAddress }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                 <table class="table table-condensed table-hover">
+                                <table class="table table-condensed table-hover">
                                     <thead>
                                         <tr>
-                                            <th colspan="3">Account</th>
+                                            <th colspan="3">Personal </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Name </td>
-                                            <td>{{ Auth::user()->name }}</td>
+                                            <td>Position</td>
+                                            <td>UI Designer</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>Gender  </td>
-                                            <td>{{ Auth::user()->gender }}</td>
+                                            <td>Last Logged In</td>
+                                            <td>56 min</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>User Name  </td>
-                                            <td>{{ Auth::user()->userName }}</td>
+                                            <td>Position</td>
+                                            <td>Senior Marketing Manager</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>Email </td>
-                                            <td>{{ Auth::user()->email }}</td>
+                                            <td>Supervisor</td>
+                                            <td>
+                                            <a href="#">
+                                                Kenneth Ross
+                                            </a></td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td>Phone </td>
-                                            <td>{{ Auth::user()->phone }}</td>
+                                            <td>Status</td>
+                                            <td><span class="label label-sm label-info">Administrator</span></td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
-                                        <!--
+                                    </tbody>
+                                </table>
+                                <table class="table table-condensed table-hover">
+                                    <thead>
                                         <tr>
-                                            <td>Password </td>
-                                            <td><span class="label label-sm label-info">Change Password</span></td>
+                                            <th colspan="3">Additional information</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Birth</td>
+                                            <td>21 October 1982</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                                        </tr>-->
+                                        </tr>
+                                        <tr>
+                                            <td>Groups</td>
+                                            <td>New company web site development, HR Management</td>
+                                            <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -151,7 +157,6 @@
                                             <th>Date</th>
                                             <th class="hidden-xs">Speaker</th>
                                             <th class="hidden-xs" >Status</th>
-                                            <th width="150">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -169,13 +174,6 @@
                                                         <span class="label label-sm label-danger">Pending</span>
                                                     @endif
                                                 </th>
-                                                <th>
-                                                    <p>
-                                                        <a class="btn btn-red" href="#"><i class="fa fa-times fa fa-white" width="10"></i></a>
-                                                        <a class="btn btn-blue" href="event/{{ $event->id}}/edit"><i class="fa fa-info-circle"></i></a>
-                                                    </p>
-                                                </th>
-
                                             </tr>
 
                                         @endif
@@ -190,124 +188,230 @@
                 </div>
 
                 <div id="panel_edit_account" class="tab-pane fade">
-                    <form action="/home/{{Auth::user()->id}}" role="form" id="form" method="post" enctype="multipart/form-data" >
+                    <form action="#" role="form" id="form">
                         <div class="row">
+                            <div class="col-md-12">
+                                <h3>Account Info</h3>
+                                <hr>
+                            </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <div class="col-md-12">
-                                        <h3>Organization Info</h3>
-                                        <hr/>
-                                    </div>
                                     <label class="control-label">
-                                        Name
+                                        First Name
                                     </label>
-                                    <input type="text" value="{{ Auth::user()->orgName }}" class="form-control" id="orgName" name="orgName" value="{{ old('orgName') }}">
+                                    <input type="text" placeholder="Peter" class="form-control" id="firstname" name="firstname">
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">
-                                        Email
+                                        Last Name
                                     </label>
-                                    <input type="email" value="{{ Auth::user()->orgEmail }}" class="form-control" id="orgEmail" name="orgEmail" >
+                                    <input type="text" placeholder="Clark" class="form-control" id="lastname" name="lastname">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Email Address
+                                    </label>
+                                    <input type="email" placeholder="peter@example.com" class="form-control" id="email" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">
                                         Phone
                                     </label>
-                                    <input type="text" value="{{ Auth::user()->orgPhone }}" class="form-control" id="phone" name="orgPhone">
+                                    <input type="email" placeholder="(641)-734-4763" class="form-control" id="phone" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">
-                                        Country
+                                        Password
                                     </label>
-                                    <input type="text" value="{{ Auth::user()->orgCountry }}" class="form-control" id="orgCountry" name="orgCountry">
+                                    <input type="password" placeholder="password" class="form-control" name="password" id="password">
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">
-                                        City
+                                        Confirm Password
                                     </label>
-                                    <input type="text" value="{{ Auth::user()->orgCity }}" class="form-control" id="orgCity" name="orgCity">
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">
-                                        Address
-                                    </label>
-                                    <input type="text" value="{{ Auth::user()->orgAddress }}" class="form-control" id="orgAddress" name="orgAddress">
+                                    <input type="password"  placeholder="password" class="form-control" id="password_again" name="password_again">
                                 </div>
                             </div>
                             <div class="col-md-6">
+                                <div class="form-group connected-group">
+                                    <label class="control-label">
+                                        Date of Birth
+                                    </label>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <select name="dd" id="dd" class="form-control" >
+                                                <option value="">DD</option>
+                                                <option value="01">1</option>
+                                                <option value="02">2</option>
+                                                <option value="03">3</option>
+                                                <option value="04">4</option>
+                                                <option value="05">5</option>
+                                                <option value="06">6</option>
+                                                <option value="07">7</option>
+                                                <option value="08">8</option>
+                                                <option value="09">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21" selected="selected">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <select name="mm" id="mm" class="form-control" >
+                                                <option value="">MM</option>
+                                                <option value="01">1</option>
+                                                <option value="02">2</option>
+                                                <option value="03">3</option>
+                                                <option value="04">4</option>
+                                                <option value="05">5</option>
+                                                <option value="06">6</option>
+                                                <option value="07">7</option>
+                                                <option value="08">8</option>
+                                                <option value="09">9</option>
+                                                <option value="10" selected="selected">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" placeholder="1982" id="yyyy" name="yyyy" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
-                                    <div class="col-md-12">
-                                        <h3>Account</h3>
-                                        <hr/>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Name
-                                        </label>
-                                        <input type="text" value="{{ Auth::user()->name }}" class="form-control" id="name" name="name">
-                                    </div>
                                     <label class="control-label">
                                         Gender
                                     </label>
                                     <div>
                                         <label class="radio-inline">
-                                            <input type="radio" class="grey" value="Female" name="gender" id="gender_female">
+                                            <input type="radio" class="grey" value="" name="gender" id="gender_female">
                                             Female
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" class="grey" value="Male" name="gender"  id="gender_male" checked="checked">
+                                            <input type="radio" class="grey" value="" name="gender"  id="gender_male" checked="checked">
                                             Male
                                         </label>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Phone
-                                        </label>
-                                        <input type="text" value="{{ Auth::user()->phone }}" class="form-control" id="phone" name="phone">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            User Name
-                                        </label>
-                                        <input type="text" value="{{ Auth::user()->userName }}" class="form-control" id="userName" name="userName">
-                                    </div>
-                                     <div class="form-group">
-                                        <label class="control-label">
-                                            Email
-                                        </label>
-                                        <input type="text" value="{{ Auth::user()->email }}" class="form-control" id="email" name="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Password
-                                        </label>
-                                        <input type="password" placeholder="password" class="form-control" name="password" id="password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            Confirm Password
-                                        </label>
-                                        <input type="password"  placeholder="password" class="form-control" id="   password_again" name="password_again">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>
-                                            Image Upload
-                                        </label>
-                                        <div class="fileupload fileupload-new" data-provides="fileupload">
-                                            <div class="fileupload-new thumbnail"><img src="images/{{ Auth::user()->photo  }}" alt="">
-                                            </div>
-                                            <div class="fileupload-preview fileupload-exists thumbnail"></div>
-                                            <div class="user-edit-image-buttons">
-                                                <span class="btn btn-azure btn-file"><span class="fileupload-new"><i class="fa fa-picture"></i> Select image</span><span class="fileupload-exists"><i class="fa fa-picture"></i> Change</span>
-                                                    <input type="file" name="photo" alt="">
-                                                </span>
-                                                <a href="#" class="btn fileupload-exists btn-red" data-dismiss="fileupload">
-                                                    <i class="fa fa-times"></i> Remove
-                                                </a>
-                                            </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">
+                                                Zip Code
+                                            </label>
+                                            <input class="form-control" placeholder="12345" type="text" name="zipcode" id="zipcode">
                                         </div>
                                     </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label class="control-label">
+                                                City
+                                            </label>
+                                            <input class="form-control tooltips" placeholder="London (UK)" type="text" data-original-title="We'll display it when you write reviews" data-rel="tooltip"  title="" data-placement="top" name="city" id="city">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        Image Upload
+                                    </label>
+                                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                                        <div class="fileupload-new thumbnail"><img src="{{ asset('') }}assets/img/avatar-1-xl.jpg" alt="">
+                                        </div>
+                                        <div class="fileupload-preview fileupload-exists thumbnail"></div>
+                                        <div class="user-edit-image-buttons">
+                                            <span class="btn btn-azure btn-file"><span class="fileupload-new"><i class="fa fa-picture"></i> Select image</span><span class="fileupload-exists"><i class="fa fa-picture"></i> Change</span>
+                                                <input type="file">
+                                            </span>
+                                            <a href="#" class="btn fileupload-exists btn-red" data-dismiss="fileupload">
+                                                <i class="fa fa-times"></i> Remove
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Additional Info</h3>
+                                <hr>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Twitter
+                                    </label>
+                                    <span class="input-icon">
+                                        <input class="form-control" type="text" placeholder="Text Field">
+                                        <i class="fa fa-twitter"></i> </span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Facebook
+                                    </label>
+                                    <span class="input-icon">
+                                        <input class="form-control" type="text" placeholder="Text Field">
+                                        <i class="fa fa-facebook"></i> </span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Google Plus
+                                    </label>
+                                    <span class="input-icon">
+                                        <input class="form-control" type="text" placeholder="Text Field">
+                                        <i class="fa fa-google-plus"></i> </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Github
+                                    </label>
+                                    <span class="input-icon">
+                                        <input class="form-control" type="text" placeholder="Text Field">
+                                        <i class="fa fa-github"></i> </span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Linkedin
+                                    </label>
+                                    <span class="input-icon">
+                                        <input class="form-control" type="text" placeholder="Text Field">
+                                        <i class="fa fa-linkedin"></i> </span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Skype
+                                    </label>
+                                    <span class="input-icon">
+                                        <input class="form-control" type="text" placeholder="Text Field">
+                                        <i class="fa fa-skype"></i> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    Required Fields
+                                    <hr>
                                 </div>
                             </div>
                         </div>
@@ -322,8 +426,6 @@
                                     Cancel
                                 </a>
                             </div>
-                            <input type="hidden" name="_method" value="put"></input>
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}"></input>
                             <div class="col-md-4">
                                 <button class="btn btn-green btn-block" type="submit">
                                     Update <i class="fa fa-arrow-circle-right"></i>
