@@ -472,7 +472,6 @@ class Swift_Mime_ContentEncoder_QpContentEncoderTest extends \SwiftMailerTestCas
         $encoder->charsetChanged('windows-1252');
     }
 
-<<<<<<< HEAD
     public function testTextIsPreWrapped()
     {
         $encoder = $this->createEncoder();
@@ -492,8 +491,6 @@ class Swift_Mime_ContentEncoder_QpContentEncoderTest extends \SwiftMailerTestCas
             );
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     // -- Creation Methods
 
     private function _createCharacterStream($stub = false)
@@ -501,18 +498,12 @@ class Swift_Mime_ContentEncoder_QpContentEncoderTest extends \SwiftMailerTestCas
         return $this->getMockery('Swift_CharacterStream')->shouldIgnoreMissing();
     }
 
-<<<<<<< HEAD
     private function createEncoder()
     {
         $factory = new Swift_CharacterReaderFactory_SimpleCharacterReaderFactory();
         $charStream = new Swift_CharacterStream_NgCharacterStream($factory, 'utf-8');
 
         return new Swift_Mime_ContentEncoder_QpContentEncoder($charStream);
-=======
-    private function _createEncoder($charStream)
-    {
-        return new Swift_Mime_HeaderEncoder_QpHeaderEncoder($charStream);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     private function _createOutputByteStream($stub = false)

@@ -85,7 +85,6 @@ class ListenerMakeCommand extends GeneratorCommand
     }
 
     /**
-<<<<<<< HEAD
      * Determine if the class already exists.
      *
      * @param  string  $rawName
@@ -97,8 +96,6 @@ class ListenerMakeCommand extends GeneratorCommand
     }
 
     /**
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Get the default namespace for the class.
      *
      * @param  string  $rootNamespace

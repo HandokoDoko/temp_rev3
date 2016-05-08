@@ -86,13 +86,8 @@ class DatabaseUserProvider implements UserProvider
     public function updateRememberToken(UserContract $user, $token)
     {
         $this->conn->table($this->table)
-<<<<<<< HEAD
                 ->where('id', $user->getAuthIdentifier())
                 ->update(['remember_token' => $token]);
-=======
-            ->where('id', $user->getAuthIdentifier())
-            ->update(['remember_token' => $token]);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

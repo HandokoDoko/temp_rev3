@@ -32,10 +32,6 @@ class IsSelected extends FormFieldConstraint
     /**
      * Get the selected value of a select field or radio group.
      *
-<<<<<<< HEAD
-=======
-     * @param  string  $selector
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @param  \Symfony\Component\DomCrawler\Crawler  $crawler
      * @return array
      *

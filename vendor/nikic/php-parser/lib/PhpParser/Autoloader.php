@@ -31,11 +31,7 @@ class Autoloader
      */
     static public function autoload($class) {
         if (0 === strpos($class, 'PhpParser\\')) {
-<<<<<<< HEAD
             $fileName = __DIR__ . strtr(substr($class, 9), '\\', '/') . '.php';
-=======
-            $fileName = dirname(__DIR__) . '/' . strtr($class, '\\', '/') . '.php';
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             if (file_exists($fileName)) {
                 require $fileName;
             }

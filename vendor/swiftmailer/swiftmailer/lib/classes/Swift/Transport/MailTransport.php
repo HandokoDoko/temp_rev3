@@ -156,27 +156,16 @@ class Swift_Transport_MailTransport implements Swift_Transport
         if ("\r\n" != PHP_EOL) {
             // Non-windows (not using SMTP)
             $headers = str_replace("\r\n", PHP_EOL, $headers);
-<<<<<<< HEAD
             $subject = str_replace("\r\n", PHP_EOL, $subject);
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $body = str_replace("\r\n", PHP_EOL, $body);
         } else {
             // Windows, using SMTP
             $headers = str_replace("\r\n.", "\r\n..", $headers);
-<<<<<<< HEAD
             $subject = str_replace("\r\n.", "\r\n..", $subject);
             $body = str_replace("\r\n.", "\r\n..", $body);
         }
 
         if ($this->_invoker->mail($to, $subject, $body, $headers, $this->_formatExtraParams($this->_extraParams, $reversePath))) {
-=======
-            $body = str_replace("\r\n.", "\r\n..", $body);
-        }
-
-        if ($this->_invoker->mail($to, $subject, $body, $headers,
-            sprintf($this->_extraParams, $reversePath))) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             if ($evt) {
                 $evt->setResult(Swift_Events_SendEvent::RESULT_SUCCESS);
                 $evt->setFailedRecipients($failedRecipients);
@@ -246,7 +235,6 @@ class Swift_Transport_MailTransport implements Swift_Transport
 
         return $path;
     }
-<<<<<<< HEAD
 
     /**
      * Return php mail extra params to use for invoker->mail.
@@ -264,6 +252,4 @@ class Swift_Transport_MailTransport implements Swift_Transport
 
         return !empty($extraParams) ? $extraParams : null;
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

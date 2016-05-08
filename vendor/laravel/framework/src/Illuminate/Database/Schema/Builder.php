@@ -98,11 +98,8 @@ class Builder
      */
     public function getColumnType($table, $column)
     {
-<<<<<<< HEAD
         $table = $this->connection->getTablePrefix().$table;
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         return $this->connection->getDoctrineColumn($table, $column)->getType()->getName();
     }
 

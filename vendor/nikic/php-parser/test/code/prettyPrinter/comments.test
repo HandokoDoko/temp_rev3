@@ -27,10 +27,6 @@ function justForIndentation()
        Even more text. */
     $foo;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 -----
 function justForIndentation()
 {
@@ -56,7 +52,6 @@ function justForIndentation()
        More text.
        Even more text. */
     $foo;
-<<<<<<< HEAD
 }
 -----
 <?php
@@ -69,6 +64,4 @@ function test()
 function test()
 {
     // empty
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

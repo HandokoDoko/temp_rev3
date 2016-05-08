@@ -10,7 +10,6 @@
         }
     ],
     "require": {
-<<<<<<< HEAD
         "php": "^5.3.3|^7.0"
     },
     "require-dev": {
@@ -18,17 +17,6 @@
         "squizlabs/php_codesniffer": "~1.5",
         "ext-intl": "*"
     },
-=======
-        "php": ">=5.3.3"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~4.0",
-        "squizlabs/php_codesniffer": "~1.5"
-    },
-    "suggest": {
-         "ext-intl": "*"
-     },
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     "autoload": {
         "psr-4": {
             "Faker\\": "src/Faker/"
@@ -36,20 +24,12 @@
     },
     "autoload-dev": {
         "psr-4": {
-<<<<<<< HEAD
             "Faker\\Test\\": "test/Faker/"
-=======
-            "Faker\\PHPUnit\\": "test/Faker/"
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
     },
     "extra": {
         "branch-alias": {
-<<<<<<< HEAD
             "dev-master": "1.6.0"
-=======
-            "dev-master": "1.5.x-dev"
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
     }
 }

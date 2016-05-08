@@ -29,12 +29,9 @@ array(
         )
         stmts: array(
         )
-<<<<<<< HEAD
         comments: array(
             0: // foreach on variable
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Stmt_Foreach(
         expr: Expr_Variable(
@@ -129,12 +126,9 @@ array(
         )
         stmts: array(
         )
-<<<<<<< HEAD
         comments: array(
             0: // foreach on expression
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     7: Stmt_Foreach(
         expr: Expr_Variable(
@@ -147,11 +141,8 @@ array(
         )
         stmts: array(
         )
-<<<<<<< HEAD
         comments: array(
             0: // alternative syntax
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
 )

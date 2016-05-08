@@ -102,12 +102,9 @@ array(
             )
         )
         finallyStmts: null
-<<<<<<< HEAD
         comments: array(
             0: // no finally
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     2: Stmt_TryCatch(
         stmts: array(
@@ -116,11 +113,8 @@ array(
         )
         finallyStmts: array(
         )
-<<<<<<< HEAD
         comments: array(
             0: // no catch
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
 )

@@ -58,13 +58,8 @@ class CliDumper extends AbstractDumper
     {
         parent::__construct($output, $charset);
 
-<<<<<<< HEAD
         if ('\\' === DIRECTORY_SEPARATOR && 'ON' !== @getenv('ConEmuANSI') && 'xterm' !== @getenv('TERM')) {
             // Use only the base 16 xterm colors when using ANSICON or standard Windows 10 CLI 
-=======
-        if ('\\' === DIRECTORY_SEPARATOR && false !== @getenv('ANSICON')) {
-            // Use only the base 16 xterm colors when using ANSICON
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $this->setStyles(array(
                 'default' => '31',
                 'num' => '1;34',
@@ -174,11 +169,7 @@ class CliDumper extends AbstractDumper
             $this->dumpLine($cursor->depth, true);
         } else {
             $attr = array(
-<<<<<<< HEAD
                 'length' => 0 <= $cut ? mb_strlen($str, 'UTF-8') + $cut : 0,
-=======
-                'length' => 0 <= $cut ? iconv_strlen($str, 'UTF-8') + $cut : 0,
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 'binary' => $bin,
             );
             $str = explode("\n", $str);
@@ -204,13 +195,8 @@ class CliDumper extends AbstractDumper
                 if ($i < $m) {
                     $str .= "\n";
                 }
-<<<<<<< HEAD
                 if (0 < $this->maxStringWidth && $this->maxStringWidth < $len = mb_strlen($str, 'UTF-8')) {
                     $str = mb_substr($str, 0, $this->maxStringWidth, 'UTF-8');
-=======
-                if (0 < $this->maxStringWidth && $this->maxStringWidth < $len = iconv_strlen($str, 'UTF-8')) {
-                    $str = iconv_substr($str, 0, $this->maxStringWidth, 'UTF-8');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                     $lineCut = $len - $this->maxStringWidth;
                 }
                 if ($m && 0 < $cursor->depth) {
@@ -460,16 +446,12 @@ class CliDumper extends AbstractDumper
         }
 
         if ('\\' === DIRECTORY_SEPARATOR) {
-<<<<<<< HEAD
             static::$defaultColors = @(
                 0 >= version_compare('10.0.10586', PHP_WINDOWS_VERSION_MAJOR.'.'.PHP_WINDOWS_VERSION_MINOR.'.'.PHP_WINDOWS_VERSION_BUILD)
                 || false !== getenv('ANSICON')
                 || 'ON' === getenv('ConEmuANSI')
                 || 'xterm' === getenv('TERM')
             );
-=======
-            static::$defaultColors = @(false !== getenv('ANSICON') || 'ON' === getenv('ConEmuANSI') || 'xterm' === getenv('TERM'));
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         } elseif (function_exists('posix_isatty')) {
             $h = stream_get_meta_data($this->outputStream) + array('wrapper_type' => null);
             $h = 'Output' === $h['stream_type'] && 'PHP' === $h['wrapper_type'] ? fopen('php://stdout', 'wb') : $this->outputStream;

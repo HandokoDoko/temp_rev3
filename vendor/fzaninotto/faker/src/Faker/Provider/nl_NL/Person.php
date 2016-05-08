@@ -99,11 +99,7 @@ class Person extends \Faker\Provider\Person
         'van Hostaden', 'Houdijk', 'van \'t Houteveen', 'Huberts', 'Huel', 'Huijben', 'Huijbrechts', 'Huijs',
         'Huijzing', 'Huisman', 'Huls', 'Hulshouts', 'Hulskes', 'Hulst', 'van Hulten', 'Huurdeman', 'van het Heerenveen',
         'Jaceps', 'Jacobi', 'Jacobs', 'Jacquot', 'de Jager', 'Jans', 'Jansdr', 'Janse', 'Jansen', 'Jansen', 'Jansse',
-<<<<<<< HEAD
         'Janssen', 'Janssens', 'Jasper dr', 'Jdotte', 'Jeggij', 'Jekel', 'Jerusalem', 'Jochems', 'de Jode Vastraedsd',
-=======
-        'Janssen', 'Janssens', 'Jasper dr.', 'Jdotte', 'Jeggij', 'Jekel', 'Jerusalem', 'Jochems', 'de Jode Vastraedsd',
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         'Jones', 'de Jong', 'Jonkman', 'Joosten', 'Jorlink', 'Jorrisen', 'van Jumiège', 'Jurrijens', 'Köster',
         'van der Kaay', 'de Kale', 'Kallen', 'Kalman', 'Kamp', 'Kamper', 'Karels', 'Kas', 'van Kasteelen', 'Kathagen',
         'Keijser', 'de Keijser', 'Keijzer', 'de Keijzer', 'Keltenie', 'van Kempen', 'Kerkhof', 'Ketel', 'Ketting',

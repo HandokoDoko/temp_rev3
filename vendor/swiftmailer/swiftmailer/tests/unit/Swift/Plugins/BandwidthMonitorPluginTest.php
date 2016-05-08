@@ -2,13 +2,10 @@
 
 class Swift_Plugins_BandwidthMonitorPluginTest extends \PHPUnit_Framework_TestCase
 {
-<<<<<<< HEAD
     private $_monitor;
 
     private $_bytes = 0;
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function setUp()
     {
         $this->_monitor = new Swift_Plugins_BandwidthMonitorPlugin();
@@ -124,10 +121,6 @@ class Swift_Plugins_BandwidthMonitorPluginTest extends \PHPUnit_Framework_TestCa
         return $msg;
     }
 
-<<<<<<< HEAD
-=======
-    private $_bytes = 0;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function _write($is)
     {
         for ($i = 0; $i < $this->_bytes; ++$i) {

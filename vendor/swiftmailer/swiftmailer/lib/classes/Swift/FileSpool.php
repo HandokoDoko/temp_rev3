@@ -39,11 +39,7 @@ class Swift_FileSpool extends Swift_ConfigurableSpool
 
         if (!file_exists($this->_path)) {
             if (!mkdir($this->_path, 0777, true)) {
-<<<<<<< HEAD
                 throw new Swift_IoException(sprintf('Unable to create path "%s".', $this->_path));
-=======
-                throw new Swift_IoException('Unable to create Path ['.$this->_path.']');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             }
         }
     }
@@ -112,11 +108,7 @@ class Swift_FileSpool extends Swift_ConfigurableSpool
             }
         }
 
-<<<<<<< HEAD
         throw new Swift_IoException(sprintf('Unable to create a file for enqueuing Message in "%s".', $this->_path));
-=======
-        throw new Swift_IoException('Unable to create a file for enqueuing Message');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

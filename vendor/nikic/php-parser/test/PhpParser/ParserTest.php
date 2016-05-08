@@ -3,12 +3,9 @@
 namespace PhpParser;
 
 use PhpParser\Comment;
-<<<<<<< HEAD
 use PhpParser\Node\Expr;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Scalar\String_;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 abstract class ParserTest extends \PHPUnit_Framework_TestCase
 {
@@ -60,11 +57,7 @@ EOC;
         $this->assertInstanceOf('PhpParser\Node\Stmt\Function_', $fn);
         $this->assertEquals(array(
             'comments' => array(
-<<<<<<< HEAD
                 new Comment\Doc('/** Doc comment */', 2, 6),
-=======
-                new Comment\Doc('/** Doc comment */', 2),
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             ),
             'startLine' => 3,
             'endLine' => 7,
@@ -86,13 +79,8 @@ EOC;
         $this->assertInstanceOf('PhpParser\Node\Stmt\Echo_', $echo);
         $this->assertEquals(array(
             'comments' => array(
-<<<<<<< HEAD
                 new Comment("// Line\n", 4, 49),
                 new Comment("// Comments\n", 5, 61),
-=======
-                new Comment("// Line\n", 4),
-                new Comment("// Comments\n", 5),
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             ),
             'startLine' => 6,
             'endLine' => 6,
@@ -120,7 +108,6 @@ EOC;
         $parser = $this->getParser($lexer);
         $parser->parse('dummy');
     }
-<<<<<<< HEAD
 
     /**
      * @dataProvider provideTestKindAttributes
@@ -173,8 +160,6 @@ EOC;
             array("exit(1)", ['kind' => Expr\Exit_::KIND_EXIT]),
         );
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }
 
 class InvalidTokenLexer extends Lexer {

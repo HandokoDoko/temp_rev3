@@ -128,13 +128,7 @@ class Swift_Mime_MimePart extends Swift_Mime_SimpleMimeEntity
      */
     public function getDelSp()
     {
-<<<<<<< HEAD
         return 'yes' == $this->_getHeaderParameter('Content-Type', 'delsp') ? true : false;
-=======
-        return ($this->_getHeaderParameter('Content-Type', 'delsp') == 'yes')
-            ? true
-            : false;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -200,11 +194,7 @@ class Swift_Mime_MimePart extends Swift_Mime_SimpleMimeEntity
     protected function _convertString($string)
     {
         $charset = strtolower($this->getCharset());
-<<<<<<< HEAD
         if (!in_array($charset, array('utf-8', 'iso-8859-1', 'iso-8859-15', ''))) {
-=======
-        if (!in_array($charset, array('utf-8', 'iso-8859-1', ''))) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             // mb_convert_encoding must be the first one to check, since iconv cannot convert some words.
             if (function_exists('mb_convert_encoding')) {
                 $string = mb_convert_encoding($string, $charset, 'utf-8');

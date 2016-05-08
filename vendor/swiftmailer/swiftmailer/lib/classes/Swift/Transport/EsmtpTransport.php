@@ -42,10 +42,7 @@ class Swift_Transport_EsmtpTransport extends Swift_Transport_AbstractSmtpTranspo
         'blocking' => 1,
         'tls' => false,
         'type' => Swift_Transport_IoBuffer::TYPE_SOCKET,
-<<<<<<< HEAD
         'stream_context_options' => array(),
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         );
 
     /**
@@ -143,10 +140,7 @@ class Swift_Transport_EsmtpTransport extends Swift_Transport_AbstractSmtpTranspo
      */
     public function setEncryption($encryption)
     {
-<<<<<<< HEAD
         $encryption = strtolower($encryption);    
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         if ('tls' == $encryption) {
             $this->_params['protocol'] = 'tcp';
             $this->_params['tls'] = true;
@@ -169,7 +163,6 @@ class Swift_Transport_EsmtpTransport extends Swift_Transport_AbstractSmtpTranspo
     }
 
     /**
-<<<<<<< HEAD
      * Sets the stream context options.
      *
      * @param array $options
@@ -194,8 +187,6 @@ class Swift_Transport_EsmtpTransport extends Swift_Transport_AbstractSmtpTranspo
     }
 
     /**
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Sets the source IP.
      *
      * @param string $source
@@ -232,12 +223,8 @@ class Swift_Transport_EsmtpTransport extends Swift_Transport_AbstractSmtpTranspo
         foreach ($handlers as $handler) {
             $assoc[$handler->getHandledKeyword()] = $handler;
         }
-<<<<<<< HEAD
 
         @uasort($assoc, array($this, '_sortHandlers'));
-=======
-        uasort($assoc, array($this, '_sortHandlers'));
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $this->_handlers = $assoc;
         $this->_setHandlerParams();
 

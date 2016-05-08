@@ -6,32 +6,22 @@ class Documentor
 {
     protected $generator;
 
-<<<<<<< HEAD
     /**
      * @param Generator $generator
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __construct(Generator $generator)
     {
         $this->generator = $generator;
     }
 
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function getFormatters()
     {
         $formatters = array();
         $providers = array_reverse($this->generator->getProviders());
-<<<<<<< HEAD
         $providers[]= new Provider\Base($this->generator);
-=======
-        $providers[]= new \Faker\Provider\Base($this->generator);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         foreach ($providers as $provider) {
             $providerClass = get_class($provider);
             $formatters[$providerClass] = array();

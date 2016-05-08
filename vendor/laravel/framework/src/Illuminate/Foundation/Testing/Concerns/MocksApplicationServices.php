@@ -94,7 +94,6 @@ trait MocksApplicationServices
     }
 
     /**
-<<<<<<< HEAD
      * Specify a list of observers that will not run for the given operation.
      *
      * @param  array|string  $observers
@@ -114,8 +113,6 @@ trait MocksApplicationServices
     }
 
     /**
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Filter the given events against the fired events.
      *
      * @param  array  $events
@@ -227,11 +224,7 @@ trait MocksApplicationServices
      * Check if the given class exists in an array of dispatched classes.
      *
      * @param  string  $needle
-<<<<<<< HEAD
      * @param  array  $haystack
-=======
-     * @param  array   $haystack
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @return bool
      */
     protected function wasDispatched($needle, array $haystack)

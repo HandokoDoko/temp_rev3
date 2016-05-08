@@ -97,12 +97,9 @@ array(
     5: Expr_Array(
         items: array(
         )
-<<<<<<< HEAD
         comments: array(
             0: // short array syntax
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     6: Expr_Array(
         items: array(

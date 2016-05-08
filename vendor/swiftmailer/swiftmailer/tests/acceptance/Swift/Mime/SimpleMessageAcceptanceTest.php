@@ -778,13 +778,8 @@ class Swift_Mime_SimpleMessageAcceptanceTest extends \PHPUnit_Framework_TestCase
             '--\\2'."\r\n".
             'Content-Type: image/jpeg; name=myimage.jpg'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
-<<<<<<< HEAD
             'Content-ID: <'.$cid.'>'."\r\n".
             'Content-Disposition: inline; filename=myimage.jpg'."\r\n".
-=======
-            'Content-Disposition: inline; filename=myimage.jpg'."\r\n".
-            'Content-ID: <'.$cid.'>'."\r\n".
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             "\r\n".
             preg_quote(base64_encode('<image data>'), '~').
             "\r\n\r\n".
@@ -862,13 +857,8 @@ class Swift_Mime_SimpleMessageAcceptanceTest extends \PHPUnit_Framework_TestCase
             '--\\1'."\r\n".
             'Content-Type: image/jpeg; name=myimage.jpg'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
-<<<<<<< HEAD
             'Content-ID: <'.$cid.'>'."\r\n".
             'Content-Disposition: inline; filename=myimage.jpg'."\r\n".
-=======
-            'Content-Disposition: inline; filename=myimage.jpg'."\r\n".
-            'Content-ID: <'.$cid.'>'."\r\n".
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             "\r\n".
             preg_quote(base64_encode('<image data>'), '~').
             "\r\n\r\n".
@@ -948,13 +938,8 @@ class Swift_Mime_SimpleMessageAcceptanceTest extends \PHPUnit_Framework_TestCase
             '--\\1'."\r\n".
             'Content-Type: image/jpeg; name=myimage.jpg'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
-<<<<<<< HEAD
             'Content-ID: <'.$cid.'>'."\r\n".
             'Content-Disposition: inline; filename=myimage.jpg'."\r\n".
-=======
-            'Content-Disposition: inline; filename=myimage.jpg'."\r\n".
-            'Content-ID: <'.$cid.'>'."\r\n".
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             "\r\n".
             preg_quote(base64_encode('<image data>'), '~').
             "\r\n\r\n".

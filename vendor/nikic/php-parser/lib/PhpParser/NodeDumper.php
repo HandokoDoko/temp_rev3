@@ -4,7 +4,6 @@ namespace PhpParser;
 
 class NodeDumper
 {
-<<<<<<< HEAD
     private $dumpComments;
 
     /**
@@ -17,8 +16,6 @@ class NodeDumper
         $this->dumpComments = !empty($options['dumpComments']);
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /**
      * Dumps a node or array.
      *
@@ -46,13 +43,10 @@ class NodeDumper
                     $r .= str_replace("\n", "\n    ", $this->dump($value));
                 }
             }
-<<<<<<< HEAD
 
             if ($this->dumpComments && $comments = $node->getAttribute('comments')) {
                 $r .= "\n    comments: " . str_replace("\n", "\n    ", $this->dump($comments));
             }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         } elseif (is_array($node)) {
             $r = 'array(';
 
@@ -71,11 +65,8 @@ class NodeDumper
                     $r .= str_replace("\n", "\n    ", $this->dump($value));
                 }
             }
-<<<<<<< HEAD
         } elseif ($node instanceof Comment) {
             return $node->getReformattedText();
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         } else {
             throw new \InvalidArgumentException('Can only dump nodes and arrays.');
         }

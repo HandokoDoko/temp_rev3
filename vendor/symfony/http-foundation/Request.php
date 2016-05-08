@@ -709,11 +709,7 @@ class Request
      * Order of precedence: PATH (routing placeholders or custom attributes), GET, BODY
      *
      * @param string $key     the key
-<<<<<<< HEAD
      * @param mixed  $default the default value if the parameter key does not exist
-=======
-     * @param mixed  $default the default value
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @return mixed
      */
@@ -1374,11 +1370,7 @@ class Request
      * Here is the process to determine the format:
      *
      *  * format defined by the user (with setRequestFormat())
-<<<<<<< HEAD
      *  * _format request attribute
-=======
-     *  * _format request parameter
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *  * $default
      *
      * @param string $default The default format

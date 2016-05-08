@@ -19,7 +19,6 @@ array(
             parts: array(
                 0: A
             )
-<<<<<<< HEAD
             comments: array(
                 0: // property name variations
             )
@@ -28,10 +27,6 @@ array(
         comments: array(
             0: // property name variations
         )
-=======
-        )
-        name: b
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Expr_StaticPropertyFetch(
         class: Name(
@@ -59,7 +54,6 @@ array(
                 parts: array(
                     0: A
                 )
-<<<<<<< HEAD
                 comments: array(
                     0: // array access
                 )
@@ -68,20 +62,13 @@ array(
             comments: array(
                 0: // array access
             )
-=======
-            )
-            name: b
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         dim: Scalar_String(
             value: c
         )
-<<<<<<< HEAD
         comments: array(
             0: // array access
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     4: Expr_ArrayDimFetch(
         var: Expr_StaticPropertyFetch(
@@ -96,12 +83,9 @@ array(
             value: c
         )
     )
-<<<<<<< HEAD
     5: Stmt_Nop(
         comments: array(
             0: // class name variations can be found in staticCall.test
         )
     )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 )

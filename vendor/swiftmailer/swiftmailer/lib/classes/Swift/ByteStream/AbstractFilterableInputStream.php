@@ -22,11 +22,8 @@ abstract class Swift_ByteStream_AbstractFilterableInputStream implements Swift_I
 
     /**
      * StreamFilters.
-<<<<<<< HEAD
      *
      * @var Swift_StreamFilter[]
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     private $_filters = array();
 

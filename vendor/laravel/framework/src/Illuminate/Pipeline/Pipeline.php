@@ -112,7 +112,6 @@ class Pipeline implements PipelineContract
     {
         return function ($stack, $pipe) {
             return function ($passable) use ($stack, $pipe) {
-<<<<<<< HEAD
                 if ($pipe instanceof Closure) {
                     // If the pipe is an instance of a Closure, we will just call it directly but
                     // otherwise we'll resolve the pipes out of the container and call it with
@@ -135,19 +134,6 @@ class Pipeline implements PipelineContract
                 }
 
                 return call_user_func_array([$pipe, $this->method], $parameters);
-=======
-                // If the pipe is an instance of a Closure, we will just call it directly but
-                // otherwise we'll resolve the pipes out of the container and call it with
-                // the appropriate method and arguments, returning the results back out.
-                if ($pipe instanceof Closure) {
-                    return call_user_func($pipe, $passable, $stack);
-                } else {
-                    list($name, $parameters) = $this->parsePipeString($pipe);
-
-                    return call_user_func_array([$this->container->make($name), $this->method],
-                            array_merge([$passable, $stack], $parameters));
-                }
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             };
         };
     }

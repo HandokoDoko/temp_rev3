@@ -54,13 +54,7 @@ class Swift_ByteStream_ArrayByteStreamTest extends \PHPUnit_Framework_TestCase
     public function testResettingPointerAfterExhaustion()
     {
         $input = array('a', 'b', 'c');
-<<<<<<< HEAD
         $bs = $this->_createArrayStream($input); while (false !== $bs->read(1));
-=======
-        $bs = $this->_createArrayStream($input);
-
-        while (false !== $bs->read(1));
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         $bs->setReadPointer(0);
         $this->assertEquals('a', $bs->read(1),

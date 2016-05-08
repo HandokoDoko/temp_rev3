@@ -38,12 +38,9 @@ array(
         expr: Expr_Variable(
             name: a
         )
-<<<<<<< HEAD
         comments: array(
             0: // unary ops
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Expr_UnaryPlus(
         expr: Expr_Variable(
@@ -58,22 +55,16 @@ array(
     3: Expr_BinaryOp_BitwiseAnd(
         left: Expr_Variable(
             name: a
-<<<<<<< HEAD
             comments: array(
                 0: // binary ops
             )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         right: Expr_Variable(
             name: b
         )
-<<<<<<< HEAD
         comments: array(
             0: // binary ops
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     4: Expr_BinaryOp_BitwiseOr(
         left: Expr_Variable(
@@ -167,32 +158,23 @@ array(
         left: Expr_BinaryOp_Mul(
             left: Expr_Variable(
                 name: a
-<<<<<<< HEAD
                 comments: array(
                     0: // associativity
                 )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             )
             right: Expr_Variable(
                 name: b
             )
-<<<<<<< HEAD
             comments: array(
                 0: // associativity
             )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         right: Expr_Variable(
             name: c
         )
-<<<<<<< HEAD
         comments: array(
             0: // associativity
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     16: Expr_BinaryOp_Mul(
         left: Expr_Variable(
@@ -210,12 +192,9 @@ array(
     17: Expr_BinaryOp_Plus(
         left: Expr_Variable(
             name: a
-<<<<<<< HEAD
             comments: array(
                 0: // precedence
             )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         right: Expr_BinaryOp_Mul(
             left: Expr_Variable(
@@ -225,12 +204,9 @@ array(
                 name: c
             )
         )
-<<<<<<< HEAD
         comments: array(
             0: // precedence
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     18: Expr_BinaryOp_Mul(
         left: Expr_BinaryOp_Plus(
@@ -248,12 +224,9 @@ array(
     19: Expr_BinaryOp_Pow(
         left: Expr_Variable(
             name: a
-<<<<<<< HEAD
             comments: array(
                 0: // pow is special
             )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         right: Expr_BinaryOp_Pow(
             left: Expr_Variable(
@@ -263,12 +236,9 @@ array(
                 name: c
             )
         )
-<<<<<<< HEAD
         comments: array(
             0: // pow is special
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     20: Expr_BinaryOp_Pow(
         left: Expr_BinaryOp_Pow(

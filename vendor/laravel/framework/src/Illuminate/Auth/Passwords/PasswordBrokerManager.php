@@ -2,10 +2,7 @@
 
 namespace Illuminate\Auth\Passwords;
 
-<<<<<<< HEAD
 use Illuminate\Support\Str;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 use InvalidArgumentException;
 use Illuminate\Contracts\Auth\PasswordBrokerFactory as FactoryContract;
 
@@ -86,7 +83,6 @@ class PasswordBrokerManager implements FactoryContract
      */
     protected function createTokenRepository(array $config)
     {
-<<<<<<< HEAD
         $key = $this->app['config']['app.key'];
 
         if (Str::startsWith($key, 'base64:')) {
@@ -97,12 +93,6 @@ class PasswordBrokerManager implements FactoryContract
             $this->app['db']->connection(),
             $config['table'],
             $key,
-=======
-        return new DatabaseTokenRepository(
-            $this->app['db']->connection(),
-            $config['table'],
-            $this->app['config']['app.key'],
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $config['expire']
         );
     }

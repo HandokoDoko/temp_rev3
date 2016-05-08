@@ -41,11 +41,8 @@ class RateLimiter
         if ($this->attempts($key) > $maxAttempts) {
             $this->cache->add($key.':lockout', time() + ($decayMinutes * 60), $decayMinutes);
 
-<<<<<<< HEAD
             $this->resetAttempts($key);
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             return true;
         }
 
@@ -78,7 +75,6 @@ class RateLimiter
     }
 
     /**
-<<<<<<< HEAD
      * Reset the number of attempts for the given key.
      *
      * @param  string  $key
@@ -90,8 +86,6 @@ class RateLimiter
     }
 
     /**
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Get the number of retries left for the given key.
      *
      * @param  string  $key
@@ -113,11 +107,7 @@ class RateLimiter
      */
     public function clear($key)
     {
-<<<<<<< HEAD
         $this->resetAttempts($key);
-=======
-        $this->cache->forget($key);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         $this->cache->forget($key.':lockout');
     }

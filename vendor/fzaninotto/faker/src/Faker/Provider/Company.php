@@ -2,11 +2,7 @@
 
 namespace Faker\Provider;
 
-<<<<<<< HEAD
 class Company extends Base
-=======
-class Company extends \Faker\Provider\Base
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 {
     protected static $formats = array(
         '{{lastName}} {{companySuffix}}',
@@ -14,13 +10,10 @@ class Company extends \Faker\Provider\Base
 
     protected static $companySuffix = array('Ltd');
 
-<<<<<<< HEAD
     protected static $jobTitleFormat = array(
         '{{word}}',
     );
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /**
      * @example 'Acme Ltd'
      */
@@ -38,7 +31,6 @@ class Company extends \Faker\Provider\Base
     {
         return static::randomElement(static::$companySuffix);
     }
-<<<<<<< HEAD
 
     /**
      * @example 'Job'
@@ -49,6 +41,4 @@ class Company extends \Faker\Provider\Base
 
         return $this->generator->parse($format);
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

@@ -62,20 +62,12 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
      *
      * @var array
      */
-<<<<<<< HEAD
     protected $_ignoredHeaders = array('return-path' => true);
-=======
-    protected $_ignoredHeaders = array();
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
     /**
      * Signer identity.
      *
-<<<<<<< HEAD
      * @var string
-=======
-     * @var unknown_type
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     protected $_signerIdentity;
 
@@ -151,16 +143,6 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
      */
     protected $_dkimHeader;
 
-<<<<<<< HEAD
-=======
-    /**
-     * Hash Handler.
-     *
-     * @var hash_ressource
-     */
-    private $_headerHashHandler;
-
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     private $_bodyHashHandler;
 
     private $_headerHash;
@@ -217,10 +199,6 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
     {
         $this->_headerHash = null;
         $this->_signedHeaders = array();
-<<<<<<< HEAD
-=======
-        $this->_headerHashHandler = null;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $this->_bodyHash = null;
         $this->_bodyHashHandler = null;
         $this->_bodyCanonIgnoreStart = 2;
@@ -395,11 +373,7 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
             $this->_showLen = true;
             $this->_maxLen = PHP_INT_MAX;
         } elseif ($len === false) {
-<<<<<<< HEAD
             $this->_showLen = false;
-=======
-            $this->showLen = false;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $this->_maxLen = PHP_INT_MAX;
         } else {
             $this->_showLen = true;
@@ -412,11 +386,7 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
     /**
      * Set the signature timestamp.
      *
-<<<<<<< HEAD
      * @param int $time A timestamp
-=======
-     * @param timestamp $time
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @return Swift_Signers_DKIMSigner
      */
@@ -430,11 +400,7 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
     /**
      * Set the signature expiration timestamp.
      *
-<<<<<<< HEAD
      * @param int $time A timestamp
-=======
-     * @param timestamp $time
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @return Swift_Signers_DKIMSigner
      */
@@ -614,7 +580,6 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
         $this->_addToHeaderHash($header);
     }
 
-<<<<<<< HEAD
     /**
      * @deprecated This method is currently useless in this class but it must be
      *             kept for BC reasons due to its "protected" scope. This method
@@ -622,11 +587,6 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
      */
     protected function _endOfHeaders()
     {
-=======
-    protected function _endOfHeaders()
-    {
-        //$this->_headerHash=hash_final($this->_headerHashHandler, true);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     protected function _canonicalizeBody($string)

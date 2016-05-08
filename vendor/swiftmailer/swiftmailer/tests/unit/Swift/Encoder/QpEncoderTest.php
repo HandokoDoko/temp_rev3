@@ -372,7 +372,6 @@ class Swift_Encoder_QpEncoderTest extends \SwiftMailerTestCase
             );
     }
 
-<<<<<<< HEAD
     public function testTextIsPreWrapped()
     {
         $encoder = $this->createEncoder();
@@ -386,15 +385,12 @@ class Swift_Encoder_QpEncoderTest extends \SwiftMailerTestCase
             );
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     // -- Creation methods
 
     private function _createCharStream()
     {
         return $this->getMockery('Swift_CharacterStream')->shouldIgnoreMissing();
     }
-<<<<<<< HEAD
 
     private function createEncoder()
     {
@@ -403,6 +399,4 @@ class Swift_Encoder_QpEncoderTest extends \SwiftMailerTestCase
 
         return new Swift_Encoder_QpEncoder($charStream);
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

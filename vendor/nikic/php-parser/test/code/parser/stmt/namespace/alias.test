@@ -84,12 +84,9 @@ array(
                 alias: A
             )
         )
-<<<<<<< HEAD
         comments: array(
             0: // evil alias notation - Do Not Use!
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     4: Stmt_Use(
         type: 1
@@ -119,12 +116,9 @@ array(
                 alias: bar
             )
         )
-<<<<<<< HEAD
         comments: array(
             0: // function and constant aliases
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     6: Stmt_Use(
         type: 2
@@ -171,8 +165,4 @@ array(
             )
         )
     )
-<<<<<<< HEAD
 )
-=======
-)
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

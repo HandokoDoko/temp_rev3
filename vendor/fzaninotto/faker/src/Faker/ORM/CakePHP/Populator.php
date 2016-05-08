@@ -10,45 +10,33 @@ class Populator
     protected $quantities = [];
     protected $guessers = [];
 
-<<<<<<< HEAD
     /**
      * @param \Faker\Generator $generator
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __construct(\Faker\Generator $generator)
     {
         $this->generator = $generator;
     }
 
-<<<<<<< HEAD
     /**
      * @return \Faker\Generator
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function getGenerator()
     {
         return $this->generator;
     }
 
-<<<<<<< HEAD
     /**
      * @return array
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function getGuessers()
     {
         return $this->guessers;
     }
 
-<<<<<<< HEAD
     /**
      * @return $this
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function removeGuesser($name)
     {
         if ($this->guessers[$name]) {
@@ -57,13 +45,10 @@ class Populator
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @return $this
      * @throws \Exception
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function addGuesser($class)
     {
         if (!is_object($class)) {
@@ -78,14 +63,11 @@ class Populator
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param array $customColumnFormatters
      * @param array $customModifiers
      * @return $this
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function addEntity($entity, $number, $customColumnFormatters = [], $customModifiers = [])
     {
         if (!$entity instanceof EntityPopulator) {
@@ -99,11 +81,7 @@ class Populator
 
         $entity->modifiers = $entity->guessModifiers($this);
         if ($customModifiers) {
-<<<<<<< HEAD
             $entity->mergeModifiersWith($customModifiers);
-=======
-            $entity->mergeModifiers($customModifiers);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         $class = $entity->class;
@@ -112,13 +90,10 @@ class Populator
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param array $options
      * @return array
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function execute($options = [])
     {
         $insertedEntities = [];

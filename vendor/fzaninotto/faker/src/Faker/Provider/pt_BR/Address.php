@@ -24,15 +24,12 @@ class Address extends \Faker\Provider\Address
         'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC',
         'SP', 'SE', 'TO'
     );
-<<<<<<< HEAD
     protected static $region = array(
         'Centro-Oeste', 'Nordeste', 'Norte', 'Sudeste', 'Sul'
     );
     protected static $regionAbbr = array(
         'CO', 'N', 'NE', 'SE', 'S'
     );
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     protected static $country = array(
         'Afeganistão', 'África do Sul', 'Albânia', 'Alemanha', 'Andorra',
         'Angola', 'Antigua e Barbuda', 'Arabia Saudita', 'Argélia',
@@ -138,7 +135,6 @@ class Address extends \Faker\Provider\Address
     {
         return static::randomElement(static::$stateAbbr);
     }
-<<<<<<< HEAD
     
     /**
      * @example 'Nordeste'
@@ -155,6 +151,4 @@ class Address extends \Faker\Provider\Address
     {
         return static::randomElement(static::$regionAbbr);
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

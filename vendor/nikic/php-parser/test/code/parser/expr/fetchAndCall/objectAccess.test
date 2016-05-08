@@ -22,7 +22,6 @@ array(
     0: Expr_PropertyFetch(
         var: Expr_Variable(
             name: a
-<<<<<<< HEAD
             comments: array(
                 0: // property fetch variations
             )
@@ -31,10 +30,6 @@ array(
         comments: array(
             0: // property fetch variations
         )
-=======
-        )
-        name: b
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Expr_ArrayDimFetch(
         var: Expr_PropertyFetch(
@@ -61,22 +56,16 @@ array(
     3: Expr_MethodCall(
         var: Expr_Variable(
             name: a
-<<<<<<< HEAD
             comments: array(
                 0: // method call variations
             )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         name: b
         args: array(
         )
-<<<<<<< HEAD
         comments: array(
             0: // method call variations
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     4: Expr_MethodCall(
         var: Expr_Variable(
@@ -117,32 +106,23 @@ array(
         var: Expr_MethodCall(
             var: Expr_Variable(
                 name: a
-<<<<<<< HEAD
                 comments: array(
                     0: // array dereferencing
                 )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             )
             name: b
             args: array(
             )
-<<<<<<< HEAD
             comments: array(
                 0: // array dereferencing
             )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         dim: Scalar_String(
             value: c
         )
-<<<<<<< HEAD
         comments: array(
             0: // array dereferencing
         )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     8: Expr_ArrayDimFetch(
         var: Expr_MethodCall(
@@ -157,13 +137,9 @@ array(
             value: c
         )
     )
-<<<<<<< HEAD
     9: Stmt_Nop(
         comments: array(
             0: // invalid PHP: drop Support?
         )
     )
 )
-=======
-)
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

@@ -11,11 +11,8 @@
 
 namespace Symfony\Component\Console\Helper;
 
-<<<<<<< HEAD
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 use Symfony\Component\Console\Exception\LogicException;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
@@ -58,11 +55,7 @@ class ProgressIndicator
         $indicatorValues = array_values($indicatorValues);
 
         if (2 > count($indicatorValues)) {
-<<<<<<< HEAD
             throw new InvalidArgumentException('Must have at least 2 indicator value characters.');
-=======
-            throw new \InvalidArgumentException('Must have at least 2 indicator value characters.');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         $this->format = self::getFormatDefinition($format);
@@ -127,11 +120,7 @@ class ProgressIndicator
     public function start($message)
     {
         if ($this->started) {
-<<<<<<< HEAD
             throw new LogicException('Progress indicator already started.');
-=======
-            throw new \LogicException('Progress indicator already started.');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         $this->message = $message;
@@ -150,11 +139,7 @@ class ProgressIndicator
     public function advance()
     {
         if (!$this->started) {
-<<<<<<< HEAD
             throw new LogicException('Progress indicator has not yet been started.');
-=======
-            throw new \LogicException('Progress indicator has not yet been started.');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         if (!$this->output->isDecorated()) {
@@ -181,11 +166,7 @@ class ProgressIndicator
     public function finish($message)
     {
         if (!$this->started) {
-<<<<<<< HEAD
             throw new LogicException('Progress indicator has not yet been started.');
-=======
-            throw new \LogicException('Progress indicator has not yet been started.');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         $this->message = $message;

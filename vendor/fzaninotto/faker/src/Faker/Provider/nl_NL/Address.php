@@ -70,11 +70,7 @@ class Address extends \Faker\Provider\Address
         'Haïti', 'Heard en McDonaldeilanden', 'Honduras', 'Hong Kong', 'Hongarije',
         'IJsland', 'India', 'Indonesië', 'Iran', 'Irak', 'Ierland', 'Man', 'Israel', 'Ivoorkust', 'Italië',
         'Jamaica', 'Japan', 'Jersey', 'Jordanië', 'Jemen',
-<<<<<<< HEAD
         'Kazachstan', 'Kenia', 'Kleinere afgelegen eilanden van de Verenigde Staten', 'Kiribati', 'Korea', 'Koeweit', 'Kirgizië', 'Kameroen', 'Kaapverdië', 'Kaaimaneilanden', 'Kroatië',
-=======
-        'Kazachstan', 'Kenia', 'Kleinere afgelegen eilanden van de Verenigde statent', 'Kiribati', 'Korea', 'Koeweit', 'Kirgizië', 'Kameroen', 'Kaapverdië', 'Kaaimaneilanden', 'Kroatië',
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         'Laos', 'Letland', 'Libanon', 'Lesotho', 'Liberia', 'Libië', 'Liechtenstein', 'Litouwen', 'Luxemburg',
         'Macau', 'Macedonië', 'Madagascar', 'Malawi', 'Maleisië', 'Maldiven', 'Mali', 'Malta', 'Marshalleilanden', 'Martinique', 'Mauritus', 'Mauritania', 'Mayotte', 'Mexico', 'Micronesië', 'Moldavië', 'Monaco', 'Mongolië', 'Montenegro', 'Monsterrat', 'Marokko', 'Mozambique', 'Myanmar',
         'Namibië', 'Nauru', 'Nepal', 'Nederlandse Antillen', 'Nederland', 'Nieuw-Caledonië', 'Nieuw-Zeeland', 'Nicaragua', 'Niger', 'Nigeria', 'Niue', 'Norfolk', 'Noordelijke Marianen', 'Noorwegen',

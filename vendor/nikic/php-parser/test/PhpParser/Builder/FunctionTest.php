@@ -76,7 +76,6 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
         )), $node);
     }
 
-<<<<<<< HEAD
     public function testReturnType() {
         $node = $this->createFunctionBuilder('test')
             ->setReturnType('bool')
@@ -87,8 +86,6 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
         ), array()), $node);
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /**
      * @expectedException \LogicException
      * @expectedExceptionMessage Expected parameter node, got "Name"

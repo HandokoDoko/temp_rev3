@@ -75,10 +75,7 @@ abstract class PrettyPrinterAbstract
     );
 
     protected $noIndentToken;
-<<<<<<< HEAD
     protected $docStringEndToken;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     protected $canUseSemicolonNamespaces;
     protected $options;
 
@@ -86,21 +83,14 @@ abstract class PrettyPrinterAbstract
      * Creates a pretty printer instance using the given options.
      *
      * Supported options:
-<<<<<<< HEAD
      *  * bool $shortArraySyntax = false: Whether to use [] instead of array() as the default array
      *                                    syntax, if the node does not specify a format.
-=======
-     *  * bool $shortArraySyntax = false: Whether to use [] instead of array()
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @param array $options Dictionary of formatting options
      */
     public function __construct(array $options = []) {
         $this->noIndentToken = '_NO_INDENT_' . mt_rand();
-<<<<<<< HEAD
         $this->docStringEndToken = '_DOC_STRING_END_' . mt_rand();
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         $defaultOptions = ['shortArraySyntax' => false];
         $this->options = $options + $defaultOptions;
@@ -116,11 +106,7 @@ abstract class PrettyPrinterAbstract
     public function prettyPrint(array $stmts) {
         $this->preprocessNodes($stmts);
 
-<<<<<<< HEAD
         return ltrim($this->handleMagicTokens($this->pStmts($stmts, false)));
-=======
-        return ltrim(str_replace("\n" . $this->noIndentToken, "\n", $this->pStmts($stmts, false)));
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -131,11 +117,7 @@ abstract class PrettyPrinterAbstract
      * @return string Pretty printed node
      */
     public function prettyPrintExpr(Expr $node) {
-<<<<<<< HEAD
         return $this->handleMagicTokens($this->p($node));
-=======
-        return str_replace("\n" . $this->noIndentToken, "\n", $this->p($node));
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -177,7 +159,6 @@ abstract class PrettyPrinterAbstract
         }
     }
 
-<<<<<<< HEAD
     protected function handleMagicTokens($str) {
         // Drop no-indent tokens
         $str = str_replace($this->noIndentToken, '', $str);
@@ -189,8 +170,6 @@ abstract class PrettyPrinterAbstract
         return $str;
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /**
      * Pretty prints an array of nodes (statements) and indents them optionally.
      *
@@ -202,7 +181,6 @@ abstract class PrettyPrinterAbstract
     protected function pStmts(array $nodes, $indent = true) {
         $result = '';
         foreach ($nodes as $node) {
-<<<<<<< HEAD
             $comments = $node->getAttribute('comments', array());
             if ($comments) {
                 $result .= "\n" . $this->pComments($comments);
@@ -212,12 +190,6 @@ abstract class PrettyPrinterAbstract
             }
 
             $result .= "\n" . $this->p($node) . ($node instanceof Expr ? ';' : '');
-=======
-            $result .= "\n"
-                    . $this->pComments($node->getAttribute('comments', array()))
-                    . $this->p($node)
-                    . ($node instanceof Expr ? ';' : '');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         if ($indent) {
@@ -329,7 +301,6 @@ abstract class PrettyPrinterAbstract
      * @return string Reformatted text of comments
      */
     protected function pComments(array $comments) {
-<<<<<<< HEAD
         $formattedComments = [];
 
         foreach ($comments as $comment) {
@@ -337,14 +308,5 @@ abstract class PrettyPrinterAbstract
         }
 
         return implode("\n", $formattedComments);
-=======
-        $result = '';
-
-        foreach ($comments as $comment) {
-            $result .= $comment->getReformattedText() . "\n";
-        }
-
-        return $result;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 }

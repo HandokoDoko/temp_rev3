@@ -141,11 +141,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     /**
      * Resets internal states.
      *
-<<<<<<< HEAD
      * @return Swift_Signers_DomainKeySigner
-=======
-     * @return Swift_Signers_DomainKeysSigner
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function reset()
     {
@@ -174,11 +170,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
      * @throws Swift_IoException
      *
      * @return int
-<<<<<<< HEAD
      * @return Swift_Signers_DomainKeySigner
-=======
-     * @return Swift_Signers_DomainKeysSigner
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function write($bytes)
     {
@@ -196,11 +188,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
      *
      * @throws Swift_IoException
      *
-<<<<<<< HEAD
      * @return Swift_Signers_DomainKeySigner
-=======
-     * @return Swift_Signers_DomainKeysSigner
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function commit()
     {
@@ -215,11 +203,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
      *
      * @param Swift_InputByteStream $is
      *
-<<<<<<< HEAD
      * @return Swift_Signers_DomainKeySigner
-=======
-     * @return Swift_Signers_DomainKeysSigner
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function bind(Swift_InputByteStream $is)
     {
@@ -237,11 +221,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
      *
      * @param Swift_InputByteStream $is
      *
-<<<<<<< HEAD
      * @return Swift_Signers_DomainKeySigner
-=======
-     * @return Swift_Signers_DomainKeysSigner
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function unbind(Swift_InputByteStream $is)
     {
@@ -263,11 +243,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
      *
      * @throws Swift_IoException
      *
-<<<<<<< HEAD
      * @return Swift_Signers_DomainKeySigner
-=======
-     * @return Swift_Signers_DomainKeysSigner
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function flushBuffers()
     {
@@ -281,11 +257,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
      *
      * @param string $hash
      *
-<<<<<<< HEAD
      * @return Swift_Signers_DomainKeySigner
-=======
-     * @return Swift_Signers_DomainKeysSigner
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function setHashAlgorithm($hash)
     {
@@ -299,11 +271,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
      *
      * @param string $canon simple | nofws defaults to simple
      *
-<<<<<<< HEAD
      * @return Swift_Signers_DomainKeySigner
-=======
-     * @return Swift_Signers_DomainKeysSigner
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function setCanon($canon)
     {
@@ -368,15 +336,9 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     {
         if ($this->_debugHeaders) {
             return array('DomainKey-Signature', 'X-DebugHash');
-<<<<<<< HEAD
         }
 
         return array('DomainKey-Signature');
-=======
-        } else {
-            return array('DomainKey-Signature');
-        }
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -540,11 +502,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
                 $this->_hashHandler = hash_init('sha1');
                 break;
         }
-<<<<<<< HEAD
         $this->_bodyCanonLine = '';
-=======
-        $this->_canonLine = '';
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

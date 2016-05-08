@@ -10,12 +10,9 @@ array(
 -----
 Syntax error, unexpected EOF from 1:20 to 1:20
 array(
-<<<<<<< HEAD
     0: Stmt_Nop(
         comments: array(
             0: /* bar */
         )
     )
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 )

@@ -19,7 +19,6 @@ class Address extends \Faker\Provider\Address
         'খুলনা', 'বরিশাল', 'চিটাগং', 'ঢাকা', 'রাজশাহী', 'সিলেট', 'কুমিল্লা'
     );
     protected static $country = array(
-<<<<<<< HEAD
         'অস্ট্রিয়া',
         'অস্ট্রেলিয়া',
         'অ্যাঙ্গোলা',
@@ -273,9 +272,6 @@ class Address extends \Faker\Provider\Address
         'হণ্ডুরাস',
         'হাইতি',
         'হাঙ্গেরি',
-=======
-        'বাংলাদেশ'
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     );
     protected static $cityFormats = array(
         '{{cityPrefix}}{{citySuffix}}',

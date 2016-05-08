@@ -5,7 +5,6 @@ namespace Faker\Provider\en_ZA;
 class PhoneNumber extends \Faker\Provider\PhoneNumber
 {
     protected static $formats = array(
-<<<<<<< HEAD
         '+27({{areaCode}})#######',
         '+27{{areaCode}}#######',
         '0{{areaCode}}#######',
@@ -98,15 +97,4 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
 
         return self::numerify($this->generator->parse($format));
     }
-=======
-        '+27(##)##########',
-        '+(#)##########',
-        '08#########',
-        '07########',
-        '0##-###-####',
-        '(0##)###-####',
-        '0-800-###-####',
-        '### ####'
-    );
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

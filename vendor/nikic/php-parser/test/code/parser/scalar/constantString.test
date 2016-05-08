@@ -8,15 +8,10 @@ b'';
 b"";
 'Hi';
 b'Hi';
-<<<<<<< HEAD
 B'Hi';
 "Hi";
 b"Hi";
 B"Hi";
-=======
-"Hi";
-b"Hi";
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 '!\'!\\!\a!';
 "!\"!\\!\$!\n!\r!\t!\f!\v!\e!\a";
 "!\xFF!\377!\400!\0!";
@@ -47,7 +42,6 @@ array(
         value: Hi
     )
     8: Scalar_String(
-<<<<<<< HEAD
         value: Hi
     )
     9: Scalar_String(
@@ -61,16 +55,6 @@ array(
     !@@{ "\r" }@@!@@{ "\t" }@@!@@{ "\f" }@@!@@{ "\v" }@@!@@{ chr(27) /* "\e" */ }@@!\a
     )
     12: Scalar_String(
-=======
-        value: !'!\!\a!
-    )
-    9: Scalar_String(
-        value: !"!\!$!
-    !
-!@@{ "\t" }@@!@@{ "\f" }@@!@@{ "\v" }@@!@@{ chr(27) /* "\e" */ }@@!\a
-    )
-    10: Scalar_String(
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         value: !@@{ chr(255) }@@!@@{ chr(255) }@@!@@{ chr(0) }@@!@@{ chr(0) }@@!
     )
 )

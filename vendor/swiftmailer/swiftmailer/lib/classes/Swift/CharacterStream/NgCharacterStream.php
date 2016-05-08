@@ -165,13 +165,7 @@ class Swift_CharacterStream_NgCharacterStream implements Swift_CharacterStream
             return false;
         }
         $ret = false;
-<<<<<<< HEAD
         $length = $this->_currentPos + $length > $this->_charCount ? $this->_charCount - $this->_currentPos : $length;
-=======
-        $length = ($this->_currentPos + $length > $this->_charCount)
-          ? $this->_charCount - $this->_currentPos
-          : $length;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         switch ($this->_mapType) {
             case Swift_CharacterReader::MAP_TYPE_FIXED_LEN:
                 $len = $length * $this->_map;
@@ -182,13 +176,6 @@ class Swift_CharacterStream_NgCharacterStream implements Swift_CharacterStream
                 break;
 
             case Swift_CharacterReader::MAP_TYPE_INVALID:
-<<<<<<< HEAD
-=======
-                $end = $this->_currentPos + $length;
-                $end = $end > $this->_charCount
-                    ? $this->_charCount
-                    : $end;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 $ret = '';
                 for (; $this->_currentPos < $length; ++$this->_currentPos) {
                     if (isset($this->_map[$this->_currentPos])) {
@@ -201,13 +188,7 @@ class Swift_CharacterStream_NgCharacterStream implements Swift_CharacterStream
 
             case Swift_CharacterReader::MAP_TYPE_POSITIONS:
                 $end = $this->_currentPos + $length;
-<<<<<<< HEAD
                 $end = $end > $this->_charCount ? $this->_charCount : $end;
-=======
-                $end = $end > $this->_charCount
-                    ? $this->_charCount
-                    : $end;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 $ret = '';
                 $start = 0;
                 if ($this->_currentPos > 0) {

@@ -84,7 +84,6 @@ class Swift_Transport_MailTransportTest extends \SwiftMailerTestCase
         $transport->send($message);
     }
 
-<<<<<<< HEAD
     public function testTransportSettingUsingReturnPathForExtraParams()
     {
         $invoker = $this->_createInvoker();
@@ -187,8 +186,6 @@ class Swift_Transport_MailTransportTest extends \SwiftMailerTestCase
         $transport->send($message);
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function testTransportUsesHeadersFromMessage()
     {
         $invoker = $this->_createInvoker();
@@ -199,7 +196,6 @@ class Swift_Transport_MailTransportTest extends \SwiftMailerTestCase
         $message = $this->_createMessage($headers);
 
         $message->shouldReceive('toString')
-<<<<<<< HEAD
             ->zeroOrMoreTimes()
             ->andReturn(
                 "Subject: Stuff\r\n".
@@ -209,17 +205,6 @@ class Swift_Transport_MailTransportTest extends \SwiftMailerTestCase
         $invoker->shouldReceive('mail')
             ->once()
             ->with(\Mockery::any(), \Mockery::any(), \Mockery::any(), 'Subject: Stuff'.PHP_EOL, \Mockery::any());
-=======
-             ->zeroOrMoreTimes()
-             ->andReturn(
-                "Subject: Stuff\r\n".
-                "\r\n".
-                'This body'
-             );
-        $invoker->shouldReceive('mail')
-                ->once()
-                ->with(\Mockery::any(), \Mockery::any(), \Mockery::any(), 'Subject: Stuff'.PHP_EOL, \Mockery::any());
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         $transport->send($message);
     }
@@ -366,7 +351,6 @@ class Swift_Transport_MailTransportTest extends \SwiftMailerTestCase
         $transport->send($message);
     }
 
-<<<<<<< HEAD
     public function testMessageHeadersOnlyHavePHPEolsDuringSending()
     {
         $invoker = $this->_createInvoker();
@@ -406,8 +390,6 @@ class Swift_Transport_MailTransportTest extends \SwiftMailerTestCase
         $transport->send($message);
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     // -- Creation Methods
 
     private function _createTransport($invoker, $dispatcher)

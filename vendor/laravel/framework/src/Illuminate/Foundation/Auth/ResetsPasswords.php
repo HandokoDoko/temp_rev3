@@ -2,10 +2,7 @@
 
 namespace Illuminate\Foundation\Auth;
 
-<<<<<<< HEAD
 use Illuminate\Support\Str;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 use Illuminate\Http\Request;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Auth;
@@ -185,16 +182,12 @@ trait ResetsPasswords
      */
     public function reset(Request $request)
     {
-<<<<<<< HEAD
         $this->validate(
             $request,
             $this->getResetValidationRules(),
             $this->getResetValidationMessages(),
             $this->getResetValidationCustomAttributes()
         );
-=======
-        $this->validate($request, $this->getResetValidationRules());
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         $credentials = $request->only(
             'email', 'password', 'password_confirmation', 'token'
@@ -230,7 +223,6 @@ trait ResetsPasswords
     }
 
     /**
-<<<<<<< HEAD
      * Get the password reset validation messages.
      *
      * @return array
@@ -251,8 +243,6 @@ trait ResetsPasswords
     }
 
     /**
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Reset the given user's password.
      *
      * @param  \Illuminate\Contracts\Auth\CanResetPassword  $user
@@ -261,16 +251,10 @@ trait ResetsPasswords
      */
     protected function resetPassword($user, $password)
     {
-<<<<<<< HEAD
         $user->forceFill([
             'password' => bcrypt($password),
             'remember_token' => Str::random(60),
         ])->save();
-=======
-        $user->password = bcrypt($password);
-
-        $user->save();
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         Auth::guard($this->getGuard())->login($user);
     }

@@ -99,15 +99,12 @@ class NodeTraverser implements NodeTraverserInterface
 
                 foreach ($this->visitors as $visitor) {
                     if (null !== $return = $visitor->leaveNode($subNode)) {
-<<<<<<< HEAD
                         if (is_array($return)) {
                             throw new \LogicException(
                                 'leaveNode() may only return an array ' .
                                 'if the parent structure is an array'
                             );
                         }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                         $subNode = $return;
                     }
                 }

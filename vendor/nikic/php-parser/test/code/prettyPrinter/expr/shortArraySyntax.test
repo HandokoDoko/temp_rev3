@@ -6,12 +6,6 @@ Short array syntax
 array(1, 2, 3);
 ['a' => 'b', 'c' => 'd'];
 -----
-<<<<<<< HEAD
 [];
 array(1, 2, 3);
-=======
-!!both {"shortArraySyntax": true}
-[];
-[1, 2, 3];
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 ['a' => 'b', 'c' => 'd'];

@@ -439,7 +439,6 @@ class Builder
      * Add a "cross join" clause to the query.
      *
      * @param  string  $table
-<<<<<<< HEAD
      * @param  string  $first
      * @param  string  $operator
      * @param  string  $second
@@ -451,12 +450,6 @@ class Builder
             return $this->join($table, $first, $operator, $second, 'cross');
         }
 
-=======
-     * @return \Illuminate\Database\Query\Builder|static
-     */
-    public function crossJoin($table)
-    {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $this->joins[] = new JoinClause('cross', $table);
 
         return $this;
@@ -519,12 +512,8 @@ class Builder
         // If the given operator is not found in the list of valid operators we will
         // assume that the developer is just short-cutting the '=' operators and
         // we will set the operators to '=' and set the values appropriately.
-<<<<<<< HEAD
         if (! in_array(strtolower($operator), $this->operators, true) &&
             ! in_array(strtolower($operator), $this->grammar->getOperators(), true)) {
-=======
-        if (! in_array(strtolower($operator), $this->operators, true)) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             list($value, $operator) = [$operator, '='];
         }
 
@@ -1374,12 +1363,7 @@ class Builder
      */
     public function forPageAfterId($perPage = 15, $lastId = 0, $column = 'id')
     {
-<<<<<<< HEAD
         return $this->where($column, '>', $lastId)
-=======
-        return $this->select($column)
-                    ->where($column, '>', $lastId)
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                     ->orderBy($column, 'asc')
                     ->take($perPage);
     }

@@ -34,7 +34,6 @@ class ColorTest extends \PHPUnit_Framework_TestCase
         $this->assertRegExp('/^rgb\(' . $regexp . ',' . $regexp . ',' . $regexp . '\)$/i', Color::rgbCssColor());
     }
 
-<<<<<<< HEAD
     public function testRgbaCssColor()
     {
         $regexp = '([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])';
@@ -42,8 +41,6 @@ class ColorTest extends \PHPUnit_Framework_TestCase
         $this->assertRegExp('/^rgba\(' . $regexp . ',' . $regexp . ',' . $regexp . ',' . $regexpAlpha . '\)$/i', Color::rgbaCssColor());
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function testSafeColorName()
     {
         $this->assertRegExp('/^[\w]+$/', Color::safeColorName());

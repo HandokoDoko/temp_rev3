@@ -22,16 +22,9 @@ abstract class AbstractPipes implements PipesInterface
     public $pipes = array();
 
     /** @var string */
-<<<<<<< HEAD
     private $inputBuffer = '';
     /** @var resource|null */
     private $input;
-=======
-    protected $inputBuffer = '';
-    /** @var resource|null */
-    protected $input;
-
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /** @var bool */
     private $blocked = true;
 
@@ -97,14 +90,8 @@ abstract class AbstractPipes implements PipesInterface
         if (!isset($this->pipes[0])) {
             return;
         }
-<<<<<<< HEAD
         $input = $this->input;
         $r = $e = array();
-=======
-
-        $e = array();
-        $r = null !== $this->input ? array($this->input) : $e;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $w = array($this->pipes[0]);
 
         // let's have a look if something changed in streams
@@ -121,11 +108,7 @@ abstract class AbstractPipes implements PipesInterface
                 }
             }
 
-<<<<<<< HEAD
             if ($input) {
-=======
-            foreach ($r as $input) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 for (;;) {
                     $data = fread($input, self::CHUNK_SIZE);
                     if (!isset($data[0])) {
@@ -139,11 +122,7 @@ abstract class AbstractPipes implements PipesInterface
                         return array($this->pipes[0]);
                     }
                 }
-<<<<<<< HEAD
                 if (feof($input)) {
-=======
-                if (!isset($data[0]) && feof($input)) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                     // no more data to read on input resource
                     // use an empty buffer in the next reads
                     $this->input = null;

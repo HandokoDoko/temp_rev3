@@ -20367,3 +20367,12 @@ Stack trace:
 #79 C:\xampp\htdocs\CVProject\server.php(21): require_once('C:\\xampp\\htdocs...')
 #80 {main}  
 >>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
+[2016-05-08 14:52:34] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL), expecting ')'' in D:\CVProjectNew\bootstrap\cache\services.php:25
+Stack trace:
+#0 {main}  
+[2016-05-08 14:54:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Intervention\Image\ImageServiceProvider' not found' in D:\CVProjectNew\vendor\laravel\framework\src\Illuminate\Foundation\ProviderRepository.php:146
+Stack trace:
+#0 {main}  
+[2016-05-08 14:58:55] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Intervention\Image\ImageServiceProvider' not found' in D:\CVProjectNew\vendor\laravel\framework\src\Illuminate\Foundation\ProviderRepository.php:146
+Stack trace:
+#0 {main}  

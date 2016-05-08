@@ -52,13 +52,9 @@ class SparkPostTransport extends Transport
             'json' => [
                 'recipients' => $recipients,
                 'content' => [
-<<<<<<< HEAD
                     'html' => $message->getBody(),
                     'from' => $this->getFrom($message),
                     'subject' => $message->getSubject(),
-=======
-                    'email_rfc822' => $message->toString(),
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 ],
             ],
         ];
@@ -76,11 +72,7 @@ class SparkPostTransport extends Transport
      */
     protected function getRecipients(Swift_Mime_Message $message)
     {
-<<<<<<< HEAD
         $to = $bcc = [];
-=======
-        $to = [];
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         if ($message->getTo()) {
             $to = array_merge($to, array_keys($message->getTo()));
@@ -91,26 +83,17 @@ class SparkPostTransport extends Transport
         }
 
         if ($message->getBcc()) {
-<<<<<<< HEAD
             $to = array_merge($bcc, array_keys($message->getBcc()));
         }
 
         $recipients = array_map(function ($address) {
             return ['address' => ['email' => $address, 'header_to' => $address]];
-=======
-            $to = array_merge($to, array_keys($message->getBcc()));
-        }
-
-        $recipients = array_map(function ($address) {
-            return compact('address');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }, $to);
 
         return $recipients;
     }
 
     /**
-<<<<<<< HEAD
      * Get the "from" contacts in the format required by SparkPost.
      *
      * @param  Swift_Mime_Message  $message
@@ -124,8 +107,6 @@ class SparkPostTransport extends Transport
     }
 
     /**
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Get the API key being used by the transport.
      *
      * @return string

@@ -242,15 +242,9 @@ class Route
             $middleware = [$middleware];
         }
 
-<<<<<<< HEAD
         $this->action['middleware'] = array_merge(
             (array) Arr::get($this->action, 'middleware', []), $middleware
         );
-=======
-        $this->action['middleware'] = array_unique(array_merge(
-            (array) Arr::get($this->action, 'middleware', []), $middleware
-        ));
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         return $this;
     }
@@ -273,10 +267,7 @@ class Route
     /**
      * Get the parameters that are listed in the route / controller signature.
      *
-<<<<<<< HEAD
      * @param string|null  $subClass
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @return array
      */
     public function signatureParameters($subClass = null)
@@ -458,13 +449,7 @@ class Route
         // compile that and get the parameter matches for this domain. We will then
         // merge them into this parameters array so that this array is completed.
         $params = $this->matchToKeys(
-<<<<<<< HEAD
             array_slice($this->bindPathParameters($request), 1)
-=======
-
-            array_slice($this->bindPathParameters($request), 1)
-
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         );
 
         // If the route has a regular expression for the host part of the URI, we will
@@ -837,7 +822,6 @@ class Route
      */
     public function uses($action)
     {
-<<<<<<< HEAD
         $action = is_string($action) ? $this->addGroupNamespaceToStringUses($action) : $action;
 
         return $this->setAction(array_merge($this->action, $this->parseAction([
@@ -861,9 +845,6 @@ class Route
         }
 
         return $action;
-=======
-        return $this->setAction(array_merge($this->action, $this->parseAction($action)));
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

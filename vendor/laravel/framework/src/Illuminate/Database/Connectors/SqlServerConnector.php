@@ -45,11 +45,8 @@ class SqlServerConnector extends Connector implements ConnectorInterface
         // need to establish the PDO connections and return them back for use.
         if (in_array('dblib', $this->getAvailableDrivers())) {
             return $this->getDblibDsn($config);
-<<<<<<< HEAD
         } elseif ($this->prefersOdbc($config)) {
             return $this->getOdbcDsn($config);
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         } else {
             return $this->getSqlSrvDsn($config);
         }
@@ -76,7 +73,6 @@ class SqlServerConnector extends Connector implements ConnectorInterface
     }
 
     /**
-<<<<<<< HEAD
      * Determine if the database configuration prefers ODBC.
      *
      * @param  array  $config
@@ -104,8 +100,6 @@ class SqlServerConnector extends Connector implements ConnectorInterface
     }
 
     /**
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Get the DSN string for a SqlSrv connection.
      *
      * @param  array  $config

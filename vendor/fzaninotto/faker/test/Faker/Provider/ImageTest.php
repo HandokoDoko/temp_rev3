@@ -45,7 +45,6 @@ class ImageTest extends \PHPUnit_Framework_TestCase
 
     public function testDownloadWithDefaults()
     {
-<<<<<<< HEAD
         $url = "http://www.lorempixel.com/";
         $curlPing = curl_init($url);
         curl_setopt($curlPing, CURLOPT_TIMEOUT, 5);
@@ -59,8 +58,6 @@ class ImageTest extends \PHPUnit_Framework_TestCase
             $this->markTestSkipped("LoremPixel is offline, skipping image download");
         }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $file = Image::image(sys_get_temp_dir());
         $this->assertFileExists($file);
         if (function_exists('getimagesize')) {

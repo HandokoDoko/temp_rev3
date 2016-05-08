@@ -49,7 +49,6 @@ class Swift_Plugins_ReporterPlugin implements Swift_Events_SendListener
         $message = $evt->getMessage();
         $failures = array_flip($evt->getFailedRecipients());
         foreach ((array) $message->getTo() as $address => $null) {
-<<<<<<< HEAD
             $this->_reporter->notify($message, $address, array_key_exists($address, $failures) ? Swift_Plugins_Reporter::RESULT_FAIL : Swift_Plugins_Reporter::RESULT_PASS);
         }
         foreach ((array) $message->getCc() as $address => $null) {
@@ -57,27 +56,6 @@ class Swift_Plugins_ReporterPlugin implements Swift_Events_SendListener
         }
         foreach ((array) $message->getBcc() as $address => $null) {
             $this->_reporter->notify($message, $address, array_key_exists($address, $failures) ? Swift_Plugins_Reporter::RESULT_FAIL : Swift_Plugins_Reporter::RESULT_PASS);
-=======
-            $this->_reporter->notify(
-                $message, $address, (array_key_exists($address, $failures)
-                ? Swift_Plugins_Reporter::RESULT_FAIL
-                : Swift_Plugins_Reporter::RESULT_PASS)
-                );
-        }
-        foreach ((array) $message->getCc() as $address => $null) {
-            $this->_reporter->notify(
-                $message, $address, (array_key_exists($address, $failures)
-                ? Swift_Plugins_Reporter::RESULT_FAIL
-                : Swift_Plugins_Reporter::RESULT_PASS)
-                );
-        }
-        foreach ((array) $message->getBcc() as $address => $null) {
-            $this->_reporter->notify(
-                $message, $address, (array_key_exists($address, $failures)
-                ? Swift_Plugins_Reporter::RESULT_FAIL
-                : Swift_Plugins_Reporter::RESULT_PASS)
-                );
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
     }
 }

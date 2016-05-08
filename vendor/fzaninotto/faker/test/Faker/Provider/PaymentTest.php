@@ -2,10 +2,7 @@
 
 namespace Faker\Test\Provider;
 
-<<<<<<< HEAD
 use Faker\Calculator\Iban;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 use Faker\Calculator\Luhn;
 use Faker\Generator;
 use Faker\Provider\Base as BaseProvider;
@@ -27,7 +24,6 @@ class PaymentTest extends \PHPUnit_Framework_TestCase
         $this->faker = $faker;
     }
 
-<<<<<<< HEAD
     public function localeDataProvider()
     {
         $providerPath = realpath(__DIR__ . '/../../../src/Faker/Provider');
@@ -49,8 +45,6 @@ class PaymentTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function testCreditCardTypeReturnsValidVendorName()
     {
         $this->assertTrue(in_array($this->faker->creditCardType, array('Visa', 'MasterCard', 'American Express', 'Discover Card')));
@@ -93,7 +87,6 @@ class PaymentTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(count($cardDetails), 4);
         $this->assertEquals(array('type', 'number', 'name', 'expirationDate'), array_keys($cardDetails));
     }
-<<<<<<< HEAD
 
     protected $ibanFormats = array(
         'AD' => '/^AD\d{2}\d{4}\d{4}[A-Z0-9]{12}$/',
@@ -210,6 +203,4 @@ class PaymentTest extends \PHPUnit_Framework_TestCase
         // Test checksum
         $this->assertTrue(Iban::isValid($iban), "Checksum for $iban is invalid");
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

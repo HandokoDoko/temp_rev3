@@ -484,7 +484,6 @@ if (! function_exists('data_set')) {
             } elseif ($overwrite || ! isset($target->{$segment})) {
                 $target->{$segment} = $value;
             }
-<<<<<<< HEAD
         } else {
             $target = [];
 
@@ -493,8 +492,6 @@ if (! function_exists('data_set')) {
             } elseif ($overwrite) {
                 $target[$segment] = $value;
             }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         return $target;
@@ -872,11 +869,7 @@ if (! function_exists('value')) {
 
 if (! function_exists('windows_os')) {
     /**
-<<<<<<< HEAD
      * Determine whether the current environment is Windows based.
-=======
-     * Determine whether the current envrionment is Windows based.
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @return bool
      */

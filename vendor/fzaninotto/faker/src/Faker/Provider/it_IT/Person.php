@@ -85,7 +85,6 @@ class Person extends \Faker\Provider\Person
     {
         return static::randomElement(static::$suffix);
     }
-<<<<<<< HEAD
 
     /**
      * TaxCode (CodiceFiscale)
@@ -96,6 +95,4 @@ class Person extends \Faker\Provider\Person
     {
         return strtoupper(static::bothify('??????##?##?###?'));
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

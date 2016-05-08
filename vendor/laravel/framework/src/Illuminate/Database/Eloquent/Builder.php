@@ -155,11 +155,7 @@ class Builder
     }
 
     /**
-<<<<<<< HEAD
      * Find multiple models by their primary keys.
-=======
-     * Find a model by its primary key.
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @param  array  $ids
      * @param  array  $columns
@@ -511,13 +507,8 @@ class Builder
      * Increment a column's value by a given amount.
      *
      * @param  string  $column
-<<<<<<< HEAD
      * @param  int  $amount
      * @param  array  $extra
-=======
-     * @param  int     $amount
-     * @param  array   $extra
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @return int
      */
     public function increment($column, $amount = 1, array $extra = [])
@@ -531,13 +522,8 @@ class Builder
      * Decrement a column's value by a given amount.
      *
      * @param  string  $column
-<<<<<<< HEAD
      * @param  int  $amount
      * @param  array  $extra
-=======
-     * @param  int     $amount
-     * @param  array   $extra
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @return int
      */
     public function decrement($column, $amount = 1, array $extra = [])
@@ -637,13 +623,8 @@ class Builder
     /**
      * Eagerly load the relationship on a set of models.
      *
-<<<<<<< HEAD
      * @param  array  $models
      * @param  string  $name
-=======
-     * @param  array     $models
-     * @param  string    $name
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @param  \Closure  $constraints
      * @return array
      */
@@ -929,11 +910,7 @@ class Builder
      */
     protected function shouldRunExistsQuery($operator, $count)
     {
-<<<<<<< HEAD
         return ($operator === '>=' || $operator === '<') && $count === 1;
-=======
-        return ($operator === '>=' && $count === 1) || ($operator === '<' && $count === 1);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

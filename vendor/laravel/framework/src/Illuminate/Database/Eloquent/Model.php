@@ -2282,19 +2282,11 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
 
         static::unguard();
 
-<<<<<<< HEAD
         try {
             return $callback();
         } finally {
             static::reguard();
         }
-=======
-        $result = $callback();
-
-        static::reguard();
-
-        return $result;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -2634,25 +2626,14 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
         // an appropriate native PHP type dependant upon the associated value
         // given with the key in the pair. Dayle made this comment line up.
         if ($this->hasCast($key)) {
-<<<<<<< HEAD
             return $this->castAttribute($key, $value);
-=======
-            $value = $this->castAttribute($key, $value);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         // If the attribute is listed as a date, we will convert it to a DateTime
         // instance on retrieval, which makes it quite convenient to work with
         // date fields without having to create a mutator for each property.
-<<<<<<< HEAD
         if (in_array($key, $this->getDates()) && ! is_null($value)) {
             return $this->asDateTime($value);
-=======
-        elseif (in_array($key, $this->getDates())) {
-            if (! is_null($value)) {
-                return $this->asDateTime($value);
-            }
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         return $value;
@@ -2711,13 +2692,9 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
                 .'Illuminate\Database\Eloquent\Relations\Relation');
         }
 
-<<<<<<< HEAD
         $this->setRelation($method, $results = $relations->getResults());
 
         return $results;
-=======
-        return $this->relations[$method] = $relations->getResults();
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -3105,11 +3082,7 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
      *
      * @param  string|null  $key
      * @param  mixed  $default
-<<<<<<< HEAD
      * @return mixed|array
-=======
-     * @return array
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function getOriginal($key = null, $default = null)
     {

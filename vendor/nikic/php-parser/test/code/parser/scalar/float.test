@@ -53,7 +53,6 @@ array(
         value: INF
     )
     10: Scalar_DNumber(
-<<<<<<< HEAD
         value: 1.844674407371E+19
         comments: array(
             0: // various integer -> float overflows
@@ -71,20 +70,5 @@ array(
     )
     14: Scalar_DNumber(
         value: 1.844674407371E+19
-=======
-        value: @@{ 0xFFFFFFFFFFFFFFFF }@@
-    )
-    11: Scalar_DNumber(
-        value: @@{ 0xFFFFFFFFFFFFFFFF }@@
-    )
-    12: Scalar_DNumber(
-        value: @@{ 0xFFFFFFFFFFFFFFFF }@@
-    )
-    13: Scalar_DNumber(
-        value: @@{ 0xFFFFFFFFFFFFFFFF }@@
-    )
-    14: Scalar_DNumber(
-        value: @@{ 0xFFFFFFFFFFFFFFFF }@@
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
 )

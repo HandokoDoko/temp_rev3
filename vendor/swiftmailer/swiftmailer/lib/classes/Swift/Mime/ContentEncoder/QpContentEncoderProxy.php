@@ -61,10 +61,7 @@ class Swift_Mime_ContentEncoder_QpContentEncoderProxy implements Swift_Mime_Cont
     public function charsetChanged($charset)
     {
         $this->charset = $charset;
-<<<<<<< HEAD
         $this->safeEncoder->charsetChanged($charset);
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

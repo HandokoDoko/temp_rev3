@@ -2,11 +2,7 @@
 
 namespace Faker\Provider;
 
-<<<<<<< HEAD
 class Uuid extends Base
-=======
-class Uuid extends \Faker\Provider\Base
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 {
     /**
      * Generate name based md5 UUID (version 3).

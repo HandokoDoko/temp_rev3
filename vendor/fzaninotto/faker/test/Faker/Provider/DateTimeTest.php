@@ -6,7 +6,6 @@ use Faker\Provider\DateTime as DateTimeProvider;
 
 class DateTimeTest extends \PHPUnit_Framework_TestCase
 {
-<<<<<<< HEAD
     public function setUp()
     {
         $this->originalTz = date_default_timezone_get();
@@ -19,8 +18,6 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase
         date_default_timezone_set($this->originalTz);
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function testUnixTime()
     {
         $timestamp = DateTimeProvider::unixTime();
@@ -35,7 +32,6 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\DateTime', $date);
         $this->assertGreaterThanOrEqual(new \DateTime('@0'), $date);
         $this->assertLessThanOrEqual(new \DateTime(), $date);
-<<<<<<< HEAD
         $this->assertEquals(new \DateTimeZone($this->defaultTz), $date->getTimezone());
     }
 
@@ -43,8 +39,6 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase
     {
         $date = DateTimeProvider::dateTime('now', 'America/New_York');
         $this->assertEquals($date->getTimezone(), new \DateTimeZone('America/New_York'));
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     public function testDateTimeAD()
@@ -53,10 +47,7 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\DateTime', $date);
         $this->assertGreaterThanOrEqual(new \DateTime('0000-01-01 00:00:00'), $date);
         $this->assertLessThanOrEqual(new \DateTime(), $date);
-<<<<<<< HEAD
         $this->assertEquals(new \DateTimeZone($this->defaultTz), $date->getTimezone());
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     public function testIso8601()
@@ -91,10 +82,7 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\DateTime', $date);
         $this->assertGreaterThanOrEqual(new \DateTime($start), $date);
         $this->assertLessThanOrEqual(new \DateTime($end), $date);
-<<<<<<< HEAD
         $this->assertEquals(new \DateTimeZone($this->defaultTz), $date->getTimezone());
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     public function providerDateTimeBetween()
@@ -107,7 +95,6 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-<<<<<<< HEAD
     /**
      *
      * @dataProvider providerDateTimeInInterval
@@ -137,8 +124,6 @@ class DateTimeTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function testFixedSeedWithMaximumTimestamp()
     {
         $max = '2018-03-01 12:00:00';

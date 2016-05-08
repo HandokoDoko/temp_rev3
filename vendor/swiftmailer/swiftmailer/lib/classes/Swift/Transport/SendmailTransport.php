@@ -102,10 +102,7 @@ class Swift_Transport_SendmailTransport extends Swift_Transport_AbstractSmtpTran
         $failedRecipients = (array) $failedRecipients;
         $command = $this->getCommand();
         $buffer = $this->getBuffer();
-<<<<<<< HEAD
         $count = 0;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         if (false !== strpos($command, ' -t')) {
             if ($evt = $this->_eventDispatcher->createSendEvent($this, $message)) {

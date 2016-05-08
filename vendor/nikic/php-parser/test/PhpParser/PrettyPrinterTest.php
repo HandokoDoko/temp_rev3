@@ -4,11 +4,8 @@ namespace PhpParser;
 
 use PhpParser\Comment;
 use PhpParser\Node\Expr;
-<<<<<<< HEAD
 use PhpParser\Node\Scalar\Encapsed;
 use PhpParser\Node\Scalar\EncapsedStringPart;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 use PhpParser\Node\Scalar\String_;
 use PhpParser\Node\Stmt;
 use PhpParser\PrettyPrinter\Standard;
@@ -107,7 +104,6 @@ class PrettyPrinterTest extends CodeTestAbstract
         $options = isset($parts[1]) ? json_decode($parts[1], true) : [];
         return [$version, $options];
     }
-<<<<<<< HEAD
 
     public function testArraySyntaxDefault() {
         $prettyPrinter = new Standard(['shortArraySyntax' => true]);
@@ -165,6 +161,4 @@ class PrettyPrinterTest extends CodeTestAbstract
             [new Encapsed([new EncapsedStringPart("STR")], $heredoc), '"STR"'],
         ];
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

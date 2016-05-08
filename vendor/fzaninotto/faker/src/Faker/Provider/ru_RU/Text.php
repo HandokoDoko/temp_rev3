@@ -21,10 +21,6 @@ class Text extends \Faker\Provider\Text
      *
      * Language: Russian
      *
-<<<<<<< HEAD
-=======
-     * @licence Creative Commons Attribution-ShareAlike https://creativecommons.org/licenses/by-sa/3.0/deed.ru
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @see     https://wikimediafoundation.org/wiki/Terms_of_Use/
      * @link    http://ru.wikisource.org/wiki/%D0%9C%D1%91%D1%80%D1%82%D0%B2%D1%8B%D0%B5_%D0%B4%D1%83%D1%88%D0%B8_(%D0%93%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C)/%D0%A2%D0%BE%D0%BC_I/%D0%93%D0%BB%D0%B0%D0%B2%D0%B0_I
      * @var string

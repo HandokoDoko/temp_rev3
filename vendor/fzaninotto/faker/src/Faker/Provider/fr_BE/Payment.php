@@ -16,7 +16,6 @@ class Payment extends \Faker\Provider\Payment
     {
         return static::iban($countryCode, $prefix, $length);
     }
-<<<<<<< HEAD
 
     /**
      * Value Added Tax (VAT)
@@ -37,6 +36,4 @@ class Payment extends \Faker\Provider\Payment
 
         return sprintf("%s0%d", $prefix, self::randomNumber(9, true));
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

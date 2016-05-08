@@ -233,11 +233,7 @@ class ProgressBarTest extends \PHPUnit_Framework_TestCase
             $this->generateOutput('  0/50 [>---------------------------]   0%').
             $this->generateOutput('  0/50 [>---------------------------]   0%').
             $this->generateOutput('  1/50 [>---------------------------]   2%').
-<<<<<<< HEAD
             $this->generateOutput('  2/50 [=>--------------------------]'),
-=======
-            $this->generateOutput('  2/50 [=>--------------------------]     '),
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             stream_get_contents($output->getStream())
         );
     }
@@ -357,11 +353,7 @@ class ProgressBarTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(
             $this->generateOutput('  0/50 [>---------------------------]   0%').
             $this->generateOutput(' 25/50 [==============>-------------]  50%').
-<<<<<<< HEAD
             $this->generateOutput(''),
-=======
-            $this->generateOutput('                                          '),
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             stream_get_contents($output->getStream())
         );
     }
@@ -559,15 +551,9 @@ class ProgressBarTest extends \PHPUnit_Framework_TestCase
         rewind($output->getStream());
         $this->assertEquals(
             $this->generateOutput(">---------------------------\nfoobar").
-<<<<<<< HEAD
             $this->generateOutput("=========>------------------\nfoobar").
             "\x0D\x1B[2K\x1B[1A\x1B[2K".
             $this->generateOutput("============================\nfoobar"),
-=======
-            $this->generateOutput("=========>------------------\nfoobar                      ").
-            $this->generateOutput("                            \n                            ").
-            $this->generateOutput("============================\nfoobar                      "),
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             stream_get_contents($output->getStream())
         );
     }
@@ -599,29 +585,17 @@ class ProgressBarTest extends \PHPUnit_Framework_TestCase
             $this->generateOutput(
                 " \033[44;37m Starting the demo... fingers crossed  \033[0m\n".
                 '  0/15 '.$progress.str_repeat($empty, 26)."   0%\n".
-<<<<<<< HEAD
                 " \xf0\x9f\x8f\x81  < 1 sec                        \033[44;37m 0 B \033[0m"
-=======
-                " \xf0\x9f\x8f\x81  1 sec                          \033[44;37m 0 B \033[0m"
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             ).
             $this->generateOutput(
                 " \033[44;37m Looks good to me...                   \033[0m\n".
                 '  4/15 '.str_repeat($done, 7).$progress.str_repeat($empty, 19)."  26%\n".
-<<<<<<< HEAD
                 " \xf0\x9f\x8f\x81  < 1 sec                     \033[41;37m 97 KiB \033[0m"
-=======
-                " \xf0\x9f\x8f\x81  1 sec                       \033[41;37m 97 KiB \033[0m"
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             ).
             $this->generateOutput(
                 " \033[44;37m Thanks, bye                           \033[0m\n".
                 ' 15/15 '.str_repeat($done, 28)." 100%\n".
-<<<<<<< HEAD
                 " \xf0\x9f\x8f\x81  < 1 sec                    \033[41;37m 195 KiB \033[0m"
-=======
-                " \xf0\x9f\x8f\x81  1 sec                      \033[41;37m 195 KiB \033[0m"
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             ),
             stream_get_contents($output->getStream())
         );
@@ -685,10 +659,6 @@ class ProgressBarTest extends \PHPUnit_Framework_TestCase
     {
         $count = substr_count($expected, "\n");
 
-<<<<<<< HEAD
         return "\x0D\x1B[2K".($count ? str_repeat("\x1B[1A\x1B[2K", $count) : '').$expected;
-=======
-        return "\x0D".($count ? sprintf("\033[%dA", $count) : '').$expected;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 }

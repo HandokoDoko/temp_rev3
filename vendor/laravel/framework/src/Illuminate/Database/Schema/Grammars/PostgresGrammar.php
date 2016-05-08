@@ -28,11 +28,7 @@ class PostgresGrammar extends Grammar
      */
     public function compileTableExists()
     {
-<<<<<<< HEAD
         return 'select * from information_schema.tables where table_schema = ? and table_name = ?';
-=======
-        return 'select * from information_schema.tables where table_name = ?';
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -65,11 +61,7 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-<<<<<<< HEAD
      * Compile a column addition command.
-=======
-     * Compile a create table command.
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command

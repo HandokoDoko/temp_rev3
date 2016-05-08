@@ -172,11 +172,7 @@ class Swift_Transport_Esmtp_AuthHandler implements Swift_Transport_EsmtpHandler
             foreach ($this->_getAuthenticatorsForAgent() as $authenticator) {
                 if (in_array(strtolower($authenticator->getAuthKeyword()),
                     array_map('strtolower', $this->_esmtpParams))) {
-<<<<<<< HEAD
                     ++$count;
-=======
-                    $count++;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                     if ($authenticator->authenticate($agent, $this->_username, $this->_password)) {
                         return;
                     }

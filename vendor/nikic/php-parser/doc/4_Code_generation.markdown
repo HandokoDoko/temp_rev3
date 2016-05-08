@@ -29,10 +29,7 @@ $node = $factory->namespace('Name\Space')
         ->addStmt($factory->method('someMethod')
             ->makePublic()
             ->makeAbstract() // ->makeFinal()
-<<<<<<< HEAD
             ->setReturnType('bool')
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             ->addParam($factory->param('someParam')->setTypeHint('SomeClass'))
             ->setDocComment('/**
                               * This method does something.
@@ -78,11 +75,7 @@ abstract class SomeClass extends SomeOtherClass implements A\Few, \Interfaces
      *
      * @param SomeClass And takes a parameter
      */
-<<<<<<< HEAD
     public abstract function someMethod(SomeClass $someParam) : bool;
-=======
-    public abstract function someMethod(SomeClass $someParam);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     protected function anotherMethod($someParam = 'test')
     {
         print $someParam;

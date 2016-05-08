@@ -105,11 +105,7 @@ class Arr
         $results = [];
 
         foreach ($array as $key => $value) {
-<<<<<<< HEAD
             if (is_array($value) && ! empty($value)) {
-=======
-            if (is_array($value)) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 $results = array_merge($results, static::dot($value, $prepend.$key.'.'));
             } else {
                 $results[$prepend.$key] = $value;
@@ -237,7 +233,6 @@ class Arr
         }
 
         foreach ($keys as $key) {
-<<<<<<< HEAD
             // if the exact key exists in the top-level, remove it
             if (static::exists($array, $key)) {
                 unset($array[$key]);
@@ -245,8 +240,6 @@ class Arr
                 continue;
             }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $parts = explode('.', $key);
 
             // clean up before each pass

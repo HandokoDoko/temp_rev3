@@ -76,11 +76,8 @@ class View implements ArrayAccess, ViewContract
      *
      * @param  callable|null  $callback
      * @return string
-<<<<<<< HEAD
      *
      * @throws \Throwable
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function render(callable $callback = null)
     {

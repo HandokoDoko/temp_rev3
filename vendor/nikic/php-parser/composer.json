@@ -24,11 +24,7 @@
     "bin": ["bin/php-parse"],
     "extra": {
         "branch-alias": {
-<<<<<<< HEAD
             "dev-master": "2.1-dev"
-=======
-            "dev-master": "2.0-dev"
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
     }
 }

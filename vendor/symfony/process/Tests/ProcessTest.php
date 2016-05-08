@@ -209,7 +209,6 @@ class ProcessTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expectedLength, strlen($p->getErrorOutput()));
     }
 
-<<<<<<< HEAD
     public function testLiveStreamAsInput()
     {
         $stream = fopen('php://memory', 'r+');
@@ -228,8 +227,6 @@ class ProcessTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('hello', $p->getOutput());
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /**
      * @expectedException \Symfony\Component\Process\Exception\LogicException
      * @expectedExceptionMessage Input can not be set while the process is running.
@@ -1166,11 +1163,7 @@ class ProcessTest extends \PHPUnit_Framework_TestCase
      * @dataProvider provideVariousIncrementals
      */
     public function testIncrementalOutputDoesNotRequireAnotherCall($stream, $method) {
-<<<<<<< HEAD
         $process = $this->getProcess(self::$phpBin.' -r '.escapeshellarg('$n = 0; while ($n < 3) { file_put_contents(\''.$stream.'\', $n, 1); $n++; usleep(1000); }'), null, null, null, null);
-=======
-        $process = new Process(self::$phpBin.' -r '.escapeshellarg('$n = 0; while ($n < 3) { file_put_contents(\''.$stream.'\', $n, 1); $n++; usleep(1000); }'), null, null, null, null);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $process->start();
         $result = '';
         $limit = microtime(true) + 3;

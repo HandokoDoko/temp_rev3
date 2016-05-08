@@ -4,11 +4,8 @@ namespace Faker\Provider\es_ES;
 
 class Person extends \Faker\Provider\Person
 {
-<<<<<<< HEAD
     private static $crcMap=array('T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T');
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     protected static $maleNameFormats = array(
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
@@ -30,10 +27,6 @@ class Person extends \Faker\Provider\Person
     );
 
     /**
-<<<<<<< HEAD
-=======
-     *
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * {@link} http://www.ine.es/daco/daco42/nombyapel/nombyapel.htm
      */
     protected static $firstNameMale = array(
@@ -76,7 +69,6 @@ class Person extends \Faker\Provider\Person
     {
         return static::randomElement(static::$suffix);
     }
-<<<<<<< HEAD
 
     /**
      * Generate a Documento Nacional de Identidad (DNI) number
@@ -92,6 +84,4 @@ class Person extends \Faker\Provider\Person
 
         return $number . $letter;
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

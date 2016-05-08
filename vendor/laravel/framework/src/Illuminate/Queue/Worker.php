@@ -127,16 +127,8 @@ class Worker
      */
     protected function daemonShouldRun()
     {
-<<<<<<< HEAD
         return $this->manager->isDownForMaintenance()
                     ? false : $this->events->until('illuminate.queue.looping') !== false;
-=======
-        if ($this->manager->isDownForMaintenance()) {
-            return false;
-        }
-
-        return $this->events->until('illuminate.queue.looping') !== false;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -209,22 +201,15 @@ class Worker
         try {
             $this->raiseBeforeJobEvent($connection, $job);
 
-<<<<<<< HEAD
             // First we will fire off the job. Once it is done we will see if it will be
             // automatically deleted after processing and if so we'll fire the delete
             // method on the job. Otherwise, we will just keep on running our jobs.
-=======
-            // First we will fire off the job. Once it is done we will see if it will
-            // be auto-deleted after processing and if so we will go ahead and run
-            // the delete method on the job. Otherwise we will just keep moving.
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $job->fire();
 
             $this->raiseAfterJobEvent($connection, $job);
 
             return ['job' => $job, 'failed' => false];
         } catch (Exception $e) {
-<<<<<<< HEAD
             $this->handleJobException($connection, $job, $delay, $e);
         } catch (Throwable $e) {
             $this->handleJobException($connection, $job, $delay, $e);
@@ -256,34 +241,6 @@ class Worker
         }
 
         throw $e;
-=======
-            try {
-                $this->raiseExceptionOccurredJobEvent($connection, $job, $e);
-            } finally {
-                // If we catch an exception, we will attempt to release the job back onto
-                // the queue so it is not lost. This will let is be retried at a later
-                // time by another listener (or the same one). We will do that here.
-                if (! $job->isDeleted()) {
-                    $job->release($delay);
-                }
-            }
-
-            throw $e;
-        } catch (Throwable $e) {
-            try {
-                $this->raiseExceptionOccurredJobEvent($connection, $job, $e);
-            } finally {
-                // If we catch an exception, we will attempt to release the job back onto
-                // the queue so it is not lost. This will let is be retried at a later
-                // time by another listener (or the same one). We will do that here.
-                if (! $job->isDeleted()) {
-                    $job->release($delay);
-                }
-            }
-
-            throw $e;
-        }
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

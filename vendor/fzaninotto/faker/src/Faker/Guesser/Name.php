@@ -8,27 +8,20 @@ class Name
 {
     protected $generator;
 
-<<<<<<< HEAD
     /**
      * @param \Faker\Generator $generator
      */
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __construct(\Faker\Generator $generator)
     {
         $this->generator = $generator;
     }
 
-<<<<<<< HEAD
     /**
      * @param string $name
      * @param int|null $size Length of field, if known
      * @return callable
      */
     public function guessFormat($name, $size = null)
-=======
-    public function guessFormat($name)
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     {
         $name = Base::toLower($name);
         $generator = $this->generator;
@@ -42,20 +35,11 @@ class Name
                 return $generator->dateTime;
             };
         }
-<<<<<<< HEAD
         switch (str_replace('_', '', $name)) {
-=======
-        switch ($name) {
-            case 'first_name':
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             case 'firstname':
                 return function () use ($generator) {
                     return $generator->firstName;
                 };
-<<<<<<< HEAD
-=======
-            case 'last_name':
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             case 'lastname':
                 return function () use ($generator) {
                     return $generator->lastName;
@@ -66,7 +50,6 @@ class Name
                     return $generator->userName;
                 };
             case 'email':
-<<<<<<< HEAD
             case 'emailaddress':
                 return function () use ($generator) {
                     return $generator->email;
@@ -75,14 +58,6 @@ class Name
             case 'phone':
             case 'telephone':
             case 'telnumber':
-=======
-                return function () use ($generator) {
-                    return $generator->email;
-                };
-            case 'phone_number':
-            case 'phonenumber':
-            case 'phone':
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 return function () use ($generator) {
                     return $generator->phoneNumber;
                 };
@@ -91,10 +66,7 @@ class Name
                     return $generator->address;
                 };
             case 'city':
-<<<<<<< HEAD
             case 'town':
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 return function () use ($generator) {
                     return $generator->city;
                 };
@@ -111,7 +83,6 @@ class Name
                 return function () use ($generator) {
                     return $generator->state;
                 };
-<<<<<<< HEAD
             case 'county':
                 if ($this->generator->locale == 'en_US') {
                     return function () use ($generator) {
@@ -170,23 +141,13 @@ class Name
                     };
                 }
 
-=======
-            case 'country':
-                return function () use ($generator) {
-                    return $generator->country;
-                };
-            case 'title':
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 return function () use ($generator) {
                     return $generator->sentence;
                 };
             case 'body':
             case 'summary':
-<<<<<<< HEAD
             case 'article':
             case 'description':
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 return function () use ($generator) {
                     return $generator->text;
                 };

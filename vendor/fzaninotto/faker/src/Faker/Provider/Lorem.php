@@ -2,11 +2,7 @@
 
 namespace Faker\Provider;
 
-<<<<<<< HEAD
 class Lorem extends Base
-=======
-class Lorem extends \Faker\Provider\Base
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 {
     protected static $wordList = array(
         'alias', 'consequatur', 'aut', 'perferendis', 'sit', 'voluptatem',
@@ -72,11 +68,7 @@ class Lorem extends \Faker\Provider\Base
             $words []= static::word();
         }
 
-<<<<<<< HEAD
         return $asText ? implode(' ', $words) : $words;
-=======
-        return $asText ? join(' ', $words) : $words;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -100,11 +92,7 @@ class Lorem extends \Faker\Provider\Base
         $words = static::words($nbWords);
         $words[0] = ucwords($words[0]);
 
-<<<<<<< HEAD
         return implode($words, ' ') . '.';
-=======
-        return join($words, ' ') . '.';
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -122,11 +110,7 @@ class Lorem extends \Faker\Provider\Base
             $sentences []= static::sentence();
         }
 
-<<<<<<< HEAD
         return $asText ? implode(' ', $sentences) : $sentences;
-=======
-        return $asText ? join(' ', $sentences) : $sentences;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -147,11 +131,7 @@ class Lorem extends \Faker\Provider\Base
             $nbSentences = self::randomizeNbElements($nbSentences);
         }
 
-<<<<<<< HEAD
         return implode(static::sentences($nbSentences), ' ');
-=======
-        return join(static::sentences($nbSentences), ' ');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -169,11 +149,7 @@ class Lorem extends \Faker\Provider\Base
             $paragraphs []= static::paragraph();
         }
 
-<<<<<<< HEAD
         return $asText ? implode("\n\n", $paragraphs) : $paragraphs;
-=======
-        return $asText ? join("\n\n", $paragraphs) : $paragraphs;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -229,11 +205,7 @@ class Lorem extends \Faker\Provider\Base
             }
         }
 
-<<<<<<< HEAD
         return implode($text, '');
-=======
-        return join($text, '');
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     protected static function randomizeNbElements($nbElements)

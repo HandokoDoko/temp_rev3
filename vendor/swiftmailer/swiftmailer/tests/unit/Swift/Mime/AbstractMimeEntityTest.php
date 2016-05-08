@@ -379,11 +379,7 @@ abstract class Swift_Mime_AbstractMimeEntityTest extends \SwiftMailerTestCase
             $this->_createEncoder(), $this->_createCache()
             );
         $firstBoundary = $entity->getBoundary();
-<<<<<<< HEAD
         for ($i = 0; $i < 10; ++$i) {
-=======
-        for ($i = 0; $i < 10; $i++) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $this->assertEquals($firstBoundary, $entity->getBoundary());
         }
     }
@@ -544,21 +540,13 @@ abstract class Swift_Mime_AbstractMimeEntityTest extends \SwiftMailerTestCase
         $child1 = new MimeEntityFixture(Swift_Mime_MimeEntity::LEVEL_ALTERNATIVE,
             "Content-Type: text/plain\r\n".
             "\r\n".
-<<<<<<< HEAD
             'foobar', 'text/plain'
-=======
-            'foobar'
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             );
 
         $child2 = new MimeEntityFixture(Swift_Mime_MimeEntity::LEVEL_ALTERNATIVE,
             "Content-Type: text/html\r\n".
             "\r\n".
-<<<<<<< HEAD
             '<b>foobar</b>', 'text/html'
-=======
-            '<b>foobar</b>'
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             );
 
         $headers->shouldReceive('toString')
@@ -635,11 +623,7 @@ abstract class Swift_Mime_AbstractMimeEntityTest extends \SwiftMailerTestCase
             "\r\n".
             'data'.
             "\r\n\r\n--xxx--\r\n".
-<<<<<<< HEAD
             '$~',
-=======
-            "\$~",
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $entity->toString()
             );
     }

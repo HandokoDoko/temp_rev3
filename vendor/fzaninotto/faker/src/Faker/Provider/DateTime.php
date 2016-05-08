@@ -2,11 +2,7 @@
 
 namespace Faker\Provider;
 
-<<<<<<< HEAD
 class DateTime extends Base
-=======
-class DateTime extends \Faker\Provider\Base
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 {
     protected static $century = array('I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX','XXI');
 
@@ -40,7 +36,6 @@ class DateTime extends \Faker\Provider\Base
      * Get a datetime object for a date between January 1, 1970 and now
      *
      * @param \DateTime|int|string $max maximum timestamp used as random end limit, default to "now"
-<<<<<<< HEAD
      * @param string $timezone time zone in which the date time should be set, default to result of `date_default_timezone_get`
      * @example DateTime('2005-08-16 20:39:21')
      * @return \DateTime
@@ -53,21 +48,12 @@ class DateTime extends \Faker\Provider\Base
             new \DateTime('@' . static::unixTime($max)),
             (null === $timezone ? date_default_timezone_get() : $timezone)
         );
-=======
-     * @example DateTime('2005-08-16 20:39:21')
-     * @return \DateTime
-     */
-    public static function dateTime($max = 'now')
-    {
-        return new \DateTime('@' . static::unixTime($max));
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
      * Get a datetime object for a date between January 1, 001 and now
      *
      * @param \DateTime|int|string $max maximum timestamp used as random end limit, default to "now"
-<<<<<<< HEAD
      * @param string $timezone time zone in which the date time should be set, default to result of `date_default_timezone_get`
      * @example DateTime('1265-03-22 21:15:52')
      * @return \DateTime
@@ -80,14 +66,6 @@ class DateTime extends \Faker\Provider\Base
             new \DateTime('@' . mt_rand(-62135597361, static::getMaxTimestamp($max))),
             (null === $timezone ? date_default_timezone_get() : $timezone)
         );
-=======
-     * @example DateTime('1265-03-22 21:15:52')
-     * @return \DateTime
-     */
-    public static function dateTimeAD($max = 'now')
-    {
-        return new \DateTime('@' . mt_rand(-62135597361, static::getMaxTimestamp($max)));
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -132,7 +110,6 @@ class DateTime extends \Faker\Provider\Base
      * Get a DateTime object based on a random date between two given dates.
      * Accepts date strings that can be recognized by strtotime().
      *
-<<<<<<< HEAD
      * @param \DateTime|string $startDate Defaults to 30 years ago
      * @param \DateTime|string $endDate   Defaults to "now"
      * @param string $timezone time zone in which the date time should be set, default to result of `date_default_timezone_get`
@@ -142,14 +119,6 @@ class DateTime extends \Faker\Provider\Base
      * @see http://php.net/manual/en/function.date-default-timezone-get.php
      */
     public static function dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null)
-=======
-     * @param string $startDate Defaults to 30 years ago
-     * @param string $endDate   Defaults to "now"
-     * @example DateTime('1999-02-02 11:42:52')
-     * @return \DateTime
-     */
-    public static function dateTimeBetween($startDate = '-30 years', $endDate = 'now')
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     {
         $startTimestamp = $startDate instanceof \DateTime ? $startDate->getTimestamp() : strtotime($startDate);
         $endTimestamp = static::getMaxTimestamp($endDate);
@@ -160,7 +129,6 @@ class DateTime extends \Faker\Provider\Base
 
         $timestamp = mt_rand($startTimestamp, $endTimestamp);
 
-<<<<<<< HEAD
         return static::setTimezone(
             new \DateTime('@' . $timestamp),
             (null === $timezone ? date_default_timezone_get() : $timezone)
@@ -195,12 +163,6 @@ class DateTime extends \Faker\Provider\Base
             $end,
             (null === $timezone ? date_default_timezone_get() : $timezone)
         );
-=======
-        $ts = new \DateTime('@' . $timestamp);
-        $ts->setTimezone(new \DateTimeZone(date_default_timezone_get()));
-
-        return $ts;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -320,7 +282,6 @@ class DateTime extends \Faker\Provider\Base
     {
         return static::randomElement(\DateTimeZone::listIdentifiers());
     }
-<<<<<<< HEAD
 
     /**
      * Internal method to set the time zone on a DateTime.
@@ -329,6 +290,4 @@ class DateTime extends \Faker\Provider\Base
     {
         return $dt->setTimezone(new \DateTimeZone($timezone));
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

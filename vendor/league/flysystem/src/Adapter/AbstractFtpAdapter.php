@@ -6,10 +6,7 @@ use DateTime;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Config;
 use League\Flysystem\NotSupportedException;
-<<<<<<< HEAD
 use RuntimeException;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 abstract class AbstractFtpAdapter extends AbstractAdapter
 {
@@ -399,14 +396,11 @@ abstract class AbstractFtpAdapter extends AbstractAdapter
     protected function normalizeUnixObject($item, $base)
     {
         $item = preg_replace('#\s+#', ' ', trim($item), 7);
-<<<<<<< HEAD
 
         if (count(explode(' ', $item, 9)) !== 9) {
             throw new RuntimeException("Metadata can't be parsed from item '$item' , not enough parts.");
         }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         list($permissions, /* $number */, /* $owner */, /* $group */, $size, /* $month */, /* $day */, /* $time*/, $name) = explode(' ', $item, 9);
         $type = $this->detectType($permissions);
         $path = empty($base) ? $name : $base . $this->separator . $name;
@@ -433,14 +427,11 @@ abstract class AbstractFtpAdapter extends AbstractAdapter
     protected function normalizeWindowsObject($item, $base)
     {
         $item = preg_replace('#\s+#', ' ', trim($item), 3);
-<<<<<<< HEAD
 
         if (count(explode(' ', $item, 4)) !== 4) {
             throw new RuntimeException("Metadata can't be parsed from item '$item' , not enough parts.");
         }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         list($date, $time, $size, $name) = explode(' ', $item, 4);
         $path = empty($base) ? $name : $base . $this->separator . $name;
 

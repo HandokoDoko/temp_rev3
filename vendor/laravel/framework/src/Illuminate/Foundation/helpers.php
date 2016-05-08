@@ -257,11 +257,7 @@ if (! function_exists('csrf_field')) {
     /**
      * Generate a CSRF token form field.
      *
-<<<<<<< HEAD
      * @return \Illuminate\Support\HtmlString
-=======
-     * @return string
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     function csrf_field()
     {
@@ -487,11 +483,7 @@ if (! function_exists('method_field')) {
      * Generate a form field to spoof the HTTP verb used by forms.
      *
      * @param  string  $method
-<<<<<<< HEAD
      * @return \Illuminate\Support\HtmlString
-=======
-     * @return string
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     function method_field($method)
     {
@@ -620,20 +612,11 @@ if (! function_exists('route')) {
      * @param  string  $name
      * @param  array   $parameters
      * @param  bool    $absolute
-<<<<<<< HEAD
      * @return string
      */
     function route($name, $parameters = [], $absolute = true)
     {
         return app('url')->route($name, $parameters, $absolute);
-=======
-     * @param  \Illuminate\Routing\Route  $route
-     * @return string
-     */
-    function route($name, $parameters = [], $absolute = true, $route = null)
-    {
-        return app('url')->route($name, $parameters, $absolute, $route);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 }
 

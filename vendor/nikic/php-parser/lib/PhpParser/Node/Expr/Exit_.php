@@ -6,13 +6,10 @@ use PhpParser\Node\Expr;
 
 class Exit_ extends Expr
 {
-<<<<<<< HEAD
     /* For use in "kind" attribute */
     const KIND_EXIT = 1;
     const KIND_DIE = 2;
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /** @var null|Expr Expression */
     public $expr;
 

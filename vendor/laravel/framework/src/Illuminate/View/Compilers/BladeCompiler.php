@@ -625,7 +625,6 @@ class BladeCompiler extends Compiler implements CompilerInterface
      */
     protected function compileCan($expression)
     {
-<<<<<<< HEAD
         return "<?php if (app('Illuminate\\Contracts\\Auth\\Access\\Gate')->check{$expression}): ?>";
     }
 
@@ -638,9 +637,6 @@ class BladeCompiler extends Compiler implements CompilerInterface
     protected function compileElsecan($expression)
     {
         return "<?php elseif (app('Illuminate\\Contracts\\Auth\\Access\\Gate')->check{$expression}): ?>";
-=======
-        return "<?php if (Gate::check{$expression}): ?>";
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -651,7 +647,6 @@ class BladeCompiler extends Compiler implements CompilerInterface
      */
     protected function compileCannot($expression)
     {
-<<<<<<< HEAD
         return "<?php if (app('Illuminate\\Contracts\\Auth\\Access\\Gate')->denies{$expression}): ?>";
     }
 
@@ -664,9 +659,6 @@ class BladeCompiler extends Compiler implements CompilerInterface
     protected function compileElsecannot($expression)
     {
         return "<?php elseif (app('Illuminate\\Contracts\\Auth\\Access\\Gate')->denies{$expression}): ?>";
-=======
-        return "<?php if (Gate::denies{$expression}): ?>";
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

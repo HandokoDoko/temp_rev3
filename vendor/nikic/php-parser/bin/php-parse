@@ -27,17 +27,10 @@ if (empty($files)) {
 }
 
 $lexer = new PhpParser\Lexer\Emulative(array('usedAttributes' => array(
-<<<<<<< HEAD
     'startLine', 'endLine', 'startFilePos', 'endFilePos', 'comments'
 )));
 $parser = (new PhpParser\ParserFactory)->create(PhpParser\ParserFactory::PREFER_PHP7, $lexer);
 $dumper = new PhpParser\NodeDumper(['dumpComments' => true]);
-=======
-    'startLine', 'endLine', 'startFilePos', 'endFilePos'
-)));
-$parser = (new PhpParser\ParserFactory)->create(PhpParser\ParserFactory::PREFER_PHP7, $lexer);
-$dumper = new PhpParser\NodeDumper;
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 $prettyPrinter = new PhpParser\PrettyPrinter\Standard;
 $serializer = new PhpParser\Serializer\XML;
 
@@ -93,17 +86,11 @@ foreach ($files as $file) {
     }
 }
 
-<<<<<<< HEAD
 function showHelp($error = '') {
     if ($error) {
         echo $error . "\n\n";
     }
     die(<<<OUTPUT
-=======
-function showHelp($error) {
-    die($error . "\n\n" .
-        <<<OUTPUT
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 Usage: php-parse [operations] file1.php [file2.php ...]
    or: php-parse [operations] "<?php code"
 Turn PHP source code into an abstract syntax tree.
@@ -116,10 +103,7 @@ Operations is a list of the following options (--dump by default):
         --var-dump          var_dump() nodes (for exact structure)
     -N, --resolve-names     Resolve names using NodeVisitor\NameResolver
     -c, --with-column-info  Show column-numbers for errors (if available)
-<<<<<<< HEAD
     -h, --help              Display this page
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 Example:
     php-parse -d -p -N -d file.php
@@ -169,13 +153,10 @@ function parseArgs($args) {
             case '-c';
                 $attributes['with-column-info'] = true;
                 break;
-<<<<<<< HEAD
             case '--help':
             case '-h';
                 showHelp();
                 break;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             case '--':
                 $parseOptions = false;
                 break;

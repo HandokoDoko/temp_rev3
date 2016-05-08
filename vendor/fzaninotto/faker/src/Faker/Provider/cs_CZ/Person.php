@@ -425,7 +425,6 @@ class Person extends \Faker\Provider\Person
         'Bc.', 'Ing.', 'MUDr.', 'MVDr.', 'Mgr.', 'JUDr.', 'PhDr.', 'RNDr.', 'doc.', 'Dr.'
     );
 
-<<<<<<< HEAD
     /**
      * @return czech birth number
      * @param string|null $gender 'male', 'female' or null for any
@@ -486,8 +485,6 @@ class Person extends \Faker\Provider\Person
         return static::birthNumber(static::GENDER_FEMALE);
     }
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function title($gender = null)
     {
         return static::titleMale();

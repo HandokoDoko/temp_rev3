@@ -31,7 +31,6 @@ class AddressTest extends \PHPUnit_Framework_TestCase
         $this->assertGreaterThanOrEqual(-180, $longitude);
         $this->assertLessThanOrEqual(180, $longitude);
     }
-<<<<<<< HEAD
 
     public function testCoordinate()
     {
@@ -44,6 +43,4 @@ class AddressTest extends \PHPUnit_Framework_TestCase
         $this->assertGreaterThanOrEqual(-180, $coordinate['longitude']);
         $this->assertLessThanOrEqual(180, $coordinate['longitude']);
     }
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

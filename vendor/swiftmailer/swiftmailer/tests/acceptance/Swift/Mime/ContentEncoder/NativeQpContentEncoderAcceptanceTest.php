@@ -2,11 +2,8 @@
 
 class Swift_Mime_ContentEncoder_NativeQpContentEncoderAcceptanceTest extends \PHPUnit_Framework_TestCase
 {
-<<<<<<< HEAD
     protected $_samplesDir;
 
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /**
      * @var Swift_Mime_ContentEncoder_NativeQpContentEncoder
      */

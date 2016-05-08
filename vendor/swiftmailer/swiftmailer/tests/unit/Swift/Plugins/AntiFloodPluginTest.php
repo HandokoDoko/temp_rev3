@@ -29,11 +29,7 @@ class Swift_Plugins_AntiFloodPluginTest extends \PHPUnit_Framework_TestCase
         $evt = $this->_createSendEvent($transport);
 
         $plugin = new Swift_Plugins_AntiFloodPlugin(10);
-<<<<<<< HEAD
         for ($i = 0; $i < 12; ++$i) {
-=======
-        for ($i = 0; $i < 12; $i++) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $plugin->sendPerformed($evt);
         }
     }
@@ -49,11 +45,7 @@ class Swift_Plugins_AntiFloodPluginTest extends \PHPUnit_Framework_TestCase
         $evt = $this->_createSendEvent($transport);
 
         $plugin = new Swift_Plugins_AntiFloodPlugin(2);
-<<<<<<< HEAD
         for ($i = 0; $i < 11; ++$i) {
-=======
-        for ($i = 0; $i < 11; $i++) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $plugin->sendPerformed($evt);
         }
     }
@@ -74,11 +66,7 @@ class Swift_Plugins_AntiFloodPluginTest extends \PHPUnit_Framework_TestCase
         $evt = $this->_createSendEvent($transport);
 
         $plugin = new Swift_Plugins_AntiFloodPlugin(99, 10, $sleeper);
-<<<<<<< HEAD
         for ($i = 0; $i < 101; ++$i) {
-=======
-        for ($i = 0; $i < 101; $i++) {
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $plugin->sendPerformed($evt);
         }
     }

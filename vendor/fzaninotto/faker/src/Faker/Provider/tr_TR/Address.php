@@ -39,12 +39,8 @@ class Address extends \Faker\Provider\Address
     );
 
     /**
-<<<<<<< HEAD
     * @var array Countries in Turkish
     * @link https://tr.wikipedia.org/wiki/%C3%9Clkeler_listesi
-=======
-    * @var array Countries in Turkish, for future update/extend purposes please use @link https://tr.wikipedia.org/wiki/%C3%9Clkeler_listesi
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     */
     protected static $country = array(
         'Almanya','Amerika Birleşik Devletleri','Arjantin','Arnavutluk','Avustralya','Avusturya','Azerbaycan',

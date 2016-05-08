@@ -2,10 +2,7 @@
 
 namespace Illuminate\Database;
 
-<<<<<<< HEAD
 use Illuminate\Database\Schema\PostgresBuilder;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 use Doctrine\DBAL\Driver\PDOPgSql\Driver as DoctrineDriver;
 use Illuminate\Database\Query\Processors\PostgresProcessor;
 use Illuminate\Database\Query\Grammars\PostgresGrammar as QueryGrammar;
@@ -14,7 +11,6 @@ use Illuminate\Database\Schema\Grammars\PostgresGrammar as SchemaGrammar;
 class PostgresConnection extends Connection
 {
     /**
-<<<<<<< HEAD
      * Get a schema builder instance for the connection.
      *
      * @return \Illuminate\Database\Schema\PostgresBuilder
@@ -29,8 +25,6 @@ class PostgresConnection extends Connection
     }
 
     /**
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Get the default query grammar instance.
      *
      * @return \Illuminate\Database\Query\Grammars\PostgresGrammar

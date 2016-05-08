@@ -16,10 +16,7 @@
 class Swift_MemorySpool implements Swift_Spool
 {
     protected $messages = array();
-<<<<<<< HEAD
     private $flushRetries = 3;
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
     /**
      * Tests if this Transport mechanism has started.
@@ -46,7 +43,6 @@ class Swift_MemorySpool implements Swift_Spool
     }
 
     /**
-<<<<<<< HEAD
      * @param int $retries
      */
     public function setFlushRetries($retries)
@@ -55,8 +51,6 @@ class Swift_MemorySpool implements Swift_Spool
     }
 
     /**
-=======
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Stores a message in the queue.
      *
      * @param Swift_Mime_Message $message The message to store
@@ -90,7 +84,6 @@ class Swift_MemorySpool implements Swift_Spool
         }
 
         $count = 0;
-<<<<<<< HEAD
         $retries = $this->flushRetries;
         while ($retries--) {
             try {
@@ -110,10 +103,6 @@ class Swift_MemorySpool implements Swift_Spool
                     throw $exception;
                 }
             }
-=======
-        while ($message = array_pop($this->messages)) {
-            $count += $transport->send($message, $failedRecipients);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         return $count;

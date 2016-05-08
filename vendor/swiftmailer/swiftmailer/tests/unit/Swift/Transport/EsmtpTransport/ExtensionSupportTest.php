@@ -1,10 +1,6 @@
 <?php
 
 require_once dirname(__DIR__).'/EsmtpTransportTest.php';
-<<<<<<< HEAD
-=======
-require_once dirname(dirname(dirname(dirname(__DIR__)))).'/fixtures/EsmtpTransportFixture.php';
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 interface Swift_Transport_EsmtpHandlerMixin extends Swift_Transport_EsmtpHandler
 {
@@ -12,12 +8,7 @@ interface Swift_Transport_EsmtpHandlerMixin extends Swift_Transport_EsmtpHandler
     public function setPassword($pass);
 }
 
-<<<<<<< HEAD
 class Swift_Transport_EsmtpTransport_ExtensionSupportTest extends Swift_Transport_EsmtpTransportTest
-=======
-class Swift_Transport_EsmtpTransport_ExtensionSupportTest
-    extends Swift_Transport_EsmtpTransportTest
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 {
     public function testExtensionHandlersAreSortedAsNeeded()
     {
@@ -32,11 +23,7 @@ class Swift_Transport_EsmtpTransport_ExtensionSupportTest
         $ext1->shouldReceive('getPriorityOver')
              ->zeroOrMoreTimes()
              ->with('STARTTLS')
-<<<<<<< HEAD
              ->andReturn(1);
-=======
-             ->andReturn(0);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $ext2->shouldReceive('getHandledKeyword')
              ->zeroOrMoreTimes()
              ->andReturn('STARTTLS');
@@ -153,11 +140,7 @@ class Swift_Transport_EsmtpTransport_ExtensionSupportTest
     {
         $buf = $this->_getBuffer();
         $dispatcher = $this->_createEventDispatcher();
-<<<<<<< HEAD
         $smtp = new Swift_Transport_EsmtpTransport($buf, array(), $dispatcher);
-=======
-        $smtp = new EsmtpTransportFixture($buf, array(), $dispatcher);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $ext1 = $this->getMockery('Swift_Transport_EsmtpHandler')->shouldIgnoreMissing();
         $ext2 = $this->getMockery('Swift_Transport_EsmtpHandler')->shouldIgnoreMissing();
         $ext3 = $this->getMockery('Swift_Transport_EsmtpHandler')->shouldIgnoreMissing();
@@ -243,11 +226,7 @@ class Swift_Transport_EsmtpTransport_ExtensionSupportTest
     {
         $buf = $this->_getBuffer();
         $dispatcher = $this->_createEventDispatcher();
-<<<<<<< HEAD
         $smtp = new Swift_Transport_EsmtpTransport($buf, array(), $dispatcher);
-=======
-        $smtp = new EsmtpTransportFixture($buf, array(), $dispatcher);
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $ext1 = $this->getMockery('Swift_Transport_EsmtpHandler')->shouldIgnoreMissing();
         $ext2 = $this->getMockery('Swift_Transport_EsmtpHandler')->shouldIgnoreMissing();
         $ext3 = $this->getMockery('Swift_Transport_EsmtpHandler')->shouldIgnoreMissing();
