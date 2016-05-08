@@ -160,13 +160,8 @@
                                             <tr>
                                                 <th> {{ $no+=1 }}</th>
                                                 <th>{{ $event->eventName }}</th>
-<<<<<<< HEAD
-                                                <th>{{ $event->Date }}</th>
-                                                <th>{{ $event->EventSpeaking }}</th>
-=======
                                                 <th>{{ $event->date }}</th>
                                                 <th>{{ $event->eventSpeaking }}</th>
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                                                 <th> 
                                                     @if( $event->confirm === 1)
                                                         <span class="label label-sm label-success">Approved</span>
@@ -177,11 +172,7 @@
                                                 <th>
                                                     <p>
                                                         <a class="btn btn-red" href="#"><i class="fa fa-times fa fa-white" width="10"></i></a>
-<<<<<<< HEAD
-                                                        <a class="btn btn-blue" href="#"><i class="fa fa-arrow-circle-right"></i></a>
-=======
                                                         <a class="btn btn-blue" href="event/{{ $event->id}}/edit"><i class="fa fa-info-circle"></i></a>
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                                                     </p>
                                                 </th>
 

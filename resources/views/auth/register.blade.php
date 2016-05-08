@@ -57,12 +57,7 @@
                 {!! csrf_field() !!}
 
                 <div id="step-1">
-<<<<<<< HEAD
-
-                    <h3 class="StepTitle">Organization Profile</h2>
-=======
                     <h3 class="StepTitle">Organization Profile</h3>
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
                     <div class="form-group{{ $errors->has('orgName') ? ' has-error' : '' }}">
                         <label class="col-sm-3 control-label">
@@ -138,10 +133,6 @@
                             @endif
                         </div>
                     </div>
-
-<<<<<<< HEAD
-                     <div class="form-group{{ $errors->has('orgAddress') ? ' has-error' : '' }}">
-=======
                     <div class="form-group{{ $errors->has('orgEmail') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
                             Email Address <span class="symbol required"></span>
@@ -158,7 +149,6 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('orgPhone') ? ' has-error' : '' }}">
->>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                         <label class="col-sm-3 control-label">
                             Address
                         </label>
