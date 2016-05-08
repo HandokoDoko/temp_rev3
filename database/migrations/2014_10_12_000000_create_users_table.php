@@ -18,12 +18,12 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('phone')->nullable();
+            $table->string('phone');
             $table->string('orgName');
             $table->string('orgEmail')->unique();
-            $table->string('orgCountry')->nullable();
-            $table->string('orgCity')->nullable();
-            $table->string('orgAddress')->nullable();
+            $table->string('orgCountry');
+            $table->string('orgCity');
+            $table->string('orgAddress');
             $table->string('orgPhone');
             $table->string('photo');
             $table->string('gender');

@@ -6,7 +6,7 @@
 <div class="section section section-regist margin-top-min20 container">
     <!-- start: MAIN CONTAINER -->
     <div class="panel-body">
-        <form action="{{ url('/register') }}" role="form" class="smart-wizard form-horizontal" id="form" method="POST" autocomplete="off">
+        <form action="{{ url('/register') }}" role="form" class="smart-wizard form-horizontal" id="form" method="POST">
             <div id="wizard" class="swMain">
                 <ul>
                     <li>
@@ -58,6 +58,7 @@
                 {!! csrf_field() !!}
 
                 <div id="step-1">
+
                     <h3 class="StepTitle">Organization Profile</h2>
 
                     <div class="form-group{{ $errors->has('orgName') ? ' has-error' : '' }}">
@@ -185,7 +186,7 @@
 
                             @if ($errors->has('phone'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('name') }}</strong>
+                                    <strong>{{ $errors->first('phone') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -377,7 +378,7 @@
                             <p class="form-control-static display-value" data-display="phone" | '-'></p>
                         </div>
                     </div>
-                    <input type="hidden" name = "photo" value="assets/img/profile/anonymous.jpg"></input>
+                    <input type="hidden" name = "photo" value="anonymous.jpg"></input>
                     <div class="form-group">
                         <div class="col-md-2 col-md-offset-8">
                             <button type="submit" class="btn btn-primary">

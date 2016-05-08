@@ -37,15 +37,10 @@
                                     <h4>{{ Auth::user()->name }}</h4>
                                     <div class="fileupload fileupload-new" data-provides="fileupload">
                                         <div class="user-image">
-                                            <div class="fileupload-new thumbnail"><img src="{{ asset('') }}{{ Auth::user()->photo }}" alt=""></div>
+                                            <div class="fileupload-new thumbnail"><img src="images/{{ Auth::user()->photo  }}" alt=""></div>
                                             <div class="fileupload-preview fileupload-exists thumbnail"></div>
                                             <div class="user-image-buttons">
-                                                <span class="btn btn-azure btn-file btn-sm"><span class="fileupload-new"><i class="fa fa-pencil"></i></span><span class="fileupload-exists"><i class="fa fa-pencil"></i></span>
-                                                    <input type="file">
-                                                </span>
-                                                <a href="#" class="btn fileupload-exists btn-red btn-sm" data-dismiss="fileupload">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
+                                                <a href="#panel_edit_account" class="show-tab btn btn-azure btn-file btn-sm"><i class="fa fa-pencil edit-user-info"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -114,6 +109,11 @@
                                         <tr>
                                             <td>Email </td>
                                             <td>{{ Auth::user()->email }}</td>
+                                            <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone </td>
+                                            <td>{{ Auth::user()->phone }}</td>
                                             <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
                                         </tr>
                                         <!--
@@ -190,7 +190,7 @@
                 </div>
 
                 <div id="panel_edit_account" class="tab-pane fade">
-                    <form action="/home/{{Auth::user()->id}}" role="form" id="form" method="post">
+                    <form action="/home/{{Auth::user()->id}}" role="form" id="form" method="post" enctype="multipart/form-data" >
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -261,27 +261,46 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">
+                                            Phone
+                                        </label>
+                                        <input type="text" value="{{ Auth::user()->phone }}" class="form-control" id="phone" name="phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">
                                             User Name
                                         </label>
-                                        <input type="text" placeholder="{{ Auth::user()->userName }}" class="form-control" id="userName" name="userName">
+                                        <input type="text" value="{{ Auth::user()->userName }}" class="form-control" id="userName" name="userName">
                                     </div>
                                      <div class="form-group">
                                         <label class="control-label">
                                             Email
                                         </label>
-                                        <input type="text" placeholder="{{ Auth::user()->email }}" class="form-control" id="email" name="email">
+                                        <input type="text" value="{{ Auth::user()->email }}" class="form-control" id="email" name="email">
                                     </div>
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            Password
+                                        </label>
+                                        <input type="password" placeholder="password" class="form-control" name="password" id="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            Confirm Password
+                                        </label>
+                                        <input type="password"  placeholder="password" class="form-control" id="   password_again" name="password_again">
+                                    </div>
+
                                     <div class="form-group">
                                         <label>
                                             Image Upload
                                         </label>
                                         <div class="fileupload fileupload-new" data-provides="fileupload">
-                                            <div class="fileupload-new thumbnail"><img src="{{ asset('') }}{{ Auth::user()->photo }}" alt="">
+                                            <div class="fileupload-new thumbnail"><img src="images/{{ Auth::user()->photo  }}" alt="">
                                             </div>
                                             <div class="fileupload-preview fileupload-exists thumbnail"></div>
                                             <div class="user-edit-image-buttons">
                                                 <span class="btn btn-azure btn-file"><span class="fileupload-new"><i class="fa fa-picture"></i> Select image</span><span class="fileupload-exists"><i class="fa fa-picture"></i> Change</span>
-                                                    <input type="file">
+                                                    <input type="file" name="photo" alt="">
                                                 </span>
                                                 <a href="#" class="btn fileupload-exists btn-red" data-dismiss="fileupload">
                                                     <i class="fa fa-times"></i> Remove

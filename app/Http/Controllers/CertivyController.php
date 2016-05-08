@@ -7,6 +7,7 @@ use App\Home;
 use App\User;
 use App\Http\Requests;
 use app\model;
+use Image;
 
 class CertivyController extends Controller
 {
@@ -83,27 +84,41 @@ class CertivyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $events = Home::all();
-        $a = 0;
+        
+
         $user = User::find($id);
 
-        $user->orgName  = $request->orgName;
-        $user->orgEmail = $request->orgEmail;
-        $user->orgPhone = $request->orgPhone;
-        $user->orgName = $request->orgName;
-        $user->orgPhone = $request->orgPhone;
-        $user->orgCountry = $request->orgCountry;
-        $user->orgCity = $request->orgCity;
-        $user->orgAddress = $request->orgAddress;
-        $user->name = $request->name;
-        $user->gender = $request->gender;
-        $user->userName = $request->userName;
-        $user->email = $request->email;
-        $user->password = $request->password;
+        if($request->hasFile('photo'))
+        {
 
+            $fileName        = $user->id . '.jpg';
+            $destinationPath = 'images/';
+            $proses          = $request->file('photo')->move($destinationPath, $fileName);
+            $user->photo     = $fileName;
+        }
+        if($request->has('Password')){
+            $user->Password     = bcrypt($request->Password);
+        }
+
+        $user->orgName      = $request->orgName;
+        $user->orgEmail     = $request->orgEmail;
+        $user->orgPhone     = $request->orgPhone;
+        $user->orgCountry   = $request->orgCountry;
+        $user->orgCity      = $request->orgCity;
+        $user->orgAddress   = $request->orgAddress;
+        $user->name         = $request->name;
+        $user->gender       = $request->gender;
+        $user->userName     = $request->userName;
+        $user->email        = $request->email;
+        $user->phone        = $request->phone;
 
         $user->save();
-        return redirect('home')->with('message', 'Data Berhasil DiUpdate');
+        return redirect('home');
+    }
+
+    public function updateImage(Request $request, $id)
+    {
+        //
     }
 
     /**

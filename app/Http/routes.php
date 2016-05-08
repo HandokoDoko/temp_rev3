@@ -18,12 +18,13 @@ Route::get('/', function () {
 
 Route::auth();
 
-
-Route::resource('/home','CertivyController',['only' => [
+/*Route::group(['middleware' => ['web']], function () {
+    Route::resource('/home','CertivyController',['only' => [
     'index', 'show'
 	]]);
-
-//Route::resource('/home','CertivyController');
+});
+*/
+Route::resource('/home','CertivyController');
 
 
 Route::resource('/event','EventController');

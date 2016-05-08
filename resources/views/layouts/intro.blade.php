@@ -251,7 +251,8 @@
                     @else
                         <li class="dropdown current-user">
                             <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
-                                <img src="{{ asset('') }}assets/img/avatar-1-small.jpg" class="img-circle" alt="">
+
+                                <img width="40px" height="40px" src="images/{{ Auth::user()->photo  }}"  class="img-circle" alt="">
                                 <span class="username hidden-xs">{{ Auth::user()->name }}</span> 
                                 <i class="fa fa-caret-down "></i>
                             </a>
