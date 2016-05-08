@@ -162,7 +162,11 @@ class Table
         } elseif (isset(self::$styles[$name])) {
             $this->columnStyles[$columnIndex] = self::$styles[$name];
         } else {
+<<<<<<< HEAD
             throw new InvalidArgumentException(sprintf('Style "%s" is not defined.', $name));
+=======
+            throw new \InvalidArgumentException(sprintf('Style "%s" is not defined.', $name));
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         return $this;

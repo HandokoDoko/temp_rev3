@@ -40,30 +40,42 @@ array(
     0: Expr_Assign(
         var: Expr_Variable(
             name: a
+<<<<<<< HEAD
             comments: array(
                 0: // simple assign
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         expr: Expr_Variable(
             name: b
         )
+<<<<<<< HEAD
         comments: array(
             0: // simple assign
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Expr_AssignOp_BitwiseAnd(
         var: Expr_Variable(
             name: a
+<<<<<<< HEAD
             comments: array(
                 0: // combined assign
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         expr: Expr_Variable(
             name: b
         )
+<<<<<<< HEAD
         comments: array(
             0: // combined assign
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     2: Expr_AssignOp_BitwiseOr(
         var: Expr_Variable(
@@ -156,9 +168,12 @@ array(
     13: Expr_Assign(
         var: Expr_Variable(
             name: a
+<<<<<<< HEAD
             comments: array(
                 0: // chained assign
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         expr: Expr_AssignOp_Mul(
             var: Expr_Variable(
@@ -173,23 +188,32 @@ array(
                 )
             )
         )
+<<<<<<< HEAD
         comments: array(
             0: // chained assign
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     14: Expr_AssignRef(
         var: Expr_Variable(
             name: a
+<<<<<<< HEAD
             comments: array(
                 0: // by ref assign
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         expr: Expr_Variable(
             name: b
         )
+<<<<<<< HEAD
         comments: array(
             0: // by ref assign
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     15: Expr_AssignRef(
         var: Expr_Variable(
@@ -212,16 +236,22 @@ array(
                     name: a
                 )
             )
+<<<<<<< HEAD
             comments: array(
                 0: // list() assign
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         expr: Expr_Variable(
             name: b
         )
+<<<<<<< HEAD
         comments: array(
             0: // list() assign
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     17: Expr_Assign(
         var: Expr_List(
@@ -266,9 +296,12 @@ array(
         var: Expr_Variable(
             name: a
         )
+<<<<<<< HEAD
         comments: array(
             0: // inc/dec
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     20: Expr_PostInc(
         var: Expr_Variable(

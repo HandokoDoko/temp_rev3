@@ -23,9 +23,12 @@ class EntityPopulator
         $this->class = $class;
     }
 
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function getClass()
     {
         return $this->class;
@@ -36,9 +39,12 @@ class EntityPopulator
         $this->columnFormatters = $columnFormatters;
     }
 
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function getColumnFormatters()
     {
         return $this->columnFormatters;
@@ -49,11 +55,14 @@ class EntityPopulator
         $this->columnFormatters = array_merge($this->columnFormatters, $columnFormatters);
     }
 
+<<<<<<< HEAD
     /**
      * @param \Faker\Generator $generator
      * @param Mandango $mandango
      * @return array
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function guessColumnFormatters(\Faker\Generator $generator, Mandango $mandango)
     {
         $formatters = array();
@@ -93,7 +102,10 @@ class EntityPopulator
 
     /**
      * Insert one new record using the Entity class.
+<<<<<<< HEAD
      * @param Mandango $mandango
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function execute(Mandango $mandango, $insertedEntities)
     {

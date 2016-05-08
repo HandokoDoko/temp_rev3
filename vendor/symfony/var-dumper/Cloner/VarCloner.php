@@ -102,12 +102,20 @@ class VarCloner extends AbstractCloner
                             } else {
                                 $stub->value = $v;
                             }
+<<<<<<< HEAD
                         } elseif (0 <= $maxString && isset($v[1 + ($maxString >> 2)]) && 0 < $cut = mb_strlen($v, 'UTF-8') - $maxString) {
+=======
+                        } elseif (0 <= $maxString && isset($v[1 + ($maxString >> 2)]) && 0 < $cut = iconv_strlen($v, 'UTF-8') - $maxString) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                             $stub = new Stub();
                             $stub->type = Stub::TYPE_STRING;
                             $stub->class = Stub::STRING_UTF8;
                             $stub->cut = $cut;
+<<<<<<< HEAD
                             $stub->value = mb_substr($v, 0, $maxString, 'UTF-8');
+=======
+                            $stub->value = iconv_substr($v, 0, $maxString, 'UTF-8');
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                         }
                         break;
 

@@ -24,9 +24,12 @@ class EntityPopulator
         $this->class = $class;
     }
 
+<<<<<<< HEAD
     /**
      * @return string
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function getClass()
     {
         return $this->class;
@@ -37,9 +40,12 @@ class EntityPopulator
         $this->columnFormatters = $columnFormatters;
     }
 
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function getColumnFormatters()
     {
         return $this->columnFormatters;
@@ -50,10 +56,13 @@ class EntityPopulator
         $this->columnFormatters = array_merge($this->columnFormatters, $columnFormatters);
     }
 
+<<<<<<< HEAD
     /**
      * @param \Faker\Generator $generator
      * @return array
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function guessColumnFormatters(\Faker\Generator $generator)
     {
         $formatters = array();
@@ -77,7 +86,11 @@ class EntityPopulator
             if ($columnMap->isPrimaryKey()) {
                 continue;
             }
+<<<<<<< HEAD
             if ($formatter = $nameGuesser->guessFormat($columnMap->getPhpName(), $columnMap->getSize())) {
+=======
+            if ($formatter = $nameGuesser->guessFormat($columnMap->getPhpName())) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 $formatters[$columnMap->getPhpName()] = $formatter;
                 continue;
             }
@@ -90,10 +103,13 @@ class EntityPopulator
         return $formatters;
     }
 
+<<<<<<< HEAD
     /**
      * @param ColumnMap $columnMap
      * @return bool
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     protected function isColumnBehavior(ColumnMap $columnMap)
     {
         foreach ($columnMap->getTable()->getBehaviors() as $name => $params) {
@@ -122,9 +138,12 @@ class EntityPopulator
         $this->modifiers = $modifiers;
     }
 
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function getModifiers()
     {
         return $this->modifiers;
@@ -135,10 +154,13 @@ class EntityPopulator
         $this->modifiers = array_merge($this->modifiers, $modifiers);
     }
 
+<<<<<<< HEAD
     /**
      * @param \Faker\Generator $generator
      * @return array
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function guessModifiers(\Faker\Generator $generator)
     {
         $modifiers = array();
@@ -159,7 +181,11 @@ class EntityPopulator
                     };
                     break;
                 case 'sortable':
+<<<<<<< HEAD
                     $modifiers['sortable'] = function ($obj, $inserted) use ($class) {
+=======
+                    $modifiers['sortable'] = function ($obj, $inserted) use ($class, $generator) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                         $maxRank = isset($inserted[$class]) ? count($inserted[$class]) : 0;
                         $obj->insertAtRank(mt_rand(1, $maxRank + 1));
                     };

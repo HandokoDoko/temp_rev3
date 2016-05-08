@@ -10,7 +10,10 @@ abstract class FunctionLike extends Declaration
 {
     protected $returnByRef = false;
     protected $params = array();
+<<<<<<< HEAD
     protected $returnType = null;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
     /**
      * Make the function return by reference.
@@ -56,6 +59,7 @@ abstract class FunctionLike extends Declaration
 
         return $this;
     }
+<<<<<<< HEAD
 
     /**
      * Sets the return type for PHP 7.
@@ -76,3 +80,6 @@ abstract class FunctionLike extends Declaration
         return $this;
     }
 }
+=======
+}
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

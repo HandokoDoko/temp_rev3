@@ -5,7 +5,10 @@ namespace Faker\Provider;
 use Faker\Generator;
 use Faker\DefaultGenerator;
 use Faker\UniqueGenerator;
+<<<<<<< HEAD
 use Faker\ValidGenerator;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 class Base
 {
@@ -48,6 +51,7 @@ class Base
     }
 
     /**
+<<<<<<< HEAD
      * Generates a random digit, which cannot be $except
      *
      * @param int $except
@@ -63,6 +67,8 @@ class Base
     }
 
     /**
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Returns a random integer with 0 to $nbDigits digits.
      *
      * The maximum value returned is mt_getrandmax()
@@ -122,18 +128,30 @@ class Base
     }
 
     /**
+<<<<<<< HEAD
      * Returns a random number between $int1 and $int2 (any order)
      *
      * @param integer $int1 default to 0
      * @param integer $int2 defaults to 32 bit max integer, ie 2147483647
+=======
+     * Returns a random number between $min and $max
+     *
+     * @param integer $min default to 0
+     * @param integer $max defaults to 32 bit max integer, ie 2147483647
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @example 79907610
      *
      * @return integer
      */
+<<<<<<< HEAD
     public static function numberBetween($int1 = 0, $int2 = 2147483647)
     {
         $min = $int1 < $int2 ? $int1 : $int2;
         $max = $int1 < $int2 ? $int2 : $int1;
+=======
+    public static function numberBetween($min = 0, $max = 2147483647)
+    {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         return mt_rand($min, $max);
     }
 
@@ -156,7 +174,11 @@ class Base
     }
 
     /**
+<<<<<<< HEAD
      * Returns randomly ordered subsequence of $count elements from a provided array
+=======
+     * Returns random elements from a provided array
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @param  array            $array Array to take elements from. Defaults to a-f
      * @param  integer          $count Number of elements to take.
@@ -315,6 +337,7 @@ class Base
         } else {
             $array = str_split($string, 1);
         }
+<<<<<<< HEAD
         return implode('', static::shuffleArray($array));
     }
 
@@ -329,6 +352,9 @@ class Base
             }
         }
         return $string;
+=======
+        return join('', static::shuffleArray($array));
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -343,11 +369,17 @@ class Base
         // instead of using randomDigit() several times, which is slow,
         // count the number of hashes and generate once a large number
         $toReplace = array();
+<<<<<<< HEAD
         if (($pos = strpos($string, '#')) !== false) {
             for ($i = $pos, $last = strrpos($string, '#', $pos) + 1; $i < $last; $i++) {
                 if ($string[$i] === '#') {
                     $toReplace[] = $i;
                 }
+=======
+        for ($i = 0, $count = strlen($string); $i < $count; $i++) {
+            if ($string[$i] === '#') {
+                $toReplace []= $i;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             }
         }
         if ($nbReplacements = count($toReplace)) {
@@ -363,7 +395,11 @@ class Base
                 $string[$toReplace[$i]] = $numbers[$i];
             }
         }
+<<<<<<< HEAD
         $string = self::replaceWildcard($string, '%', 'static::randomDigitNotNull');
+=======
+        $string = preg_replace_callback('/\%/u', 'static::randomDigitNotNull', $string);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         return $string;
     }
@@ -376,21 +412,32 @@ class Base
      */
     public static function lexify($string = '????')
     {
+<<<<<<< HEAD
         return self::replaceWildcard($string, '?', 'static::randomLetter');
     }
 
     /**
      * Replaces hash signs ('#') and question marks ('?') with random numbers and letters
      * An asterisk ('*') is replaced with either a random number or a random letter
+=======
+        return preg_replace_callback('/\?/u', 'static::randomLetter', $string);
+    }
+
+    /**
+     * Replaces hash signs and question marks with random numbers and letters
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @param  string $string String that needs to bet parsed
      * @return string
      */
     public static function bothify($string = '## ??')
     {
+<<<<<<< HEAD
         $string = self::replaceWildcard($string, '*', function () {
             return mt_rand(0, 1) ? '#' : '?';
         });
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         return static::lexify(static::numerify($string));
     }
 
@@ -463,7 +510,11 @@ class Base
         // All A-F inside of [] become ABCDEF
         $regex = preg_replace_callback('/\[([^\]]+)\]/', function ($matches) {
             return '[' . preg_replace_callback('/(\w|\d)\-(\w|\d)/', function ($range) {
+<<<<<<< HEAD
                 return implode(range($range[1], $range[2]), '');
+=======
+                return join(range($range[1], $range[2]), '');
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             }, $matches[1]) . ']';
         }, $regex);
         // All [ABC] become B (or A or C)
@@ -507,6 +558,7 @@ class Base
     /**
      * Chainable method for making any formatter optional.
      *
+<<<<<<< HEAD
      * @param float|integer $weight Set the probability of receiving a null value.
      *                              "0" will always return null, "1" will always return the generator.
      *                              If $weight is an integer value, then the same system works
@@ -523,6 +575,15 @@ class Base
 
         // new system with percentage
         if (is_int($weight) && mt_rand(1, 100) <= $weight) {
+=======
+     * @param float $weight Set the probability of receiving a null value.
+     *                            "0" will always return null, "1" will always return the generator.
+     * @return Generator|DefaultGenerator
+     */
+    public function optional($weight = 0.5, $default = null)
+    {
+        if (mt_rand() / mt_getrandmax() <= $weight) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             return $this->generator;
         }
 
@@ -552,6 +613,7 @@ class Base
 
         return $this->unique;
     }
+<<<<<<< HEAD
 
     /**
      * Chainable method for forcing any formatter to return only valid values.
@@ -580,4 +642,6 @@ class Base
     {
         return new ValidGenerator($this->generator, $validator, $maxRetries);
     }
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

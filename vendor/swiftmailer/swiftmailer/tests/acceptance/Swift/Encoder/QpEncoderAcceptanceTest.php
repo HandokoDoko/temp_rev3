@@ -36,10 +36,13 @@ class Swift_Encoder_QpEncoderAcceptanceTest extends \PHPUnit_Framework_TestCase
                     $text = file_get_contents($sampleDir.'/'.$sampleFile);
                     $encodedText = $encoder->encodeString($text);
 
+<<<<<<< HEAD
                     foreach (explode("\r\n", $encodedText) as $line) {
                         $this->assertLessThanOrEqual(76, strlen($line));
                     }
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                     $this->assertEquals(
                         quoted_printable_decode($encodedText), $text,
                         '%s: Encoded string should decode back to original string for sample '.

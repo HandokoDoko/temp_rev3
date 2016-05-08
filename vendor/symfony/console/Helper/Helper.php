@@ -62,6 +62,7 @@ abstract class Helper implements HelperInterface
     {
         static $timeFormats = array(
             array(0, '< 1 sec'),
+<<<<<<< HEAD
             array(1, '1 sec'),
             array(2, 'secs', 1),
             array(60, '1 min'),
@@ -84,6 +85,28 @@ abstract class Helper implements HelperInterface
                     return floor($secs / $format[2]).' '.$format[1];
                 }
             }
+=======
+            array(2, '1 sec'),
+            array(59, 'secs', 1),
+            array(60, '1 min'),
+            array(3600, 'mins', 60),
+            array(5400, '1 hr'),
+            array(86400, 'hrs', 3600),
+            array(129600, '1 day'),
+            array(604800, 'days', 86400),
+        );
+
+        foreach ($timeFormats as $format) {
+            if ($secs >= $format[0]) {
+                continue;
+            }
+
+            if (2 == count($format)) {
+                return $format[1];
+            }
+
+            return ceil($secs / $format[2]).' '.$format[1];
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
     }
 

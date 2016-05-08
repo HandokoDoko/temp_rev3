@@ -120,6 +120,7 @@ class MethodTest extends \PHPUnit_Framework_TestCase
         )), $node);
     }
 
+<<<<<<< HEAD
     public function testReturnType() {
         $node = $this->createMethodBuilder('test')
             ->setReturnType('bool')
@@ -129,6 +130,8 @@ class MethodTest extends \PHPUnit_Framework_TestCase
         ), array()), $node);
     }
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /**
      * @expectedException \LogicException
      * @expectedExceptionMessage Cannot add statements to an abstract method

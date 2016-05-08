@@ -25,16 +25,22 @@ array(
             parts: array(
                 0: A
             )
+<<<<<<< HEAD
             comments: array(
                 0: // method name variations
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         name: b
         args: array(
         )
+<<<<<<< HEAD
         comments: array(
             0: // method name variations
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Expr_StaticCall(
         class: Name(
@@ -105,39 +111,54 @@ array(
                 parts: array(
                     0: A
                 )
+<<<<<<< HEAD
                 comments: array(
                     0: // array dereferencing
                 )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             )
             name: b
             args: array(
             )
+<<<<<<< HEAD
             comments: array(
                 0: // array dereferencing
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         dim: Scalar_String(
             value: c
         )
+<<<<<<< HEAD
         comments: array(
             0: // array dereferencing
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     6: Expr_StaticCall(
         class: Name(
             parts: array(
                 0: static
             )
+<<<<<<< HEAD
             comments: array(
                 0: // class name variations
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         name: b
         args: array(
         )
+<<<<<<< HEAD
         comments: array(
             0: // class name variations
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     7: Expr_StaticCall(
         class: Expr_Variable(
@@ -170,4 +191,8 @@ array(
         args: array(
         )
     )
+<<<<<<< HEAD
 )
+=======
+)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

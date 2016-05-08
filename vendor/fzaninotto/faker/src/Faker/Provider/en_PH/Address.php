@@ -2,7 +2,11 @@
 
 namespace Faker\Provider\en_PH;
 
+<<<<<<< HEAD
 class Address extends \Faker\Provider\en_US\Address
+=======
+class Address extends \Faker\Provider\Address
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 {
     protected static $streetNameFormats = array(
         '{{lastName}} {{streetSuffix}}'
@@ -16,6 +20,13 @@ class Address extends \Faker\Provider\en_US\Address
     protected static $buildingNumber = array('##A', '##', '##A/##', '##/##');
     protected static $postcode = array('####');
 
+<<<<<<< HEAD
+=======
+    protected static $country = array(
+        'Philippines',
+    );
+
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     //http://en.wikipedia.org/wiki/Provinces_of_the_Philippines
     protected static $province = array(
         'Abra', 'Agusan del Norte', 'Agusan del Sur', 'Aklan', 'Albay',

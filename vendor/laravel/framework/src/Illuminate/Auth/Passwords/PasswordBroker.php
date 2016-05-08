@@ -242,6 +242,7 @@ class PasswordBroker implements PasswordBrokerContract
     }
 
     /**
+<<<<<<< HEAD
      * Create a new password reset token for the given user.
      *
      * @param  CanResetPasswordContract $user
@@ -276,6 +277,8 @@ class PasswordBroker implements PasswordBrokerContract
     }
 
     /**
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Get the password reset token repository implementation.
      *
      * @return \Illuminate\Auth\Passwords\TokenRepositoryInterface

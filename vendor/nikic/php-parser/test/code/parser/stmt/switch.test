@@ -49,9 +49,12 @@ array(
         )
         cases: array(
         )
+<<<<<<< HEAD
         comments: array(
             0: // alternative syntax
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     2: Stmt_Switch(
         cond: Expr_Variable(
@@ -59,9 +62,12 @@ array(
         )
         cases: array(
         )
+<<<<<<< HEAD
         comments: array(
             0: // leading semicolon
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     3: Stmt_Switch(
         cond: Expr_Variable(

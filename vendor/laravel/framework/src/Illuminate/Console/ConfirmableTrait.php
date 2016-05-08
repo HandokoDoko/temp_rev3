@@ -29,7 +29,11 @@ trait ConfirmableTrait
             $this->comment(str_repeat('*', strlen($warning) + 12));
             $this->output->writeln('');
 
+<<<<<<< HEAD
             $confirmed = $this->confirm('Do you really wish to run this command?');
+=======
+            $confirmed = $this->confirm('Do you really wish to run this command? [y/N]');
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
             if (! $confirmed) {
                 $this->comment('Command Cancelled!');

@@ -3,11 +3,15 @@
 namespace Faker\Provider\lv_LV;
 
 use Faker\Calculator\Luhn;
+<<<<<<< HEAD
 use Faker\Provider\DateTime;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 class Person extends \Faker\Provider\Person
 {
     /**
+<<<<<<< HEAD
      * {@link} http://vardunozime.lv/names-male
      **/
     protected static $firstNameMale = array(
@@ -81,6 +85,37 @@ class Person extends \Faker\Provider\Person
         'Vaclava', 'Vaida', 'Vaila', 'Vaileta', 'Vaira', 'Vairita', 'Vairīte', 'Vaiva', 'Vaļa', 'Valda', 'Valdona', 'Valdone', 'Valentija', 'Valentīna', 'Valentina', 'Valentīne', 'Valeriana', 'Valerianna', 'Valērija', 'Valerija', 'Valerijana', 'Valerjana', 'Valfrīda', 'Valīda', 'Valija', 'Valisa', 'Valita', 'Vallida', 'Vallija', 'Valma', 'Valta', 'Valtra', 'Valtraude', 'Valtrauta', 'Valtraute', 'Valve', 'Vanda', 'Vandze', 'Vaneranda', 'Vanesa', 'Vanese', 'Varenika', 'Varita', 'Varite', 'Varonika', 'Varvara', 'Vasilisa', 'Večella', 'Vega', 'Vegita', 'Veikla', 'Veiksma', 'Velda', 'Veldra', 'Veldza', 'Veldze', 'Velga', 'Velita', 'Velonija', 'Velta', 'Velte', 'Veltija', 'Veņa', 'Vena', 'Vēna', 'Vencislava', 'Venda', 'Vendeta', 'Vendija', 'Venefrīda', 'Venēra', 'Venera', 'Veneranda', 'Venerande', 'Veneta', 'Venija', 'Venīna', 'Veniranda', 'Venita', 'Venjamina', 'Venta', 'Vera', 'Vēra', 'Veranika', 'Verēna', 'Verena', 'Vergenija', 'Verija', 'Verita', 'Veronija', 'Veronika', 'Vēsma', 'Vēsmiņa', 'Veta', 'Vētra', 'Viāna', 'Vianta', 'Vicenta', 'Vida', 'Vidaga', 'Vidaija', 'Vide', 'Vīdega', 'Vīga', 'Vigda', 'Vigeta', 'Vigija', 'Viģīlija', 'Vigilija', 'Vigita', 'Vigra', 'Vija', 'Vijolīte', 'Vika', 'Vikija', 'Viktora', 'Viktorija', 'Viktorina', 'Vila', 'Vilenta', 'Vilfrida', 'Vilhelma', 'Vilhelmīna', 'Vilhelmīne', 'Vilhelmine', 'Vilija', 'Vilita', 'Vilja', 'Viljanta', 'Villija', 'Vilma', 'Vilonija', 'Vilora', 'Vīna', 'Vinca', 'Vincenta', 'Vincentīna', 'Vincentīne', 'Vīne', 'Vineta', 'Vinete', 'Vingra', 'Vinifreda', 'Vinija', 'Vinita', 'Vinnija', 'Vinta', 'Vintra', 'Viola', 'Violanda', 'Violanta', 'Violenta', 'Violeta', 'Viorika', 'Virdžinija', 'Virēna', 'Virga', 'Virgenija', 'Virgīna', 'Virgīne', 'Virgīnija', 'Virginija', 'Virģīnija', 'Virma', 'Virta', 'Visija', 'Visma', 'Visvalda', 'Vita', 'Vitālija', 'Vitalina', 'Vitalisa', 'Vitija', 'Vitnija', 'Vitolda', 'Viva', 'Vivanta', 'Viveja', 'Viveta', 'Viviāna', 'Viviana', 'Vivija', 'Vivina', 'Vivita', 'Vizbule', 'Vizbulīte', 'Vizma', 'Vlada', 'Vladilena', 'Vladimira', 'Vladislava', 'Vladlena', 'Volga',
         'Zabīne', 'Zaiga', 'Zallija', 'Zana', 'Zanda', 'Zandra', 'Zane', 'Zanga', 'Zanita', 'Zanna', 'Zanza', 'Zara', 'Zarina', 'Zelda', 'Zelga', 'Zelma', 'Zelta', 'Zeltiņa', 'Zeltīte', 'Zemfira', 'Zemīra', 'Zemlita', 'Zena', 'Zenaida', 'Zenita', 'Zenobija', 'Zenona', 'Zenta', 'Zēra', 'Zeta', 'Zete', 'Zetiņa', 'Zidija', 'Zidonija', 'Zidra', 'Ziedīte', 'Ziednese', 'Ziedone', 'Ziedonija', 'Ziedvalda', 'Ziga', 'Zigda', 'Zigeta', 'Zigfrīda', 'Zigfrida', 'Zigija', 'Zigita', 'Zigma', 'Zigmāra', 'Zigmunda', 'Zigna', 'Zigne', 'Zigra', 'Zigrīda', 'Zigrida', 'Zigrita', 'Zīle', 'Zilga', 'Zilgma', 'Zilgme', 'Zīlīte', 'Zilva', 'Zilvija', 'Zina', 'Zinaīda', 'Zinaida', 'Zinda', 'Zindra', 'Zinīda', 'Zinija', 'Zinovija', 'Zinta', 'Zintra', 'Zira', 'Zita', 'Zlata', 'Zofija', 'Zoja', 'Zola', 'Zolija', 'Zosja', 'Zuzana', 'Zuzanna', 'Zuze', 'Zvaigznīte',
         'Žaklīna', 'Žaklina', 'Žaklīne', 'Žana', 'Žaneta', 'Žanete', 'Žanija', 'Žanna', 'Žanneta', 'Žene', 'Ženija', 'Žermēna', 'Žermena', 'Žozefina', 'Žuanete', 'Žubīte',
+=======
+     * {@link} http://ru.wikipedia.org/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B8%D0%BC%D1%8F
+     **/
+    protected static $firstNameMale = array(
+        'Enno', 'Eriks', 'Ernests', 'Ero', 'Ervis', 'Mārtiņš', 'Ādams', 'Āris', 'Āvo', 'Ēriks', 'Enriko', 'Enriks',  'Ēro', 'Ģirts', 'Īra',
+        // below are unknown gender firstnames
+        'Agris', 'Dainis', 'Dzintars', 'Emīls', 'Enijs', 'Enoks', 'Enrijs', 'Eralds', 'Erasts', 'Erberts', 'Erhards',
+        'Eriands', 'Eriens', 'Erihs', 'Erims', 'Erlends', 'Ermanis', 'Ermans', 'Ermīns', 'Ernando', 'Ernis', 'Ernsts', 'Ervids',
+        'Ervijs', 'Ervils', 'Ervins', 'Ervīns', 'Esams', 'Etjēns', 'Eugenijs', 'Eugēnijs', 'Euzebijs', 'Euģenijs', 'Euģēnijs', 'Evalds',
+        'Evarists', 'Evars', 'Evarts', 'Eventijs', 'Everts', 'Evgenijs', 'Evgēnijs', 'Evijs', 'Evģenijs', 'Evģēnijs', 'Guntis', 'Kārlis',
+        'Modris', 'Ričards', 'Valdis', 'Viesturs', 'Vilnis', 'Ādolfina', 'Ādolfs', 'Ādolfīne', 'Ārends', 'Ārens', 'Ārija', 'Ārijs',
+        'Āriks', 'Ārite', 'Ārons', 'Ārvalda', 'Ārvaldis', 'Ārvalds', 'Čelsija', 'Čereta', 'Česlava', 'Čezeta', 'Ēra', 'Ērihs',
+        'Ērmanis', 'Ēstere', 'Ēvalds', 'Ēvija', 'Ēvisa', 'Ģederts', 'Ģedimins', 'Ģintars', 'Ģints', 'Īrisa', 'Īvija', 'Ņikifors',
+        'Šandors', 'Ūnika', 'Ūva', 'Žaklīne', 'Žanija', 'Žanna', 'Žanneta', 'Žene', 'Ženija', 'Žermena', 'Žermēna', 'Žozefina',
+        'Žuanete', 'Žubīte',
+    );
+
+    protected static $firstNameFemale = array(
+        'Āra', 'Ārika', 'Čarita', 'Ērika', 'Ēva', 'Ēvī', 'Īda', 'Īna', 'Īva', 'Īvis', 'Īģe', 'Ņikita', 'Ūna',
+        'Žaklina', 'Žaklīna', 'Žana', 'Žaneta', 'Žanete',
+        // below are unknown gender firstnames
+        'Agris', 'Dainis', 'Dzintars', 'Emīls', 'Enijs', 'Enoks', 'Enrijs', 'Eralds', 'Erasts', 'Erberts', 'Erhards',
+        'Eriands', 'Eriens', 'Erihs', 'Erims', 'Erlends', 'Ermanis', 'Ermans', 'Ermīns', 'Ernando', 'Ernis', 'Ernsts', 'Ervids',
+        'Ervijs', 'Ervils', 'Ervins', 'Ervīns', 'Esams', 'Etjēns', 'Eugenijs', 'Eugēnijs', 'Euzebijs', 'Euģenijs', 'Euģēnijs', 'Evalds',
+        'Evarists', 'Evars', 'Evarts', 'Eventijs', 'Everts', 'Evgenijs', 'Evgēnijs', 'Evijs', 'Evģenijs', 'Evģēnijs', 'Guntis', 'Kārlis',
+        'Modris', 'Ričards', 'Valdis', 'Viesturs', 'Vilnis', 'Ādolfina', 'Ādolfs', 'Ādolfīne', 'Ārends', 'Ārens', 'Ārija', 'Ārijs',
+        'Āriks', 'Ārite', 'Ārons', 'Ārvalda', 'Ārvaldis', 'Ārvalds', 'Čelsija', 'Čereta', 'Česlava', 'Čezeta', 'Ēra', 'Ērihs',
+        'Ērmanis', 'Ēstere', 'Ēvalds', 'Ēvija', 'Ēvisa', 'Ģederts', 'Ģedimins', 'Ģintars', 'Ģints', 'Īrisa', 'Īvija', 'Ņikifors',
+        'Šandors', 'Ūnika', 'Ūva', 'Žaklīne', 'Žanija', 'Žanna', 'Žanneta', 'Žene', 'Ženija', 'Žermena', 'Žermēna', 'Žozefina',
+        'Žuanete', 'Žubīte',
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     );
 
     /**
@@ -98,12 +133,20 @@ class Person extends \Faker\Provider\Person
 
     public function driverLicence()
     {
+<<<<<<< HEAD
         return static::bothify('??######');
+=======
+        return $this->bothify("??######");
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     public function passportNumber()
     {
+<<<<<<< HEAD
         return static::bothify('??#######');
+=======
+        return $this->bothify("??#######");
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -115,7 +158,11 @@ class Person extends \Faker\Provider\Person
     public function personalIdentityNumber(\DateTime $birthdate = null)
     {
         if (!$birthdate) {
+<<<<<<< HEAD
             $birthdate = DateTime::dateTimeThisCentury();
+=======
+            $birthdate = \Faker\Provider\DateTime::dateTimeThisCentury();
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         $datePart = $birthdate->format('dmy');

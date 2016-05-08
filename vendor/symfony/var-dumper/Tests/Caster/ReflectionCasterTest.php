@@ -13,7 +13,10 @@ namespace Symfony\Component\VarDumper\Tests\Caster;
 
 use Symfony\Component\VarDumper\Test\VarDumperTestTrait;
 use Symfony\Component\VarDumper\Tests\Fixtures\GeneratorDemo;
+<<<<<<< HEAD
 use Symfony\Component\VarDumper\Tests\Fixtures\NotLoadableClass;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 /**
  * @author Nicolas Grekas <p@tchwork.com>
@@ -50,7 +53,11 @@ ReflectionClass {
     "export" => ReflectionMethod {
       +name: "export"
       +class: "ReflectionClass"
+<<<<<<< HEAD
 %A    parameters: {
+=======
+      parameters: {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $%s: ReflectionParameter {
 %A         position: 0
 %A
@@ -76,7 +83,11 @@ Closure {
     \$b: & 123
   }
   file: "%sReflectionCasterTest.php"
+<<<<<<< HEAD
   line: "66 to 66"
+=======
+  line: "65 to 65"
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }
 EOTXT
             , $var
@@ -92,7 +103,11 @@ EOTXT
 ReflectionParameter {
   +name: "arg1"
   position: 0
+<<<<<<< HEAD
   typeHint: "Symfony\Component\VarDumper\Tests\Fixtures\NotLoadableClass"
+=======
+  typeHint: "Symfony\Component\VarDumper\Tests\Caster\NotExistingClass"
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
   default: null
 }
 EOTXT
@@ -224,6 +239,10 @@ EODUMP;
     }
 }
 
+<<<<<<< HEAD
 function reflectionParameterFixture(NotLoadableClass $arg1 = null, $arg2)
+=======
+function reflectionParameterFixture(NotExistingClass $arg1 = null, $arg2)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 {
 }

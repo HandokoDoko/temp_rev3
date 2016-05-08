@@ -8,7 +8,11 @@ manipulation.
 
 [**Documentation for version 2.x**][doc_master] (stable; for running on PHP >= 5.4; for parsing PHP 5.2 to PHP 7.0).
 
+<<<<<<< HEAD
 [Documentation for version 1.x][doc_1_x] (unsupported; for running on PHP >= 5.3; for parsing PHP 5.2 to PHP 5.6).
+=======
+[Documentation for version 1.x][doc_1_x] (stable; for running on PHP >= 5.3; for parsing PHP 5.2 to PHP 5.6).
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 In a Nutshell
 -------------

@@ -24,26 +24,36 @@ EOS;
 Test $a and $b->c test
 EOS;
 
+<<<<<<< HEAD
 b<<<EOS
 Binary
 EOS;
 
+=======
+// comment to force line break before EOF
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 -----
 array(
     0: Scalar_String(
         value:
+<<<<<<< HEAD
         comments: array(
             0: // empty strings
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Scalar_String(
         value:
     )
     2: Scalar_String(
         value: Test '" $a \n
+<<<<<<< HEAD
         comments: array(
             0: // constant encapsed strings
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     3: Scalar_String(
         value: Test '" $a
@@ -58,9 +68,12 @@ array(
                 name: a
             )
         )
+<<<<<<< HEAD
         comments: array(
             0: // encapsed strings
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     5: Scalar_Encapsed(
         parts: array(
@@ -84,7 +97,10 @@ array(
             )
         )
     )
+<<<<<<< HEAD
     6: Scalar_String(
         value: Binary
     )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 )

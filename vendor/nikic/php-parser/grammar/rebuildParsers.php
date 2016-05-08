@@ -85,7 +85,11 @@ foreach ($grammarFileToName as $grammarFile => $name) {
 
 function resolveNodes($code) {
     return preg_replace_callback(
+<<<<<<< HEAD
         '~\b(?<name>[A-Z][a-zA-Z_\\\\]++)\s*' . PARAMS . '~',
+=======
+        '~(?<name>[A-Z][a-zA-Z_\\\\]++)\s*' . PARAMS . '~',
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         function($matches) {
             // recurse
             $matches['params'] = resolveNodes($matches['params']);
@@ -169,6 +173,7 @@ function resolveMacros($code) {
                      . ' if (\'\' === $s->value) array_pop(' . $args[0] . ');';
             }
 
+<<<<<<< HEAD
             if ('makeNop' == $name) {
                 assertArgs(2, $args, $name);
 
@@ -195,6 +200,8 @@ function resolveMacros($code) {
                      . $args[0] . '[\'docLabel\'] = $matches[1];';
             }
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             return $matches[0];
         },
         $code

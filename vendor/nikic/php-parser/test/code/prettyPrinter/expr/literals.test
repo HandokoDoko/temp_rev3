@@ -40,17 +40,32 @@ FALSE;
 378282246310005.0;
 10000000000000002.0;
 
+<<<<<<< HEAD
 // strings (single quoted)
+=======
+// strings (normalized to single quoted)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 'a';
 'a
 b';
 "a";
 "a\nb";
 'a\'b';
+<<<<<<< HEAD
 
 // strings (double quoted)
 "a'b";
 "a\b";
+=======
+"a'b";
+"a\b";
+<<<'STR'
+a\nb$a
+{$b}
+STR;
+
+// strings (normalized to double quoted)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 "$a";
 "a$b";
 "$a$b";
@@ -64,6 +79,12 @@ b';
 "\\{ $A }";
 "{$$A}[B]";
 "$$A[B]";
+<<<<<<< HEAD
+=======
+<<<STR
+a\nb$a\n{$b}
+STR;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 // make sure indentation doesn't mess anything up
 function foo()
@@ -100,9 +121,15 @@ FALSE;
 // integers (normalized to decimal)
 0;
 11;
+<<<<<<< HEAD
 011;
 0x11;
 0b11;
+=======
+9;
+17;
+3;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 // floats (normalized to ... something)
 0.0;
 0.0;
@@ -115,6 +142,7 @@ INF;
 1.0E+84;
 378282246310005.0;
 10000000000000002.0;
+<<<<<<< HEAD
 // strings (single quoted)
 'a';
 'a
@@ -125,6 +153,21 @@ b';
 // strings (double quoted)
 "a'b";
 "a\\b";
+=======
+// strings (normalized to single quoted)
+'a';
+'a
+b';
+'a';
+'a
+b';
+'a\'b';
+'a\'b';
+'a\\b';
+'a\\nb$a
+{$b}';
+// strings (normalized to double quoted)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 "{$a}";
 "a{$b}";
 "{$a}{$b}";
@@ -138,10 +181,19 @@ b';
 "\\{ {$A} }";
 "{${$A}}[B]";
 "\${$A['B']}";
+<<<<<<< HEAD
 // make sure indentation doesn't mess anything up
 function foo()
 {
     "a\nb";
+=======
+"a\nb{$a}\n{$b}";
+// make sure indentation doesn't mess anything up
+function foo()
+{
+    'a
+b';
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     'a
 b';
     'a

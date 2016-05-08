@@ -1,7 +1,6 @@
 @extends('layouts.intro')
 
 
-
 @section('content')
 <div class="section section section-regist margin-top-min20 container">
     <!-- start: MAIN CONTAINER -->
@@ -58,8 +57,12 @@
                 {!! csrf_field() !!}
 
                 <div id="step-1">
+<<<<<<< HEAD
 
                     <h3 class="StepTitle">Organization Profile</h2>
+=======
+                    <h3 class="StepTitle">Organization Profile</h3>
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
                     <div class="form-group{{ $errors->has('orgName') ? ' has-error' : '' }}">
                         <label class="col-sm-3 control-label">
@@ -136,7 +139,26 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                      <div class="form-group{{ $errors->has('orgAddress') ? ' has-error' : '' }}">
+=======
+                    <div class="form-group{{ $errors->has('orgEmail') ? ' has-error' : '' }}">
+                        <label class="col-md-3 control-label">
+                            Email Address <span class="symbol required"></span>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="email" class="form-control" name="orgEmail" value="{{ old('orgEmail') }}">
+
+                            @if ($errors->has('orgEmail'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgEmail') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('orgPhone') ? ' has-error' : '' }}">
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                         <label class="col-sm-3 control-label">
                             Address
                         </label>
@@ -160,7 +182,7 @@
                 </div>
 
                 <div id="step-2">
-                    <h3 class="StepTitle">Personal Data</h2>
+                    <h3 class="StepTitle">Personal Data</h3>
                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
                             Full Name <span class="symbol required"></span>
@@ -223,7 +245,7 @@
                 </div>
              
                 <div id="step-3">
-                    <h3 class="StepTitle">Account</h2>
+                    <h3 class="StepTitle">Account</h3>
                     <div class="form-group">
                         <div class="form-group{{ $errors->has('userName') ? ' has-error' : '' }}">
                             <label class="col-md-3 control-label">
@@ -306,11 +328,11 @@
                 </div>
 
                 <div id="step-4">
-                    <h3 class="StepTitle">Summary</h2>
+                    <h3 class="StepTitle">Summary</h3>
                     <h3>Account</h3>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Username :
+                            Username
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="userName"></p>
@@ -320,7 +342,7 @@
                     <h3>Organization</h3>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Name :
+                            Name
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="orgName"></p>
@@ -329,7 +351,7 @@
 
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Email :
+                            Email
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="orgEmail"></p>
@@ -337,7 +359,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Phone Number :
+                            Phone Number
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="orgPhone"></p>
@@ -345,7 +367,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Address :
+                            Address
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="orgAddress"></p>
@@ -356,7 +378,7 @@
                     <h3>Personal</h3>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Full Name :
+                            Full Name
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="name"></p>
@@ -364,7 +386,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Email :
+                            Email
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="email"></p>
@@ -372,7 +394,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Phone Number :
+                            Phone Number
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="phone" | '-'></p>
@@ -479,8 +501,8 @@
 
 @section('script')
         <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-        <script src="assets/plugins/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
-        <script src="assets/js/form-wizard.js"></script>
+        <script src="{{ asset('') }}assets/plugins/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+        <script src="{{ asset('') }}assets/js/form-wizard.js"></script>
         <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
         <script>
             jQuery(document).ready(function() {

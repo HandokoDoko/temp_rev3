@@ -211,8 +211,11 @@ trait InteractsWithPages
         $callback();
 
         array_pop($this->subCrawlers);
+<<<<<<< HEAD
 
         return $this;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -232,7 +235,11 @@ trait InteractsWithPages
     /**
      * Assert the given constraint.
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Foundation\Testing\Constraints\PageConstraint  $constraint
+=======
+     * @param  string  $constraint
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @param  bool  $reverse
      * @param  string  $message
      * @return $this

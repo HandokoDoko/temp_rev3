@@ -240,7 +240,11 @@ class RouteCollection implements Countable, IteratorAggregate
      * @param  string|null  $method
      * @return array
      */
+<<<<<<< HEAD
     public function get($method = null)
+=======
+    protected function get($method = null)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     {
         if (is_null($method)) {
             return $this->getRoutes();
@@ -293,6 +297,7 @@ class RouteCollection implements Countable, IteratorAggregate
     }
 
     /**
+<<<<<<< HEAD
      * Get all of the routes keyed by their HTTP verb / method.
      *
      * @return array
@@ -303,6 +308,8 @@ class RouteCollection implements Countable, IteratorAggregate
     }
 
     /**
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Get an iterator for the items.
      *
      * @return \ArrayIterator

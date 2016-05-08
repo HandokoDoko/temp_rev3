@@ -20,9 +20,12 @@ array(
     0: Expr_Ternary(
         cond: Expr_Variable(
             name: a
+<<<<<<< HEAD
             comments: array(
                 0: // ternary
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         if: Expr_Variable(
             name: b
@@ -30,9 +33,12 @@ array(
         else: Expr_Variable(
             name: c
         )
+<<<<<<< HEAD
         comments: array(
             0: // ternary
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Expr_Ternary(
         cond: Expr_Variable(
@@ -47,9 +53,12 @@ array(
         cond: Expr_Ternary(
             cond: Expr_Variable(
                 name: a
+<<<<<<< HEAD
                 comments: array(
                     0: // precedence
                 )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             )
             if: Expr_Variable(
                 name: b
@@ -57,9 +66,12 @@ array(
             else: Expr_Variable(
                 name: c
             )
+<<<<<<< HEAD
             comments: array(
                 0: // precedence
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         if: Expr_Variable(
             name: d
@@ -67,9 +79,12 @@ array(
         else: Expr_Variable(
             name: e
         )
+<<<<<<< HEAD
         comments: array(
             0: // precedence
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     3: Expr_Ternary(
         cond: Expr_Variable(
@@ -93,16 +108,22 @@ array(
     4: Expr_BinaryOp_Coalesce(
         left: Expr_Variable(
             name: a
+<<<<<<< HEAD
             comments: array(
                 0: // null coalesce
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         right: Expr_Variable(
             name: b
         )
+<<<<<<< HEAD
         comments: array(
             0: // null coalesce
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     5: Expr_BinaryOp_Coalesce(
         left: Expr_Variable(
@@ -146,4 +167,8 @@ array(
             name: c
         )
     )
+<<<<<<< HEAD
 )
+=======
+)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

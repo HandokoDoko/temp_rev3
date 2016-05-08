@@ -116,11 +116,18 @@ class Method extends FunctionLike
      */
     public function getNode() {
         return new Stmt\ClassMethod($this->name, array(
+<<<<<<< HEAD
             'type'       => $this->type,
             'byRef'      => $this->returnByRef,
             'params'     => $this->params,
             'returnType' => $this->returnType,
             'stmts'      => $this->stmts,
+=======
+            'type'   => $this->type,
+            'byRef'  => $this->returnByRef,
+            'params' => $this->params,
+            'stmts'  => $this->stmts,
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         ), $this->attributes);
     }
 }

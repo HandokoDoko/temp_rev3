@@ -152,6 +152,10 @@ class Person extends \Faker\Provider\Person
      */
     public function nationalId()
     {
+<<<<<<< HEAD
         return 'V-'.$this->numberBetween(10000, 100000000);
+=======
+        return 'V-'.$this->numberBetween($min = 10000, $max = 100000000);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 }

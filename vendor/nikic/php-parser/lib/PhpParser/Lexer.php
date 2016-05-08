@@ -2,7 +2,10 @@
 
 namespace PhpParser;
 
+<<<<<<< HEAD
 use PhpParser\Node\Scalar\LNumber;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 use PhpParser\Parser\Tokens;
 
 class Lexer
@@ -22,10 +25,17 @@ class Lexer
      * Creates a Lexer.
      *
      * @param array $options Options array. Currently only the 'usedAttributes' option is supported,
+<<<<<<< HEAD
      *                       which is an array of attributes to add to the AST nodes. Possible
      *                       attributes are: 'comments', 'startLine', 'endLine', 'startTokenPos',
      *                       'endTokenPos', 'startFilePos', 'endFilePos'. The option defaults to the
      *                       first three. For more info see getNextToken() docs.
+=======
+     *                       which is an array of attributes to add to the AST nodes. Possible attributes
+     *                       are: 'comments', 'startLine', 'endLine', 'startTokenPos', 'endTokenPos',
+     *                       'startFilePos', 'endFilePos'. The option defaults to the first three.
+     *                       For more info see getNextToken() docs.
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function __construct(array $options = array()) {
         // map from internal tokens to PhpParser tokens
@@ -33,9 +43,13 @@ class Lexer
 
         // map of tokens to drop while lexing (the map is only used for isset lookup,
         // that's why the value is simply set to 1; the value is never actually used.)
+<<<<<<< HEAD
         $this->dropTokens = array_fill_keys(
             array(T_WHITESPACE, T_OPEN_TAG, T_COMMENT, T_DOC_COMMENT), 1
         );
+=======
+        $this->dropTokens = array_fill_keys(array(T_WHITESPACE, T_OPEN_TAG), 1);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         // the usedAttributes member is a map of the used attribute names to a dummy
         // value (here "true")
@@ -123,7 +137,11 @@ class Lexer
      *  * 'startTokenPos' => Offset into the token array of the first token in the node.
      *  * 'endTokenPos'   => Offset into the token array of the last token in the node.
      *  * 'startFilePos'  => Offset into the code string of the first character that is part of the node.
+<<<<<<< HEAD
      *  * 'endFilePos'    => Offset into the code string of the last character that is part of the node.
+=======
+     *  * 'endFilePos'    => Offset into the code string of the last character that is part of the node
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @param mixed $value           Variable to store token content in
      * @param mixed $startAttributes Variable to store start attributes in
@@ -143,9 +161,12 @@ class Lexer
                 $token = "\0";
             }
 
+<<<<<<< HEAD
             if (isset($this->usedAttributes['startLine'])) {
                 $startAttributes['startLine'] = $this->line;
             }
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             if (isset($this->usedAttributes['startTokenPos'])) {
                 $startAttributes['startTokenPos'] = $this->pos;
             }
@@ -153,6 +174,7 @@ class Lexer
                 $startAttributes['startFilePos'] = $this->filePos;
             }
 
+<<<<<<< HEAD
             if (\is_string($token)) {
                 $value = $token;
                 if (isset($token[1])) {
@@ -195,6 +217,65 @@ class Lexer
             }
 
             return $id;
+=======
+            if (is_string($token)) {
+                // bug in token_get_all
+                if ('b"' === $token) {
+                    $value = 'b"';
+                    $this->filePos += 2;
+                    $id = ord('"');
+                } else {
+                    $value = $token;
+                    $this->filePos += 1;
+                    $id = ord($token);
+                }
+
+                if (isset($this->usedAttributes['startLine'])) {
+                    $startAttributes['startLine'] = $this->line;
+                }
+                if (isset($this->usedAttributes['endLine'])) {
+                    $endAttributes['endLine'] = $this->line;
+                }
+                if (isset($this->usedAttributes['endTokenPos'])) {
+                    $endAttributes['endTokenPos'] = $this->pos;
+                }
+                if (isset($this->usedAttributes['endFilePos'])) {
+                    $endAttributes['endFilePos'] = $this->filePos - 1;
+                }
+
+                return $id;
+            } else {
+                $this->line += substr_count($token[1], "\n");
+                $this->filePos += strlen($token[1]);
+
+                if (T_COMMENT === $token[0]) {
+                    if (isset($this->usedAttributes['comments'])) {
+                        $startAttributes['comments'][] = new Comment($token[1], $token[2]);
+                    }
+                } elseif (T_DOC_COMMENT === $token[0]) {
+                    if (isset($this->usedAttributes['comments'])) {
+                        $startAttributes['comments'][] = new Comment\Doc($token[1], $token[2]);
+                    }
+                } elseif (!isset($this->dropTokens[$token[0]])) {
+                    $value = $token[1];
+
+                    if (isset($this->usedAttributes['startLine'])) {
+                        $startAttributes['startLine'] = $token[2];
+                    }
+                    if (isset($this->usedAttributes['endLine'])) {
+                        $endAttributes['endLine'] = $this->line;
+                    }
+                    if (isset($this->usedAttributes['endTokenPos'])) {
+                        $endAttributes['endTokenPos'] = $this->pos;
+                    }
+                    if (isset($this->usedAttributes['endFilePos'])) {
+                        $endAttributes['endFilePos'] = $this->filePos - 1;
+                    }
+
+                    return $this->tokenMap[$token[0]];
+                }
+            }
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         throw new \RuntimeException('Reached end of lexer loop');

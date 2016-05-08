@@ -27,5 +27,8 @@ Route::auth();
 Route::resource('/home','CertivyController');
 
 
-Route::resource('/event','EventController');
+Route::group(['middleware'=>['web']],function(){
+	Route::resource('/event','EventController');
+});
+
 

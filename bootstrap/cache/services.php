@@ -22,12 +22,19 @@
     18 => 'Illuminate\\Translation\\TranslationServiceProvider',
     19 => 'Illuminate\\Validation\\ValidationServiceProvider',
     20 => 'Illuminate\\View\\ViewServiceProvider',
+<<<<<<< HEAD
     21 => 'Intervention\\Image\\ImageServiceProvider',
     22 => 'Collective\\Html\\HtmlServiceProvider',
     23 => 'App\\Providers\\AppServiceProvider',
     24 => 'App\\Providers\\AuthServiceProvider',
     25 => 'App\\Providers\\EventServiceProvider',
     26 => 'App\\Providers\\RouteServiceProvider',
+=======
+    21 => 'App\\Providers\\AppServiceProvider',
+    22 => 'App\\Providers\\AuthServiceProvider',
+    23 => 'App\\Providers\\EventServiceProvider',
+    24 => 'App\\Providers\\RouteServiceProvider',
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
   ),
   'eager' => 
   array (
@@ -40,11 +47,18 @@
     6 => 'Illuminate\\Pagination\\PaginationServiceProvider',
     7 => 'Illuminate\\Session\\SessionServiceProvider',
     8 => 'Illuminate\\View\\ViewServiceProvider',
+<<<<<<< HEAD
     9 => 'Intervention\\Image\\ImageServiceProvider',
     10 => 'App\\Providers\\AppServiceProvider',
     11 => 'App\\Providers\\AuthServiceProvider',
     12 => 'App\\Providers\\EventServiceProvider',
     13 => 'App\\Providers\\RouteServiceProvider',
+=======
+    9 => 'App\\Providers\\AppServiceProvider',
+    10 => 'App\\Providers\\AuthServiceProvider',
+    11 => 'App\\Providers\\EventServiceProvider',
+    12 => 'App\\Providers\\RouteServiceProvider',
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
   ),
   'deferred' => 
   array (
@@ -131,10 +145,13 @@
     'translation.loader' => 'Illuminate\\Translation\\TranslationServiceProvider',
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
+<<<<<<< HEAD
     'html' => 'Collective\\Html\\HtmlServiceProvider',
     'form' => 'Collective\\Html\\HtmlServiceProvider',
     'Collective\\Html\\HtmlBuilder' => 'Collective\\Html\\HtmlServiceProvider',
     'Collective\\Html\\FormBuilder' => 'Collective\\Html\\HtmlServiceProvider',
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
   ),
   'when' => 
   array (
@@ -174,8 +191,11 @@
     'Illuminate\\Validation\\ValidationServiceProvider' => 
     array (
     ),
+<<<<<<< HEAD
     'Collective\\Html\\HtmlServiceProvider' => 
     array (
     ),
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
   ),
 );

@@ -24,16 +24,22 @@ array(
     0: Expr_BinaryOp_BooleanAnd(
         left: Expr_Variable(
             name: a
+<<<<<<< HEAD
             comments: array(
                 0: // boolean ops
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         right: Expr_Variable(
             name: b
         )
+<<<<<<< HEAD
         comments: array(
             0: // boolean ops
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Expr_BinaryOp_BooleanOr(
         left: Expr_Variable(
@@ -58,16 +64,22 @@ array(
     4: Expr_BinaryOp_LogicalAnd(
         left: Expr_Variable(
             name: a
+<<<<<<< HEAD
             comments: array(
                 0: // logical ops
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         right: Expr_Variable(
             name: b
         )
+<<<<<<< HEAD
         comments: array(
             0: // logical ops
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     5: Expr_BinaryOp_LogicalOr(
         left: Expr_Variable(
@@ -89,16 +101,22 @@ array(
         left: Expr_BinaryOp_BooleanAnd(
             left: Expr_Variable(
                 name: a
+<<<<<<< HEAD
                 comments: array(
                     0: // precedence
                 )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             )
             right: Expr_Variable(
                 name: b
             )
+<<<<<<< HEAD
             comments: array(
                 0: // precedence
             )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         )
         right: Expr_BinaryOp_BooleanAnd(
             left: Expr_Variable(
@@ -108,9 +126,12 @@ array(
                 name: d
             )
         )
+<<<<<<< HEAD
         comments: array(
             0: // precedence
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     8: Expr_BinaryOp_BooleanAnd(
         left: Expr_BinaryOp_BooleanAnd(

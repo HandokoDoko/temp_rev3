@@ -57,8 +57,13 @@ class Swift_Bug38Test extends \PHPUnit_Framework_TestCase
             '--'.$boundary."\r\n".
             'Content-Type: image/gif; name=image.gif'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
+<<<<<<< HEAD
             'Content-ID: <'.preg_quote($imgId, '~').'>'."\r\n".
             'Content-Disposition: inline; filename=image.gif'."\r\n".
+=======
+            'Content-Disposition: inline; filename=image.gif'."\r\n".
+            'Content-ID: <'.preg_quote($imgId, '~').'>'."\r\n".
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             "\r\n".
             preg_quote(base64_encode('<data>'), '~').
             "\r\n\r\n".
@@ -106,8 +111,13 @@ class Swift_Bug38Test extends \PHPUnit_Framework_TestCase
         '--'.$boundary."\r\n".
         'Content-Type: image/gif; name=image.gif'."\r\n".
         'Content-Transfer-Encoding: base64'."\r\n".
+<<<<<<< HEAD
         'Content-ID: <'.preg_quote($imgId, '~').'>'."\r\n".
         'Content-Disposition: inline; filename=image.gif'."\r\n".
+=======
+        'Content-Disposition: inline; filename=image.gif'."\r\n".
+        'Content-ID: <'.preg_quote($imgId, '~').'>'."\r\n".
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         "\r\n".
         preg_quote(base64_encode('<data>'), '~').
         "\r\n\r\n".

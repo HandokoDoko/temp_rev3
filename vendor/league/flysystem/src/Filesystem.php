@@ -51,7 +51,11 @@ class Filesystem implements FilesystemInterface
     {
         $path = Util::normalizePath($path);
 
+<<<<<<< HEAD
         return strlen($path) === 0 ? false : (bool) $this->getAdapter()->has($path);
+=======
+        return (bool) $this->getAdapter()->has($path);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

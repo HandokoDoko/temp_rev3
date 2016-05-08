@@ -2,7 +2,11 @@
 
 namespace Faker\Provider;
 
+<<<<<<< HEAD
 class Address extends Base
+=======
+class Address extends \Faker\Provider\Base
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 {
     protected static $citySuffix = array('Ville');
     protected static $streetSuffix = array('Street');
@@ -19,7 +23,11 @@ class Address extends Base
         '{{streetAddress}} {{postcode}} {{city}}',
     );
 
+<<<<<<< HEAD
     protected static $buildingNumber = array('%#');
+=======
+    protected static $buildingNumber = array('##');
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     protected static $postcode = array('#####');
     protected static $country = array();
 
@@ -104,6 +112,7 @@ class Address extends Base
     }
 
     /**
+<<<<<<< HEAD
      * @example '77.147489'
      * @param float|int $min
      * @param float|int $max
@@ -135,5 +144,22 @@ class Address extends Base
             'latitude' => static::latitude(),
             'longitude' => static::longitude()
         );
+=======
+     * @example 77.147489
+     * @return float Uses signed degrees format (returns a float number between -90 and 90)
+     */
+    public static function latitude()
+    {
+        return static::randomFloat(6, 0, 180) - 90;
+    }
+
+    /**
+     * @example 86.211205
+     * @return float Uses signed degrees format (returns a float number between -180 and 180)
+     */
+    public static function longitude()
+    {
+        return static::randomFloat(6, 0, 360) - 180;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 }

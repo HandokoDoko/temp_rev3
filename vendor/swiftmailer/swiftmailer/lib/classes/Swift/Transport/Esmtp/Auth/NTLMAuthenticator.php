@@ -373,7 +373,11 @@ class Swift_Transport_Esmtp_Auth_NTLMAuthenticator implements Swift_Transport_Es
 
         $binary = $this->si2bin($time, 64); // create 64 bit binary string
         $timestamp = '';
+<<<<<<< HEAD
         for ($i = 0; $i < 8; ++$i) {
+=======
+        for ($i = 0; $i < 8; $i++) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $timestamp .= chr(bindec(substr($binary, -(($i + 1) * 8), 8)));
         }
 
@@ -437,7 +441,11 @@ class Swift_Transport_Esmtp_Auth_NTLMAuthenticator implements Swift_Transport_Es
     {
         $material = array(bin2hex($key[0]));
         $len = strlen($key);
+<<<<<<< HEAD
         for ($i = 1; $i < $len; ++$i) {
+=======
+        for ($i = 1; $i < $len; $i++) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             list($high, $low) = str_split(bin2hex($key[$i]));
             $v = $this->castToByte(ord($key[$i - 1]) << (7 + 1 - $i) | $this->uRShift(hexdec(dechex(hexdec($high) & 0xf).dechex(hexdec($low) & 0xf)), $i));
             $material[] = str_pad(substr(dechex($v), -2), 2, '0', STR_PAD_LEFT); // cast to byte

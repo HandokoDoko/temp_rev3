@@ -76,11 +76,14 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
     );
 
     /**
+<<<<<<< HEAD
      * @var string This regexp matches all characters that are not or should not be encoded by rawurlencode (see list in array above).
      */
     private $urlEncodingSkipRegexp = '#[^-.~a-zA-Z0-9_/@:;,=+!*|]#';
 
     /**
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Constructor.
      *
      * @param RouteCollection      $routes  A RouteCollection instance
@@ -187,6 +190,7 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
 
         if ('' === $url) {
             $url = '/';
+<<<<<<< HEAD
         } elseif (preg_match($this->urlEncodingSkipRegexp, $url)) {
             // the context base URL is already encoded (see Symfony\Component\HttpFoundation\Request)
             $url = strtr(rawurlencode($url), $this->decodedChars);
@@ -202,6 +206,21 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
             } elseif ('/.' === substr($url, -2)) {
                 $url = substr($url, 0, -1).'%2E';
             }
+=======
+        }
+
+        // the contexts base URL is already encoded (see Symfony\Component\HttpFoundation\Request)
+        $url = strtr(rawurlencode($url), $this->decodedChars);
+
+        // the path segments "." and ".." are interpreted as relative reference when resolving a URI; see http://tools.ietf.org/html/rfc3986#section-3.3
+        // so we need to encode them as they are not used for this purpose here
+        // otherwise we would generate a URI that, when followed by a user agent (e.g. browser), does not match this route
+        $url = strtr($url, array('/../' => '/%2E%2E/', '/./' => '/%2E/'));
+        if ('/..' === substr($url, -3)) {
+            $url = substr($url, 0, -2).'%2E%2E';
+        } elseif ('/.' === substr($url, -2)) {
+            $url = substr($url, 0, -1).'%2E';
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         $schemeAuthority = '';
@@ -267,6 +286,7 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
         }
 
         // add a query string if needed
+<<<<<<< HEAD
         $extra = array_udiff_assoc(array_diff_key($parameters, $variables), $defaults, function ($a, $b) {
             return $a == $b ? 0 : 1;
         });
@@ -275,6 +295,13 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
             // "/" and "?" can be left decoded for better user experience, see
             // http://tools.ietf.org/html/rfc3986#section-3.4
             $url .= '?'.(false === strpos($query, '%2F') ? $query : strtr($query, array('%2F' => '/')));
+=======
+        $extra = array_diff_key($parameters, $variables, $defaults);
+        if ($extra && $query = http_build_query($extra, '', '&')) {
+            // "/" and "?" can be left decoded for better user experience, see
+            // http://tools.ietf.org/html/rfc3986#section-3.4
+            $url .= '?'.strtr($query, array('%2F' => '/'));
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         return $url;

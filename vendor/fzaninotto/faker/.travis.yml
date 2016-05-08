@@ -10,6 +10,7 @@ php:
 
 sudo: false
 
+<<<<<<< HEAD
 cache:
   directories:
     - $HOME/.composer/cache
@@ -17,5 +18,10 @@ cache:
 before_script:
     - travis_retry composer self-update
     - travis_retry composer install --no-interaction --prefer-dist
+=======
+before_script:
+    - travis_retry composer self-update
+    - travis_retry composer install --no-interaction --prefer-source --dev
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 script: make sniff test

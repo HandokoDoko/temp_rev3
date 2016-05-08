@@ -46,7 +46,11 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         ),
     );
 
+<<<<<<< HEAD
     public function phoneNumber()
+=======
+    public static function phoneNumber()
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     {
         $areaCode = static::randomElement(static::$areaCodes);
         $areaCodeLength = strlen($areaCode);

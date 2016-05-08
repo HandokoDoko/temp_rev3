@@ -33,7 +33,10 @@ namespace Faker;
  *
  * @property string $company
  * @property string $companySuffix
+<<<<<<< HEAD
  * @property string $jobTitle
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
  *
  * @property string $creditCardType
  * @property string $creditCardNumber
@@ -42,7 +45,10 @@ namespace Faker;
  * @property string $creditCardExpirationDateString
  * @property string $creditCardDetails
  * @property string $bankAccountNumber
+<<<<<<< HEAD
  * @method string iban($countryCode = null, $prefix = '', $length = null)
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
  * @property string $swiftBicNumber
  * @property string $vat
  *
@@ -110,7 +116,10 @@ namespace Faker;
  * @property string $countryISOAlpha3
  * @property string $languageCode
  * @property string $currencyCode
+<<<<<<< HEAD
  * @property boolean boolean
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
  * @method boolean boolean($chanceOfGettingTrue = 50)
  *
  * @property int    $randomDigit
@@ -156,7 +165,11 @@ namespace Faker;
  * @property string $fileExtension
  * @method string file($sourceDirectory = '/tmp', $targetDirectory = '/tmp', $fullPath = true)
  *
+<<<<<<< HEAD
  * @method string imageUrl($width = 640, $height = 480, $category = null, $randomize = true, $word = null)
+=======
+ * @method string imageUrl($width = 640, $height = 480, $category = null, $randomize = true)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
  * @method string image($dir = null, $width = 640, $height = 480, $category = null, $fullPath = true)
  *
  * @property string $hexColor
@@ -187,7 +200,11 @@ class Generator
         if ($seed === null) {
             mt_srand();
         } else {
+<<<<<<< HEAD
             mt_srand((int) $seed);
+=======
+            mt_srand($seed);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
     }
 
@@ -230,18 +247,24 @@ class Generator
         return $this->format($matches[1]);
     }
 
+<<<<<<< HEAD
     /**
      * @param string $attribute
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __get($attribute)
     {
         return $this->format($attribute);
     }
 
+<<<<<<< HEAD
     /**
      * @param string $method
      * @param array $attributes
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __call($method, $attributes)
     {
         return $this->format($method, $attributes);

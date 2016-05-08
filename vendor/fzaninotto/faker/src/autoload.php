@@ -10,6 +10,10 @@
 spl_autoload_register(function ($className) {
     $className = ltrim($className, '\\');
     $fileName = '';
+<<<<<<< HEAD
+=======
+    $namespace = '';
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     if ($lastNsPos = strripos($className, '\\')) {
         $namespace = substr($className, 0, $lastNsPos);
         $className = substr($className, $lastNsPos + 1);

@@ -18,9 +18,13 @@ Additionally you may want to set the `xdebug.max_nesting_level` ini option to a 
 ini_set('xdebug.max_nesting_level', 3000);
 ```
 
+<<<<<<< HEAD
 This ensures that there will be no errors when traversing highly nested node trees. However, it is
 preferable to disable XDebug completely, as it can easily make this library more than five times
 slower.
+=======
+This ensures that there will be no errors when traversing highly nested node trees.
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 Parsing
 -------

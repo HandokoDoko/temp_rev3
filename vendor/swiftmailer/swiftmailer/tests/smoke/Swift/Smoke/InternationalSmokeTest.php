@@ -5,8 +5,11 @@
  */
 class Swift_Smoke_InternationalSmokeTest extends SwiftMailerSmokeTestCase
 {
+<<<<<<< HEAD
     private $_attFile;
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function setUp()
     {
         $this->_attFile = __DIR__.'/../../../_samples/files/textfile.zip';

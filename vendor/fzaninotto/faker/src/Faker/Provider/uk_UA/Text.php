@@ -21,6 +21,10 @@ class Text extends \Faker\Provider\Text
      *
      * Language: Ukrainian
      *
+<<<<<<< HEAD
+=======
+     * @licence Creative Commons Attribution-ShareAlike https://creativecommons.org/licenses/by-sa/3.0/deed.ru
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @see     https://wikimediafoundation.org/wiki/Terms_of_Use/
      * @link    http://uk.wikisource.org/wiki/%D0%97%D0%B0%D1%85%D0%B0%D1%80_%D0%91%D0%B5%D1%80%D0%BA%D1%83%D1%82
      * @var string

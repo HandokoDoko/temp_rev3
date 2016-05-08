@@ -3,6 +3,10 @@
 namespace Faker\ORM\CakePHP;
 
 use Cake\ORM\TableRegistry;
+<<<<<<< HEAD
+=======
+use Faker\Guesser\Name as NameGuesser;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 class EntityPopulator
 {
@@ -16,17 +20,23 @@ class EntityPopulator
         $this->class = $class;
     }
 
+<<<<<<< HEAD
     /**
      * @param string $name
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __get($name)
     {
         return $this->{$name};
     }
 
+<<<<<<< HEAD
     /**
      * @param string $name
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __set($name, $value)
     {
         $this->{$name} = $value;
@@ -42,9 +52,12 @@ class EntityPopulator
         $this->modifiers = array_merge($this->modifiers, $modifiers);
     }
 
+<<<<<<< HEAD
     /**
      * @return array
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function guessColumnFormatters($populator)
     {
         $formatters = [];
@@ -79,10 +92,14 @@ class EntityPopulator
         return $formatters;
     }
 
+<<<<<<< HEAD
     /**
      * @return array
      */
     public function guessModifiers()
+=======
+    public function guessModifiers($populator)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     {
         $modifiers = [];
         $table = $this->getTable($this->class);
@@ -110,6 +127,10 @@ class EntityPopulator
                 }
 
                 $foreignKey = $foreignKeys[array_rand($foreignKeys)];
+<<<<<<< HEAD
+=======
+                $primaryKey = $table->primaryKey();
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 $data[$assoc->foreignKey()] = $foreignKey;
                 return $data;
             };
@@ -120,9 +141,12 @@ class EntityPopulator
         return $modifiers;
     }
 
+<<<<<<< HEAD
     /**
      * @param array $options
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function execute($class, $insertedEntities, $options = [])
     {
         $table = $this->getTable($class);
@@ -143,11 +167,15 @@ class EntityPopulator
         }
 
         $pk = $table->primaryKey();
+<<<<<<< HEAD
         if (is_string($pk)) {
             return $entity->{$pk};
         }
 
         return $entity->{$pk[0]};
+=======
+        return $entity->{$pk};
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     public function setConnection($name)

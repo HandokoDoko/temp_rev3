@@ -23,9 +23,12 @@ CODE;
 <AST xmlns:node="http://nikic.github.com/PHPParser/XML/node" xmlns:subNode="http://nikic.github.com/PHPParser/XML/subNode" xmlns:attribute="http://nikic.github.com/PHPParser/XML/attribute" xmlns:scalar="http://nikic.github.com/PHPParser/XML/scalar">
  <scalar:array>
   <node:Stmt_Function>
+<<<<<<< HEAD
    <attribute:startLine>
     <scalar:int>4</scalar:int>
    </attribute:startLine>
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
    <attribute:comments>
     <scalar:array>
      <comment isDocComment="false" line="2">// comment
@@ -33,6 +36,12 @@ CODE;
      <comment isDocComment="true" line="3">/** doc comment */</comment>
     </scalar:array>
    </attribute:comments>
+<<<<<<< HEAD
+=======
+   <attribute:startLine>
+    <scalar:int>4</scalar:int>
+   </attribute:startLine>
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
    <attribute:endLine>
     <scalar:int>6</scalar:int>
    </attribute:endLine>
@@ -71,9 +80,12 @@ CODE;
         <attribute:endLine>
          <scalar:int>4</scalar:int>
         </attribute:endLine>
+<<<<<<< HEAD
         <attribute:kind>
          <scalar:int>10</scalar:int>
         </attribute:kind>
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         <subNode:value>
          <scalar:int>0</scalar:int>
         </subNode:value>
@@ -136,9 +148,12 @@ CODE;
          <attribute:endLine>
           <scalar:int>5</scalar:int>
          </attribute:endLine>
+<<<<<<< HEAD
          <attribute:kind>
           <scalar:int>1</scalar:int>
          </attribute:kind>
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
          <subNode:value>
           <scalar:string>Foo</scalar:string>
          </subNode:value>

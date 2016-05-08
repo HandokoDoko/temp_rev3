@@ -2,7 +2,10 @@
 
 namespace League\Flysystem\Adapter;
 
+<<<<<<< HEAD
 use ErrorException;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 use League\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Config;
@@ -348,10 +351,13 @@ class Ftp extends AbstractFtpAdapter
             return false;
         }
 
+<<<<<<< HEAD
         if (preg_match('/^total [0-9]*$/', $listing[0])) {
             array_shift($listing);
         }
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         return $this->normalizeObject($listing[0], '');
     }
 
@@ -445,6 +451,7 @@ class Ftp extends AbstractFtpAdapter
      * Check if the connection is open.
      *
      * @return bool
+<<<<<<< HEAD
      * @throws ErrorException
      */
     public function isConnected()
@@ -461,5 +468,11 @@ class Ftp extends AbstractFtpAdapter
 
             return false;
         }
+=======
+     */
+    public function isConnected()
+    {
+        return is_resource($this->connection) && ftp_systype($this->connection) !== false;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 }

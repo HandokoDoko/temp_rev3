@@ -22,7 +22,13 @@ class Swift_Transport_FailoverTransport extends Swift_Transport_LoadBalancedTran
      */
     private $_currentTransport;
 
+<<<<<<< HEAD
     // needed as __construct is called from elsewhere explicitly
+=======
+    /**
+     * Creates a new FailoverTransport.
+     */
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __construct()
     {
         parent::__construct();
@@ -43,7 +49,10 @@ class Swift_Transport_FailoverTransport extends Swift_Transport_LoadBalancedTran
     {
         $maxTransports = count($this->_transports);
         $sent = 0;
+<<<<<<< HEAD
         $this->_lastUsedTransport = null;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         for ($i = 0; $i < $maxTransports
             && $transport = $this->_getNextTransport(); ++$i) {
@@ -52,11 +61,15 @@ class Swift_Transport_FailoverTransport extends Swift_Transport_LoadBalancedTran
                     $transport->start();
                 }
 
+<<<<<<< HEAD
                 if ($sent = $transport->send($message, $failedRecipients)) {
                     $this->_lastUsedTransport = $transport;
 
                     return $sent;
                 }
+=======
+                return $transport->send($message, $failedRecipients);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             } catch (Swift_TransportException $e) {
                 $this->_killCurrentTransport();
             }

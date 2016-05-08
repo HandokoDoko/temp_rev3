@@ -289,7 +289,14 @@ class Swift_KeyCache_DiskKeyCache implements Swift_KeyCache
     private function _getHandle($nsKey, $itemKey, $position)
     {
         if (!isset($this->_keys[$nsKey][$itemKey])) {
+<<<<<<< HEAD
             $openMode = $this->hasKey($nsKey, $itemKey) ? 'r+b' : 'w+b';
+=======
+            $openMode = $this->hasKey($nsKey, $itemKey)
+                ? 'r+b'
+                : 'w+b'
+                ;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $fp = fopen($this->_path.'/'.$nsKey.'/'.$itemKey, $openMode);
             $this->_keys[$nsKey][$itemKey] = $fp;
         }

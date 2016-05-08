@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< HEAD
 <phpunit
     bootstrap="vendor/autoload.php"
     colors="true"
 >
+=======
+<phpunit bootstrap="vendor/autoload.php">
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     <testsuites>
         <testsuite name="Faker Test Suite">
             <directory>./test/Faker/</directory>

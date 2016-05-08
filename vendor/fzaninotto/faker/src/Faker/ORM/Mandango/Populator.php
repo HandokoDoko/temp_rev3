@@ -15,10 +15,13 @@ class Populator
     protected $entities = array();
     protected $quantities = array();
 
+<<<<<<< HEAD
     /**
      * @param \Faker\Generator $generator
      * @param Mandango $mandango
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __construct(\Faker\Generator $generator, Mandango $mandango)
     {
         $this->generator = $generator;

@@ -4,6 +4,7 @@ namespace Faker\Provider\ko_KR;
 
 class Internet extends \Faker\Provider\Internet
 {
+<<<<<<< HEAD
     protected static $userNameFormats = array(
         '{{lastNameAscii}}.{{firstNameAscii}}', '{{firstNameAscii}}.{{lastNameAscii}}', '{{firstNameAscii}}##', '?{{lastNameAscii}}',
     );
@@ -83,4 +84,8 @@ class Internet extends \Faker\Provider\Internet
     {
         return static::randomElement(static::$lastNameAscii) . '.' . $this->tld();
     }
+=======
+    protected static $freeEmailDomain = array('gmail.com', 'yahoo.com', 'hotmail.com', 'gmail.co.kr', 'hotmail.co.kr');
+    protected static $tld = array('com', 'com', 'com', 'com', 'com', 'biz', 'info', 'net', 'org', 'co.kr', 'kr');
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

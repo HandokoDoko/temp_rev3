@@ -35,8 +35,13 @@ class Swift_Mime_EmbeddedFileAcceptanceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(
             'Content-Type: application/pdf'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
+<<<<<<< HEAD
             'Content-ID: <foo@bar>'."\r\n".
             'Content-Disposition: inline'."\r\n",
+=======
+            'Content-Disposition: inline'."\r\n".
+            'Content-ID: <foo@bar>'."\r\n",
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $file->toString()
             );
     }
@@ -50,8 +55,13 @@ class Swift_Mime_EmbeddedFileAcceptanceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(
             'Content-Type: application/pdf'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
+<<<<<<< HEAD
             'Content-ID: <'.$id.'>'."\r\n".
             'Content-Disposition: attachment'."\r\n",
+=======
+            'Content-Disposition: attachment'."\r\n".
+            'Content-ID: <'.$id.'>'."\r\n",
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $file->toString()
             );
     }
@@ -65,8 +75,13 @@ class Swift_Mime_EmbeddedFileAcceptanceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(
             'Content-Type: application/pdf; name=foo.pdf'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
+<<<<<<< HEAD
             'Content-ID: <'.$id.'>'."\r\n".
             'Content-Disposition: inline; filename=foo.pdf'."\r\n",
+=======
+            'Content-Disposition: inline; filename=foo.pdf'."\r\n".
+            'Content-ID: <'.$id.'>'."\r\n",
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $file->toString()
             );
     }
@@ -80,8 +95,13 @@ class Swift_Mime_EmbeddedFileAcceptanceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(
             'Content-Type: application/pdf'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
+<<<<<<< HEAD
             'Content-ID: <'.$id.'>'."\r\n".
             'Content-Disposition: inline; size=12340'."\r\n",
+=======
+            'Content-Disposition: inline; size=12340'."\r\n".
+            'Content-ID: <'.$id.'>'."\r\n",
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $file->toString()
             );
     }
@@ -93,12 +113,20 @@ class Swift_Mime_EmbeddedFileAcceptanceTest extends \PHPUnit_Framework_TestCase
         $file->setContentType('application/pdf');
         $file->setFilename('foo.pdf');
         $file->setSize(12340);
+<<<<<<< HEAD
 
         $this->assertEquals(
             'Content-Type: application/pdf; name=foo.pdf'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
             'Content-ID: <'.$id.'>'."\r\n".
             'Content-Disposition: inline; filename=foo.pdf; size=12340'."\r\n",
+=======
+        $this->assertEquals(
+            'Content-Type: application/pdf; name=foo.pdf'."\r\n".
+            'Content-Transfer-Encoding: base64'."\r\n".
+            'Content-Disposition: inline; filename=foo.pdf; size=12340'."\r\n".
+            'Content-ID: <'.$id.'>'."\r\n",
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $file->toString()
             );
     }
@@ -114,8 +142,13 @@ class Swift_Mime_EmbeddedFileAcceptanceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(
             'Content-Type: application/pdf; name=foo.pdf'."\r\n".
             'Content-Transfer-Encoding: base64'."\r\n".
+<<<<<<< HEAD
             'Content-ID: <'.$id.'>'."\r\n".
             'Content-Disposition: inline; filename=foo.pdf; size=12340'."\r\n".
+=======
+            'Content-Disposition: inline; filename=foo.pdf; size=12340'."\r\n".
+            'Content-ID: <'.$id.'>'."\r\n".
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             "\r\n".
             base64_encode('abcd'),
             $file->toString()

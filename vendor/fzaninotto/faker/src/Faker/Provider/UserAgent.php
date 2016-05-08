@@ -2,6 +2,7 @@
 
 namespace Faker\Provider;
 
+<<<<<<< HEAD
 class UserAgent extends Base
 {
     protected static $userAgents = array('firefox', 'chrome', 'internetExplorer', 'opera', 'safari');
@@ -11,6 +12,13 @@ class UserAgent extends Base
         'Windows NT 5.01', 'Windows NT 5.0', 'Windows NT 4.0', 'Windows 98; Win 9x 4.90', 'Windows 98',
         'Windows 95', 'Windows CE'
     );
+=======
+class UserAgent extends \Faker\Provider\Base
+{
+    protected static $userAgents = array('firefox', 'chrome', 'internetExplorer', 'opera', 'safari');
+
+    protected static $windowsPlatformTokens = array('Windows NT 6.2', 'Windows NT 6.1', 'Windows NT 6.0', 'Windows NT 5.2', 'Windows NT 5.1', 'Windows NT 5.01', 'Windows NT 5.0', 'Windows NT 4.0', 'Windows 98; Win 9x 4.90', 'Windows 98', 'Windows 95', 'Windows CE');
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
     /**
      * Possible processors on Linux

@@ -376,6 +376,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
+<<<<<<< HEAD
      * Intersect an array of items with the input data.
      *
      * @param  array|mixed  $keys
@@ -387,6 +388,8 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Retrieve a query string item from the request.
      *
      * @param  string  $key
@@ -499,6 +502,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
+<<<<<<< HEAD
      * Determine if a header is set on the request.
      *
      * @param  string  $key
@@ -510,6 +514,8 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Retrieve a header from the request.
      *
      * @param  string  $key
@@ -683,7 +689,15 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
         $split = explode('/', $actual);
 
+<<<<<<< HEAD
         return isset($split[1]) && preg_match('#'.preg_quote($split[0], '#').'/.+\+'.preg_quote($split[1], '#').'#', $type);
+=======
+        if (isset($split[1]) && preg_match('/'.$split[0].'\/.+\+'.$split[1].'/', $type)) {
+            return true;
+        }
+
+        return false;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

@@ -95,17 +95,22 @@ class Swift_Mime_ContentEncoder_QpContentEncoder extends Swift_Encoder_QpEncoder
             }
 
             $enc = $this->_encodeByteSequence($bytes, $size);
+<<<<<<< HEAD
 
             $i = strpos($enc, '=0D=0A');
             $newLineLength = $lineLen + ($i === false ? $size : $i);
 
             if ($currentLine && $newLineLength >= $thisLineLength) {
+=======
+            if ($currentLine && $lineLen + $size >= $thisLineLength) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 $is->write($prepend.$this->_standardize($currentLine));
                 $currentLine = '';
                 $prepend = "=\r\n";
                 $thisLineLength = $maxLineLength;
                 $lineLen = 0;
             }
+<<<<<<< HEAD
 
             $currentLine .= $enc;
 
@@ -115,6 +120,10 @@ class Swift_Mime_ContentEncoder_QpContentEncoder extends Swift_Encoder_QpEncoder
                 // 6 is the length of '=0D=0A'.
                 $lineLen = $size - strrpos($enc, '=0D=0A') - 6;
             }
+=======
+            $lineLen += $size;
+            $currentLine .= $enc;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
         if (strlen($currentLine)) {
             $is->write($prepend.$this->_standardize($currentLine));

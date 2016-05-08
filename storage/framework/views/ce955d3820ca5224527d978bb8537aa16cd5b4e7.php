@@ -220,7 +220,11 @@
         </style>
     </head>
     <body>
+<<<<<<< HEAD
         <nav class="navbar navbar-default margin-bottom-min20" role="navigation">
+=======
+        <nav class="navbar navbar-default" role="navigation">
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
             <div class="container">
                 <div class="navbar-header">
@@ -274,7 +278,11 @@
                 <!-- /.navbar-collapse -->
             </div>
         </nav>
+<<<<<<< HEAD
         <div class="wrapper">
+=======
+        <div class="wrapper margin-top-min20">
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
             
             <!-- start: PAGE CONTENT -->

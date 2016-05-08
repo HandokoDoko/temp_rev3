@@ -198,16 +198,21 @@ class Swift_Encoder_QpEncoder implements Swift_Encoder
             }
 
             $enc = $this->_encodeByteSequence($bytes, $size);
+<<<<<<< HEAD
 
             $i = strpos($enc, '=0D=0A');
             $newLineLength = $lineLen + ($i === false ? $size : $i);
 
             if ($currentLine && $newLineLength >= $thisLineLength) {
+=======
+            if ($currentLine && $lineLen + $size >= $thisLineLength) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 $lines[$lNo] = '';
                 $currentLine = &$lines[$lNo++];
                 $thisLineLength = $maxLineLength;
                 $lineLen = 0;
             }
+<<<<<<< HEAD
 
             $currentLine .= $enc;
 
@@ -217,6 +222,10 @@ class Swift_Encoder_QpEncoder implements Swift_Encoder
                 // 6 is the length of '=0D=0A'.
                 $lineLen = $size - strrpos($enc, '=0D=0A') - 6;
             }
+=======
+            $lineLen += $size;
+            $currentLine .= $enc;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         return $this->_standardize(implode("=\r\n", $lines));

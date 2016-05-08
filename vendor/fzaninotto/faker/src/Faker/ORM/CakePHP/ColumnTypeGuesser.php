@@ -11,9 +11,12 @@ class ColumnTypeGuesser
         $this->generator = $generator;
     }
 
+<<<<<<< HEAD
     /**
      * @return \Closure|null
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function guessFormat($column, $table)
     {
         $generator = $this->generator;
@@ -25,12 +28,21 @@ class ColumnTypeGuesser
                     return $generator->boolean;
                 };
             case 'integer':
+<<<<<<< HEAD
                 return function () {
                     return mt_rand(0, intval('2147483647'));
                 };
             case 'biginteger':
                 return function () {
                     return mt_rand(0, intval('9223372036854775807'));
+=======
+                return function () use ($generator) {
+                    return $generator->randomNumber(10);
+                };
+            case 'biginteger':
+                return function () use ($generator) {
+                    return $generator->randomNumber(20);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 };
             case 'decimal':
             case 'float':

@@ -1,6 +1,7 @@
 Changelog
 =========
 
+<<<<<<< HEAD
 5.4.2 (2016-05-01)
 ------------------
 
@@ -16,6 +17,8 @@ Changelog
  * fixed add soft line break only when necessary
  * fixed escaping command-line args to Sendmail
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 5.4.1 (2015-06-06)
 ------------------
 

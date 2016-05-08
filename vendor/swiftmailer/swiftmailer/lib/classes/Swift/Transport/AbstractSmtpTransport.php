@@ -417,7 +417,11 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
         foreach ($recipients as $forwardPath) {
             try {
                 $this->_doRcptToCommand($forwardPath);
+<<<<<<< HEAD
                 ++$sent;
+=======
+                $sent++;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             } catch (Swift_TransportException $e) {
                 $failedRecipients[] = $forwardPath;
             }
@@ -461,6 +465,7 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
     /** Try to determine the hostname of the server this is run on */
     private function _lookupHostname()
     {
+<<<<<<< HEAD
         if (!empty($_SERVER['SERVER_NAME']) && $this->_isFqdn($_SERVER['SERVER_NAME'])) {
             $this->_domain = $_SERVER['SERVER_NAME'];
         } elseif (!empty($_SERVER['SERVER_ADDR'])) {
@@ -472,6 +477,13 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
             }
 
             $this->_domain = sprintf('[%s%s]', $prefix, $_SERVER['SERVER_ADDR']);
+=======
+        if (!empty($_SERVER['SERVER_NAME'])
+            && $this->_isFqdn($_SERVER['SERVER_NAME'])) {
+            $this->_domain = $_SERVER['SERVER_NAME'];
+        } elseif (!empty($_SERVER['SERVER_ADDR'])) {
+            $this->_domain = sprintf('[%s]', $_SERVER['SERVER_ADDR']);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
     }
 
@@ -481,9 +493,15 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
         // We could do a really thorough check, but there's really no point
         if (false !== $dotPos = strpos($hostname, '.')) {
             return ($dotPos > 0) && ($dotPos != strlen($hostname) - 1);
+<<<<<<< HEAD
         }
 
         return false;
+=======
+        } else {
+            return false;
+        }
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

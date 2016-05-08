@@ -151,9 +151,15 @@ class Swift_Plugins_ThrottlerPlugin extends Swift_Plugins_BandwidthMonitorPlugin
     {
         if (isset($this->_timer)) {
             return $this->_timer->getTimestamp();
+<<<<<<< HEAD
         }
 
         return time();
+=======
+        } else {
+            return time();
+        }
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

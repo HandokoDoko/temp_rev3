@@ -2,10 +2,13 @@ language: php
 
 sudo: false
 
+<<<<<<< HEAD
 cache:
   directories:
     - $HOME/.composer/cache
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 php:
   - 5.4
   - 5.5
@@ -16,7 +19,11 @@ php:
 
 install:
   - if [ $TRAVIS_PHP_VERSION = '5.6' ]; then composer require satooshi/php-coveralls '~1.0'; fi
+<<<<<<< HEAD
   - composer install --prefer-dist
+=======
+  - composer install --prefer-source
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 matrix:
   allow_failures:
@@ -24,9 +31,16 @@ matrix:
   fast_finish: true
 
 script:
+<<<<<<< HEAD
   - if [ $TRAVIS_PHP_VERSION = '5.6' ]; then vendor/bin/phpunit --coverage-clover build/logs/clover.xml; else vendor/bin/phpunit; fi
   - if [ $TRAVIS_PHP_VERSION = '7.0' ]; then test_old/run-php-src.sh; fi
 
 after_success:
   if [ $TRAVIS_PHP_VERSION = '5.6' ]; then php vendor/bin/coveralls; fi
 
+=======
+  if [ $TRAVIS_PHP_VERSION = '5.6' ]; then vendor/bin/phpunit --coverage-clover build/logs/clover.xml; else vendor/bin/phpunit; fi
+
+after_success:
+  if [ $TRAVIS_PHP_VERSION = '5.6' ]; then php vendor/bin/coveralls; fi
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

@@ -40,10 +40,13 @@ class Address extends \Faker\Provider\Address
         'Zell am See', 'Zeltweg', 'Zistersdorf', 'Zwettl',
     );
 
+<<<<<<< HEAD
     protected static $state = array(
         'Burgenland', 'Kärnten', 'Niederösterreich', 'Oberösterreich', 'Salzburg', 'Steiermark', 'Tirol', 'Vorarlberg', 'Wien'
     );
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     protected static $country = array(
         'Afghanistan', 'Alandinseln', 'Albanien', 'Algerien', 'Amerikanisch-Ozeanien', 'Amerikanisch-Samoa', 'Amerikanische Jungferninseln', 'Andorra', 'Angola', 'Anguilla', 'Antarktis', 'Antigua und Barbuda', 'Argentinien', 'Armenien', 'Aruba', 'Aserbaidschan', 'Australien', 'Ägypten', 'Äquatorialguinea', 'Äthiopien', 'Äußeres Ozeanien',
         'Bahamas', 'Bahrain', 'Bangladesch', 'Barbados', 'Belarus', 'Belgien', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivien', 'Bosnien und Herzegowina', 'Botsuana', 'Bouvetinsel', 'Brasilien', 'Britische Jungferninseln', 'Britisches Territorium im Indischen Ozean', 'Brunei Darussalam', 'Bulgarien', 'Burkina Faso', 'Burundi',
@@ -100,6 +103,7 @@ class Address extends \Faker\Provider\Address
     {
         return static::randomElement(static::$streetSuffixLong);
     }
+<<<<<<< HEAD
 
     /**
      * @example 'Wien'
@@ -108,4 +112,6 @@ class Address extends \Faker\Provider\Address
     {
         return static::randomElement(static::$state);
     }
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

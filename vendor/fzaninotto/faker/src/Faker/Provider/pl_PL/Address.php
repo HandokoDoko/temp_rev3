@@ -20,7 +20,10 @@ class Address extends \Faker\Provider\Address
         'dolnośląskie','kujawsko-pomorskie','lubelskie','lubuskie','łódzkie','małopolskie','mazowieckie','opolskie','podkarpackie',
         'podlaskie','pomorskie','śląskie','świętokrzyskie','warmińsko-mazurskie','wielkopolskie','zachodniopomorskie'
     );
+<<<<<<< HEAD
     // TODO list all country names in the world
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     protected static $country = array(
         'Polska',
     );

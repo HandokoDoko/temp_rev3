@@ -41,9 +41,15 @@ class Swift_Signers_SMimeSigner implements Swift_Signers_BodySigner
     /**
      * Constructor.
      *
+<<<<<<< HEAD
      * @param string|null $signCertificate
      * @param string|null $signPrivateKey
      * @param string|null $encryptCertificate
+=======
+     * @param string $certificate
+     * @param string $privateKey
+     * @param string $encryptCertificate
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      */
     public function __construct($signCertificate = null, $signPrivateKey = null, $encryptCertificate = null)
     {
@@ -167,7 +173,11 @@ class Swift_Signers_SMimeSigner implements Swift_Signers_BodySigner
      * But some older mail clients, namely Microsoft Outlook 2000 will work when the message first encrypted.
      * As this goes against the official specs, its recommended to only use 'encryption -> signing' when specifically targeting these 'broken' clients.
      *
+<<<<<<< HEAD
      * @param bool $signThenEncrypt
+=======
+     * @param string $signThenEncrypt
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @return Swift_Signers_SMimeSigner
      */
@@ -400,6 +410,10 @@ class Swift_Signers_SMimeSigner implements Swift_Signers_BodySigner
             }
 
             $boundary = trim($contentTypeData['1'], '"');
+<<<<<<< HEAD
+=======
+            $boundaryLen = strlen($boundary);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
             // Skip the header and CRLF CRLF
             $fromStream->setReadPointer($headersPosEnd + 4);

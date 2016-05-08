@@ -12,6 +12,7 @@ class Company extends \Faker\Provider\Company
     );
 
     protected static $companySuffix = array('VOF', 'CV', 'LLP', 'BV', 'NV', 'IBC', 'CSL', 'EESV', 'SE', 'CV', 'Stichting', '& Zonen', '& Zn');
+<<<<<<< HEAD
 
     /**
      * Belasting Toegevoegde Waarde (BTW) = VAT
@@ -36,4 +37,6 @@ class Company extends \Faker\Provider\Company
     {
         return self::vat();
     }
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

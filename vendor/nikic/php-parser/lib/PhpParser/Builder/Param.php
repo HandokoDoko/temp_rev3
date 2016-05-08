@@ -43,7 +43,11 @@ class Param extends PhpParser\BuilderAbstract
      * @return $this The builder instance (for fluid interface)
      */
     public function setTypeHint($type) {
+<<<<<<< HEAD
         if (in_array($type, array('array', 'callable', 'string', 'int', 'float', 'bool'))) {
+=======
+        if ($type === 'array' || $type === 'callable') {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $this->type = $type;
         } else {
             $this->type = $this->normalizeName($type);
@@ -73,4 +77,8 @@ class Param extends PhpParser\BuilderAbstract
             $this->name, $this->default, $this->type, $this->byRef
         );
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

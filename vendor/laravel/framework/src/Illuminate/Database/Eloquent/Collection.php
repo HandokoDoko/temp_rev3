@@ -197,6 +197,7 @@ class Collection extends BaseCollection
     }
 
     /**
+<<<<<<< HEAD
      * Make the given, typically visible, attributes hidden across the entire collection.
      *
      * @param  array|string  $attributes
@@ -210,6 +211,8 @@ class Collection extends BaseCollection
     }
 
     /**
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Make the given, typically hidden, attributes visible across the entire collection.
      *
      * @param  array|string  $attributes
@@ -217,9 +220,17 @@ class Collection extends BaseCollection
      */
     public function makeVisible($attributes)
     {
+<<<<<<< HEAD
         return $this->each(function ($model) use ($attributes) {
             $model->makeVisible($attributes);
         });
+=======
+        $this->each(function ($model) use ($attributes) {
+            $model->makeVisible($attributes);
+        });
+
+        return $this;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

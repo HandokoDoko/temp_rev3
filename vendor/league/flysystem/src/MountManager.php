@@ -182,11 +182,18 @@ class MountManager
     /**
      * @param $from
      * @param $to
+<<<<<<< HEAD
      * @param array $config
      *
      * @return bool
      */
     public function copy($from, $to, array $config = [])
+=======
+     *
+     * @return bool
+     */
+    public function copy($from, $to)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     {
         list($prefixFrom, $arguments) = $this->filterPrefix([$from]);
 
@@ -200,7 +207,11 @@ class MountManager
         list($prefixTo, $arguments) = $this->filterPrefix([$to]);
 
         $fsTo = $this->getFilesystem($prefixTo);
+<<<<<<< HEAD
         $result =  call_user_func_array([$fsTo, 'writeStream'], array_merge($arguments, [$buffer, $config]));
+=======
+        $result =  call_user_func_array([$fsTo, 'writeStream'], array_merge($arguments, [$buffer]));
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         if (is_resource($buffer)) {
             fclose($buffer);
@@ -230,6 +241,7 @@ class MountManager
      *
      * @param $from
      * @param $to
+<<<<<<< HEAD
      * @param array $config
      *
      * @return bool
@@ -237,6 +249,14 @@ class MountManager
     public function move($from, $to, array $config = [])
     {
         $copied = $this->copy($from, $to, $config);
+=======
+     *
+     * @return bool
+     */
+    public function move($from, $to)
+    {
+        $copied = $this->copy($from, $to);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         if ($copied) {
             return $this->delete($from);

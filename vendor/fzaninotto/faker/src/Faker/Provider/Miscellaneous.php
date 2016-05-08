@@ -2,6 +2,7 @@
 
 namespace Faker\Provider;
 
+<<<<<<< HEAD
 class Miscellaneous extends Base
 {
     /**
@@ -29,6 +30,11 @@ class Miscellaneous extends Base
         'uk', 'ur', 'uz', 've', 'vi', 'vo', 'wa', 'wo', 'xh', 'yi',
         'yo', 'za', 'zh', 'zu',
     );
+=======
+class Miscellaneous extends \Faker\Provider\Base
+{
+    protected static $languageCode = array('cn', 'de', 'en', 'es', 'fr', 'it', 'pt', 'ru');
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
     /**
      * @link https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
@@ -210,7 +216,11 @@ class Miscellaneous extends Base
      */
     public static function boolean($chanceOfGettingTrue = 50)
     {
+<<<<<<< HEAD
         return mt_rand(1, 100) <= $chanceOfGettingTrue;
+=======
+        return mt_rand(1, 100) <= $chanceOfGettingTrue ? true : false;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

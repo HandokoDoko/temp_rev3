@@ -121,7 +121,11 @@ class Validator implements ValidatorContract
     protected $customAttributes = [];
 
     /**
+<<<<<<< HEAD
      * The array of custom displayable values.
+=======
+     * The array of custom displayabled values.
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @var array
      */
@@ -174,7 +178,10 @@ class Validator implements ValidatorContract
     protected $dependentRules = [
         'RequiredWith', 'RequiredWithAll', 'RequiredWithout', 'RequiredWithoutAll',
         'RequiredIf', 'RequiredUnless', 'Confirmed', 'Same', 'Different', 'Unique',
+<<<<<<< HEAD
         'Before', 'After',
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     ];
 
     /**
@@ -279,11 +286,15 @@ class Validator implements ValidatorContract
 
         if (call_user_func($callback, $payload)) {
             foreach ((array) $attribute as $key) {
+<<<<<<< HEAD
                 if (Str::contains($key, '*')) {
                     $this->explodeRules([$key => $rules]);
                 } else {
                     $this->mergeRules($key, $rules);
                 }
+=======
+                $this->mergeRules($key, $rules);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             }
         }
     }
@@ -336,7 +347,11 @@ class Validator implements ValidatorContract
             return $data;
         }
 
+<<<<<<< HEAD
         return data_set($data, $attribute, null, true);
+=======
+        return data_fill($data, $attribute, null);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -436,7 +451,11 @@ class Validator implements ValidatorContract
             call_user_func($after);
         }
 
+<<<<<<< HEAD
         return $this->messages->isEmpty();
+=======
+        return count($this->messages->all()) === 0;
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**
@@ -464,10 +483,17 @@ class Validator implements ValidatorContract
             return;
         }
 
+<<<<<<< HEAD
         // First we will get the correct keys for the given attribute in case the field is nested in
         // an array. Then we determine if the given rule accepts other field names as parameters.
         // If so, we will replace any asterisks found in the parameters with the correct keys.
         if (($keys = $this->getExplicitKeys($attribute)) &&
+=======
+        // First we will get the numeric keys for the given attribute in case the field is nested in
+        // an array. Then we determine if the given rule accepts other field names as parameters.
+        // If so, we will replace any asterisks found in the parameters with the numeric keys.
+        if (($keys = $this->getNumericKeys($attribute)) &&
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             $this->dependsOnOtherFields($rule)) {
             $parameters = $this->replaceAsterisksInParameters($parameters, $keys);
         }
@@ -839,6 +865,7 @@ class Validator implements ValidatorContract
 
         $values = array_slice($parameters, 1);
 
+<<<<<<< HEAD
         if (is_bool($data)) {
             array_walk($values, function (&$value) {
                 if ($value === 'true') {
@@ -849,6 +876,8 @@ class Validator implements ValidatorContract
             });
         }
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         if (in_array($data, $values)) {
             return $this->validateRequired($attribute, $value);
         }
@@ -1664,7 +1693,11 @@ class Validator implements ValidatorContract
             return true;
         }
 
+<<<<<<< HEAD
         if ((! is_string($value) && ! is_numeric($value)) || strtotime($value) === false) {
+=======
+        if (! is_string($value) || strtotime($value) === false) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             return false;
         }
 
@@ -1685,7 +1718,11 @@ class Validator implements ValidatorContract
     {
         $this->requireParameterCount(1, $parameters, 'date_format');
 
+<<<<<<< HEAD
         if (! is_string($value) && ! is_numeric($value)) {
+=======
+        if (! is_string($value)) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             return false;
         }
 
@@ -1706,7 +1743,11 @@ class Validator implements ValidatorContract
     {
         $this->requireParameterCount(1, $parameters, 'before');
 
+<<<<<<< HEAD
         if (! is_string($value) && ! is_numeric($value)) {
+=======
+        if (! is_string($value)) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             return false;
         }
 
@@ -1748,7 +1789,11 @@ class Validator implements ValidatorContract
     {
         $this->requireParameterCount(1, $parameters, 'after');
 
+<<<<<<< HEAD
         if (! is_string($value) && ! is_numeric($value)) {
+=======
+        if (! is_string($value)) {
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             return false;
         }
 
@@ -2590,13 +2635,20 @@ class Validator implements ValidatorContract
     }
 
     /**
+<<<<<<< HEAD
      * Get the explicit keys from an attribute flattened with dot notation.
      *
      * E.g. 'foo.1.bar.spark.baz' -> [1, 'spark'] for 'foo.*.bar.*.baz'
+=======
+     * Get the numeric keys from an attribute flattened with dot notation.
+     *
+     * E.g. 'foo.1.bar.2.baz' -> [1, 2]
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @param  string  $attribute
      * @return array
      */
+<<<<<<< HEAD
     protected function getExplicitKeys($attribute)
     {
         $pattern = str_replace('\*', '([^\.]+)', preg_quote($this->getPrimaryAttribute($attribute)));
@@ -2605,6 +2657,12 @@ class Validator implements ValidatorContract
             array_shift($keys);
 
             return $keys;
+=======
+    protected function getNumericKeys($attribute)
+    {
+        if (preg_match_all('/\.(\d+)\./', $attribute, $keys)) {
+            return $keys[1];
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         return [];
@@ -2647,7 +2705,11 @@ class Validator implements ValidatorContract
     }
 
     /**
+<<<<<<< HEAD
      * Replace each field parameter which has asterisks with the given keys.
+=======
+     * Replace each field parameter which has asterisks with the given numeric keys.
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @param  array  $parameters
      * @param  array  $keys
@@ -2661,9 +2723,15 @@ class Validator implements ValidatorContract
     }
 
     /**
+<<<<<<< HEAD
      * Replace asterisks with explicit keys.
      *
      * E.g. 'foo.*.bar.*.baz', [1, 'spark'] -> foo.1.bar.spark.baz
+=======
+     * Replace asterisks with numeric keys.
+     *
+     * E.g. 'foo.*.bar.*.baz', [1, 2] -> foo.1.bar.2.baz
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *
      * @param  string  $field
      * @param  array  $keys
@@ -2671,7 +2739,11 @@ class Validator implements ValidatorContract
      */
     protected function replaceAsterisksWithKeys($field, array $keys)
     {
+<<<<<<< HEAD
         return vsprintf(str_replace('*', '%s', $field), $keys);
+=======
+        return vsprintf(str_replace('*', '%d', $field), $keys);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

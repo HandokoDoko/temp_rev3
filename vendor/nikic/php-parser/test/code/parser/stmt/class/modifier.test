@@ -38,11 +38,14 @@ array(
         stmts: array(
         )
     )
+<<<<<<< HEAD
     1: Stmt_Nop(
         comments: array(
             0: // Type in the partial parse could conceivably be any of 0, 16 or 32
         )
     )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 )
 -----
 <?php class A { abstract $a; }

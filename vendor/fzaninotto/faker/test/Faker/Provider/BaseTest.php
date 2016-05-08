@@ -23,6 +23,7 @@ class BaseTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue(BaseProvider::randomDigitNotNull() < 10);
     }
 
+<<<<<<< HEAD
 
     public function testRandomDigitNotReturnsValidDigit()
     {
@@ -33,6 +34,8 @@ class BaseTest extends \PHPUnit_Framework_TestCase
         }
     }
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /**
      * @expectedException \InvalidArgumentException
      */
@@ -276,6 +279,7 @@ class BaseTest extends \PHPUnit_Framework_TestCase
         $this->assertRegExp('/foo[a-z]Ba\dr/', BaseProvider::bothify('foo?Ba#r'));
     }
 
+<<<<<<< HEAD
     public function testBothifyAsterisk()
     {
         $this->assertRegExp('/foo([a-z]|\d)Ba([a-z]|\d)r/', BaseProvider::bothify('foo*Ba*r'));
@@ -287,6 +291,8 @@ class BaseTest extends \PHPUnit_Framework_TestCase
         $this->assertRegExp('/'.$utf.'foo\dB[a-z]a([a-z]|\d)r/u', BaseProvider::bothify($utf.'foo#B?a*r'));
     }
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function testAsciifyReturnsSameStringWhenItContainsNoStarSign()
     {
         $this->assertEquals('fooBar?', BaseProvider::asciify('fooBar?'));
@@ -347,7 +353,11 @@ class BaseTest extends \PHPUnit_Framework_TestCase
     {
         $faker = new \Faker\Generator();
         $faker->addProvider(new \Faker\Provider\Base($faker));
+<<<<<<< HEAD
         $this->assertNotNull($faker->optional(100)->randomDigit);
+=======
+        $this->assertNotNull($faker->optional(1)->randomDigit);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     public function testOptionalReturnsNullWhenCalledWithWeight0()
@@ -362,7 +372,11 @@ class BaseTest extends \PHPUnit_Framework_TestCase
         $faker = new \Faker\Generator();
         $faker->addProvider(new \Faker\Provider\Base($faker));
         $faker->addProvider(new \ArrayObject(array(1))); // hack because method_exists forbids stubs
+<<<<<<< HEAD
         $this->assertEquals(1, $faker->optional(100)->count);
+=======
+        $this->assertEquals(1, $faker->optional(1)->count);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $this->assertNull($faker->optional(0)->count);
     }
 
@@ -371,7 +385,11 @@ class BaseTest extends \PHPUnit_Framework_TestCase
         $faker = new \Faker\Generator();
         $faker->addProvider(new \Faker\Provider\Base($faker));
         $faker->addProvider(new \ArrayObject(array(1))); // hack because method_exists forbids stubs
+<<<<<<< HEAD
         $this->assertEquals(1, $faker->optional(100)->count());
+=======
+        $this->assertEquals(1, $faker->optional(1)->count());
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         $this->assertNull($faker->optional(0)->count());
     }
 
@@ -384,6 +402,7 @@ class BaseTest extends \PHPUnit_Framework_TestCase
             $values[]= $faker->optional()->randomDigit;
         }
         $this->assertContains(null, $values);
+<<<<<<< HEAD
 
         $values = array();
         for ($i=0; $i < 10; $i++) {
@@ -413,6 +432,8 @@ class BaseTest extends \PHPUnit_Framework_TestCase
             round(array_sum($valuesOld) / 10000, 2),
             round(array_sum($valuesNew) / 10000, 2)
         );
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     public function testUniqueAllowsChainingPropertyAccess()
@@ -471,6 +492,7 @@ class BaseTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(array(0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9), $values);
     }
 
+<<<<<<< HEAD
     public function testValidAllowsChainingPropertyAccess()
     {
         $faker = new \Faker\Generator();
@@ -526,6 +548,8 @@ class BaseTest extends \PHPUnit_Framework_TestCase
         $faker->valid(12)->randomElement(array(1, 3, 5, 7, 9));
     }
 
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     /**
      * @expectedException LengthException
      * @expectedExceptionMessage Cannot get 2 elements, only 1 in array

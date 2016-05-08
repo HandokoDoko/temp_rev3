@@ -42,9 +42,12 @@ array(
             0: Expr_Yield(
                 key: null
                 value: null
+<<<<<<< HEAD
                 comments: array(
                     0: // statements
                 )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             )
             1: Expr_Yield(
                 key: null
@@ -63,17 +66,23 @@ array(
             3: Expr_Assign(
                 var: Expr_Variable(
                     name: data
+<<<<<<< HEAD
                     comments: array(
                         0: // expressions
                     )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 )
                 expr: Expr_Yield(
                     key: null
                     value: null
                 )
+<<<<<<< HEAD
                 comments: array(
                     0: // expressions
                 )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             )
             4: Expr_Assign(
                 var: Expr_Variable(
@@ -121,9 +130,12 @@ array(
                     )
                 )
                 else: null
+<<<<<<< HEAD
                 comments: array(
                     0: // yield in language constructs with their own parentheses
                 )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             )
             7: Stmt_If(
                 cond: Expr_Yield(
@@ -191,9 +203,12 @@ array(
                     parts: array(
                         0: func
                     )
+<<<<<<< HEAD
                     comments: array(
                         0: // yield in function calls
                     )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 )
                 args: array(
                     0: Arg(
@@ -207,9 +222,12 @@ array(
                         unpack: false
                     )
                 )
+<<<<<<< HEAD
                 comments: array(
                     0: // yield in function calls
                 )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
             )
             13: Expr_MethodCall(
                 var: Expr_Variable(
@@ -277,4 +295,8 @@ array(
             )
         )
     )
+<<<<<<< HEAD
 )
+=======
+)
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

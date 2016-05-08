@@ -2,7 +2,11 @@
 
 namespace Faker\Provider\en_NZ;
 
+<<<<<<< HEAD
 class Address extends \Faker\Provider\en_US\Address
+=======
+class Address extends \Faker\Provider\Address
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 {
 
     /**
@@ -47,6 +51,15 @@ class Address extends \Faker\Provider\en_US\Address
     protected static $postcode = array('####');
 
     /**
+<<<<<<< HEAD
+=======
+     * An array of en_NZ (New Zealand) countries
+     * @var array
+     */
+    protected static $country = array('New Zealand');
+
+    /**
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * An array of en_NZ (New Zealand) address formats
      * @var array
      */

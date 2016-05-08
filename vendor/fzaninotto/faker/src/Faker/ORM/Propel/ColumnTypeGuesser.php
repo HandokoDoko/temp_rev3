@@ -9,18 +9,24 @@ class ColumnTypeGuesser
 {
     protected $generator;
 
+<<<<<<< HEAD
     /**
      * @param \Faker\Generator $generator
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __construct(\Faker\Generator $generator)
     {
         $this->generator = $generator;
     }
 
+<<<<<<< HEAD
     /**
      * @param ColumnMap $column
      * @return \Closure|null
      */
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function guessFormat(ColumnMap $column)
     {
         $generator = $this->generator;
@@ -99,8 +105,12 @@ class ColumnTypeGuesser
                 };
             case PropelColumnTypes::OBJECT:
             case PropelColumnTypes::PHP_ARRAY:
+<<<<<<< HEAD
             default:
             // no smart way to guess what the user expects here
+=======
+                // no smart way to guess what the user expects here
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                 return null;
         }
     }

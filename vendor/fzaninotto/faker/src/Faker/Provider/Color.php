@@ -26,7 +26,11 @@ class Color extends Base
         'DeepSkyBlue', 'DimGray', 'DimGrey', 'DodgerBlue', 'FireBrick',
         'FloralWhite', 'ForestGreen', 'Fuchsia', 'Gainsboro', 'GhostWhite',
         'Gold', 'GoldenRod', 'Gray', 'Green', 'GreenYellow', 'HoneyDew',
+<<<<<<< HEAD
         'HotPink', 'IndianRed', 'Indigo', 'Ivory', 'Khaki', 'Lavender',
+=======
+        'HotPink', 'IndianRed ', 'Indigo ', 'Ivory', 'Khaki', 'Lavender',
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         'LavenderBlush', 'LawnGreen', 'LemonChiffon', 'LightBlue', 'LightCoral',
         'LightCyan', 'LightGoldenRodYellow', 'LightGray', 'LightGreen', 'LightPink',
         'LightSalmon', 'LightSeaGreen', 'LightSkyBlue', 'LightSlateGray', 'LightSteelBlue',
@@ -91,6 +95,7 @@ class Color extends Base
     }
 
     /**
+<<<<<<< HEAD
      * @example 'rgba(0,255,122,0.8)'
      */
     public static function rgbaCssColor()
@@ -99,6 +104,8 @@ class Color extends Base
     }
 
     /**
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * @example 'blue'
      */
     public static function safeColorName()

@@ -30,6 +30,7 @@ class Swift_Transport_LoadBalancedTransport implements Swift_Transport
     protected $_transports = array();
 
     /**
+<<<<<<< HEAD
      * The Transport used in the last successful send operation.
      *
      * @var Swift_Transport
@@ -37,6 +38,10 @@ class Swift_Transport_LoadBalancedTransport implements Swift_Transport
     protected $_lastUsedTransport = null;
 
     // needed as __construct is called from elsewhere explicitly
+=======
+     * Creates a new LoadBalancedTransport.
+     */
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     public function __construct()
     {
     }
@@ -63,6 +68,7 @@ class Swift_Transport_LoadBalancedTransport implements Swift_Transport
     }
 
     /**
+<<<<<<< HEAD
      * Get the Transport used in the last successful send operation.
      *
      * @return Swift_Transport
@@ -73,6 +79,8 @@ class Swift_Transport_LoadBalancedTransport implements Swift_Transport
     }
 
     /**
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      * Test if this Transport mechanism has started.
      *
      * @return bool
@@ -115,7 +123,10 @@ class Swift_Transport_LoadBalancedTransport implements Swift_Transport
     {
         $maxTransports = count($this->_transports);
         $sent = 0;
+<<<<<<< HEAD
         $this->_lastUsedTransport = null;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
         for ($i = 0; $i < $maxTransports
             && $transport = $this->_getNextTransport(); ++$i) {
@@ -124,7 +135,10 @@ class Swift_Transport_LoadBalancedTransport implements Swift_Transport
                     $transport->start();
                 }
                 if ($sent = $transport->send($message, $failedRecipients)) {
+<<<<<<< HEAD
                     $this->_lastUsedTransport = $transport;
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
                     break;
                 }
             } catch (Swift_TransportException $e) {

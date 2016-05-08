@@ -11,7 +11,11 @@ exit();
 exit(1);
 die;
 die();
+<<<<<<< HEAD
 die('foo');
+=======
+die("foo");
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 clone $foo;
 eval('str');
 -----
@@ -19,9 +23,15 @@ isset($a, $a[$b]);
 empty($a);
 empty('foo');
 unset($a, $a[$b]);
+<<<<<<< HEAD
 exit;
 exit;
 exit(1);
+=======
+die;
+die;
+die(1);
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 die;
 die;
 die('foo');

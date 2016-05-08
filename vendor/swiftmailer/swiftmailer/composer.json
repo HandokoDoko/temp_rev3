@@ -23,11 +23,14 @@
     "autoload": {
         "files": ["lib/swift_required.php"]
     },
+<<<<<<< HEAD
     "autoload-dev": {
         "psr-0": {
             "Swift_": "tests/unit"
         }
     },
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     "extra": {
         "branch-alias": {
             "dev-master": "5.4-dev"

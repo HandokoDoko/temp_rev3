@@ -22,7 +22,10 @@ function gen()
     $a = (yield $b);
     $a = (yield $b => $c);
 }
+<<<<<<< HEAD
 // TODO Get rid of parens for cases 2 and 3
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 -----
 <?php
 
@@ -42,5 +45,9 @@ function gen()
     $a = (yield $b => $c);
     yield from $a;
     $a = (yield from $b);
+<<<<<<< HEAD
 }
 // TODO Get rid of parens for last case
+=======
+}
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

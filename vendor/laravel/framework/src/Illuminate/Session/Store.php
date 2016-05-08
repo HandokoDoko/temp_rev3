@@ -310,6 +310,7 @@ class Store implements SessionInterface
      */
     public function has($name)
     {
+<<<<<<< HEAD
         $keys = is_array($name) ? $name : func_get_args();
 
         foreach ($keys as $value) {
@@ -319,6 +320,9 @@ class Store implements SessionInterface
         }
 
         return true;
+=======
+        return ! is_null($this->get($name));
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     }
 
     /**

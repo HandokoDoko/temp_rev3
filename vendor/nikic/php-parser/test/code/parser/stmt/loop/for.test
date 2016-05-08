@@ -46,9 +46,12 @@ array(
         )
         stmts: array(
         )
+<<<<<<< HEAD
         comments: array(
             0: // "classical" loop
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     1: Stmt_For(
         init: array(
@@ -77,9 +80,12 @@ array(
         )
         stmts: array(
         )
+<<<<<<< HEAD
         comments: array(
             0: // multiple expressions
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     2: Stmt_For(
         init: array(
@@ -90,9 +96,12 @@ array(
         )
         stmts: array(
         )
+<<<<<<< HEAD
         comments: array(
             0: // infinite loop
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
     3: Stmt_For(
         init: array(
@@ -103,8 +112,11 @@ array(
         )
         stmts: array(
         )
+<<<<<<< HEAD
         comments: array(
             0: // alternative syntax
         )
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     )
 )

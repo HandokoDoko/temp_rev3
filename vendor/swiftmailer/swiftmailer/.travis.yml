@@ -1,13 +1,25 @@
 language: php
 
+<<<<<<< HEAD
 sudo: false
+=======
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
+  - hhvm-nightly
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 
 before_script:
     - cp tests/acceptance.conf.php.default tests/acceptance.conf.php
     - cp tests/smoke.conf.php.default tests/smoke.conf.php
     - composer self-update
     - composer update --no-interaction --prefer-source
+<<<<<<< HEAD
     - gem install mime-types -v 2.99.1
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
     - gem install mailcatcher
     - mailcatcher --smtp-port 4456
 
@@ -15,6 +27,7 @@ script:
     - phpunit --verbose
 
 matrix:
+<<<<<<< HEAD
     include:
         - php: 5.3
         - php: 5.4
@@ -26,3 +39,9 @@ matrix:
         - php: 7.0
         - php: hhvm
     fast_finish: true
+=======
+  allow_failures:
+    - php: 5.6
+    - php: hhvm-nightly
+  fast_finish: true
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e

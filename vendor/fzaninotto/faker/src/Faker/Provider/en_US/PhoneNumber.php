@@ -4,6 +4,7 @@ namespace Faker\Provider\en_US;
 
 class PhoneNumber extends \Faker\Provider\PhoneNumber
 {
+<<<<<<< HEAD
     /**
      * @see https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers#United_States.2C_Canada.2C_and_other_NANP_countries
      */
@@ -105,4 +106,32 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
 
         return join('', $digits);
     }
+=======
+    protected static $formats = array(
+        '+##(#)##########',
+        '+##(#)##########',
+        '0##########',
+        '0##########',
+        '###-###-####',
+        '(###)###-####',
+        '1-###-###-####',
+        '###.###.####',
+        '###-###-####',
+        '(###)###-####',
+        '1-###-###-####',
+        '###.###.####',
+        '###-###-####x###',
+        '(###)###-####x###',
+        '1-###-###-####x###',
+        '###.###.####x###',
+        '###-###-####x####',
+        '(###)###-####x####',
+        '1-###-###-####x####',
+        '###.###.####x####',
+        '###-###-####x#####',
+        '(###)###-####x#####',
+        '1-###-###-####x#####',
+        '###.###.####x#####'
+    );
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

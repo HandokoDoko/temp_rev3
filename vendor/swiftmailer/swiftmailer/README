@@ -6,6 +6,10 @@ It is released under the MIT license.
 
 Homepage:      http://swiftmailer.org
 Documentation: http://swiftmailer.org/docs
+<<<<<<< HEAD
+=======
+Mailing List:  http://groups.google.com/group/swiftmailer
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 Bugs:          https://github.com/swiftmailer/swiftmailer/issues
 Repository:    https://github.com/swiftmailer/swiftmailer
 

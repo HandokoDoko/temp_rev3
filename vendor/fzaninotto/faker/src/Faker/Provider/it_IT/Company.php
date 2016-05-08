@@ -61,6 +61,7 @@ class Company extends \Faker\Provider\Company
 
         return join($result, ' ');
     }
+<<<<<<< HEAD
 
     /**
      * Italian VAT number (Partita iva)
@@ -71,4 +72,6 @@ class Company extends \Faker\Provider\Company
     {
         return static::numerify('IT###########');
     }
+=======
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
 }

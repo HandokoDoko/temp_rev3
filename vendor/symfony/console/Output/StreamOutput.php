@@ -85,7 +85,11 @@ class StreamOutput extends Output
      *
      * Colorization is disabled if not supported by the stream:
      *
+<<<<<<< HEAD
      *  -  Windows before 10.0.10586 without Ansicon, ConEmu or Mintty
+=======
+     *  -  Windows without Ansicon, ConEmu or Mintty
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
      *  -  non tty consoles
      *
      * @return bool true if the stream supports colorization, false otherwise
@@ -93,11 +97,15 @@ class StreamOutput extends Output
     protected function hasColorSupport()
     {
         if (DIRECTORY_SEPARATOR === '\\') {
+<<<<<<< HEAD
             return
                 0 >= version_compare('10.0.10586', PHP_WINDOWS_VERSION_MAJOR.'.'.PHP_WINDOWS_VERSION_MINOR.'.'.PHP_WINDOWS_VERSION_BUILD)
                 || false !== getenv('ANSICON')
                 || 'ON' === getenv('ConEmuANSI')
                 || 'xterm' === getenv('TERM');
+=======
+            return false !== getenv('ANSICON') || 'ON' === getenv('ConEmuANSI') || 'xterm' === getenv('TERM');
+>>>>>>> c5d8951b77a855b383b3c050dba60a57554eab1e
         }
 
         return function_exists('posix_isatty') && @posix_isatty($this->stream);
