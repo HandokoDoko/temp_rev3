@@ -134,7 +134,7 @@
                                 Enroll Key <span class="symbol required"></span>
                             </label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="enrollKey" name="enrollKey" value="<?php echo e(old('orgName')); ?>">
+                                <input type="text" class="form-control" id="enrollKey" name="enrollKey" value="<?php echo e(old('orgName')); ?> ">
 
                                 <?php if($errors->has('enrollKey')): ?>
                                     <span class="help-block">
