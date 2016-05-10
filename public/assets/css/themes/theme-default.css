@@ -5,7 +5,7 @@ body {
   background-color: #22262f;
 }
 body.layout-boxed {
-  background: url("../../images/bg.png") #22262f;
+  background: url("../../img/bg.png") #22262f;
 }
 
 #slidingbar {
@@ -25,8 +25,9 @@ body.layout-boxed {
 }
 
 .topbar {
-  background: rgb(255, 143, 94) none repeat scroll 0% 0%;
-  /*background: #5f8295;
+  background: black;
+  /*background: rgb(255, 143, 94) none repeat scroll 0% 0%;
+  background: #5f8295;
   background-color: #7c9bab 0px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7c9bab 0px), to(#5f8295 100%));
   background-image: -webkit-linear-gradient(top, #7c9bab 0px, #5f8295 100%);

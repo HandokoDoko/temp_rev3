@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('') }}assets/plugins/DataTables/media/css/DT_bootstrap.css">
     <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css">
     <link rel="stylesheet" href="{{ asset('') }}assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}assets/plugins/select2/select2.css" />
     <!-- end: CSS REQUIRED FOR THIS SUBVIEW CONTENTS-->
     <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
     <link rel="stylesheet" href="{{ asset('') }}assets/plugins/weather-icons/css/weather-icons.min.css">
@@ -47,6 +48,8 @@
     <link href="{{ asset('') }}assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
     <link href="{{ asset('') }}assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
 </head>
+
+
 <!-- start: BODY -->
     <body>
         <!-- start: SLIDING BAR (SB) -->
@@ -204,7 +207,7 @@
             <!-- start: MAIN CONTAINER -->
             <div class="main-container inner">
                 <!-- start: PAGE -->
-                <div class="main-content">
+                <div class="main-content" style="padding-top: 20px;">
                     <!-- end: SPANEL CONFIGURATION MODAL FORM -->
                     <div class="container">
                         <!-- start: PAGE CONTENT -->
@@ -657,39 +660,46 @@
         <script type="text/javascript" src="{{ asset('') }}assets/plugins/jQuery/jquery-1.11.1.min.js"></script>
         <![endif]-->
         <!--[if gte IE 9]><!-->
-        <script src="{{ asset('') }}assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
-        <!--<![endif]-->
-        <script src="{{ asset('') }}assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/blockUI/jquery.blockUI.js"></script>
-        <script src="{{ asset('') }}assets/plugins/iCheck/jquery.icheck.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/moment/min/moment.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
-        <script src="{{ asset('') }}assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
-        <script src="{{ asset('') }}assets/plugins/bootbox/bootbox.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/jquery.appear/jquery.appear.js"></script>
-        <script src="{{ asset('') }}assets/plugins/jquery-cookie/jquery.cookie.js"></script>
-        <script src="{{ asset('') }}assets/plugins/velocity/jquery.velocity.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/TouchSwipe/jquery.touchSwipe.min.js"></script>
-        <!-- end: MAIN JAVASCRIPTS -->
-        <!-- start: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
-        <script src="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-        <script src="{{ asset('') }}assets/plugins/jquery-mockjax/jquery.mockjax.js"></script>
-        <script src="{{ asset('') }}assets/plugins/toastr/toastr.js"></script>
-        <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
-        <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
-        <script src="{{ asset('') }}assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/DataTables/media/js/DT_bootstrap.js"></script>
-        <script src="{{ asset('') }}assets/plugins/truncate/jquery.truncate.js"></script>
-        <script src="{{ asset('') }}assets/plugins/summernote/dist/summernote.min.js"></script>
-        <script src="{{ asset('') }}assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        
+    <script src="{{ asset('') }}assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
+    <!--<![endif]-->
+    <script src="{{ asset('') }}assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/blockUI/jquery.blockUI.js"></script>
+    <script src="{{ asset('') }}assets/plugins/iCheck/jquery.icheck.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/moment/min/moment.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
+    <script src="{{ asset('') }}assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+    <script src="{{ asset('') }}assets/plugins/bootbox/bootbox.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/jquery.appear/jquery.appear.js"></script>
+    <script src="{{ asset('') }}assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+    <script src="{{ asset('') }}assets/plugins/velocity/jquery.velocity.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/TouchSwipe/jquery.touchSwipe.min.js"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+
+    <!-- start: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->
+    <script src="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+    <script src="{{ asset('') }}assets/plugins/jquery-mockjax/jquery.mockjax.js"></script>
+    <script src="{{ asset('') }}assets/plugins/toastr/toastr.js"></script>
+    <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
+    <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+    <script src="{{ asset('') }}assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/DataTables/media/js/DT_bootstrap.js"></script>
+    <script src="{{ asset('') }}assets/plugins/truncate/jquery.truncate.js"></script>
+    <script src="{{ asset('') }}assets/plugins/summernote/dist/summernote.min.js"></script>
+    <script src="{{ asset('') }}assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="{{ asset('') }}assets/js/subview.js"></script>
+    <script src="{{ asset('') }}assets/plugins/jquery.pulsate/jquery.pulsate.min.js"></script>
+    <script src="{{ asset('') }}assets/js/pages-user-profile.js"></script>
+    <script src="{{ asset('') }}assets/js/jquery.waypoints.min.js"></script>
+    <script src="{{ asset('') }}assets/js/modernizr.js"></script>
         <script src="{{ asset('') }}assets/js/subview.js"></script>
         <script src="{{ asset('') }}assets/js/subview-examples.js"></script>
         <!-- end: JAVASCRIPTS REQUIRED FOR SUBVIEW CONTENTS -->

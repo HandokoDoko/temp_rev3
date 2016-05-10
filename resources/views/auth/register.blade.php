@@ -1,10 +1,14 @@
-@extends('layouts.intro')
+@extends('layouts.blank')
 
 
 @section('content')
-<div class="section section section-regist margin-top-min20 container">
-    <!-- start: MAIN CONTAINER -->
-    <div class="panel-body">
+<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+    <!-- start: LOGIN BOX -->
+    <div class="box-login">
+        <h3>Sign Up</h3>
+        <p>
+            Enter your personal details below:
+        </p>
         <form action="{{ url('/register') }}" role="form" class="smart-wizard form-horizontal" id="form" method="POST">
             <div id="wizard" class="swMain">
                 <ul>
@@ -57,7 +61,7 @@
                 {!! csrf_field() !!}
 
                 <div id="step-1">
-                    <h3 class="StepTitle">Organization Profile</h3>
+                    <h4 class="StepTitle">Organization Profile</h4>
 
                     <div class="form-group{{ $errors->has('orgName') ? ' has-error' : '' }}">
                         <label class="col-sm-3 control-label">
@@ -73,8 +77,7 @@
                             @endif
                         </div>
                     </div>
-
-                    <div class="form-group{{ $errors->has('orgEmail') ? ' has-error' : '' }}">
+                    <!--<div class="form-group{{ $errors->has('orgEmail') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
                             Email Address
                         </label>
@@ -87,9 +90,9 @@
                                 </span>
                             @endif
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="form-group{{ $errors->has('orgPhone') ? ' has-error' : '' }}">
+                    <!--<div class="form-group{{ $errors->has('orgPhone') ? ' has-error' : '' }}">
                         <label class="col-sm-3 control-label">
                             Phone Number
                         </label>
@@ -102,9 +105,9 @@
                                 </span>
                             @endif
                         </div>
-                    </div>
+                    </div>-->
 
-                     <div class="form-group{{ $errors->has('orgCountry') ? ' has-error' : '' }}">
+                     <!--<div class="form-group{{ $errors->has('orgCountry') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
                             Country
                         </label>
@@ -117,9 +120,9 @@
                                 </span>
                             @endif
                         </div>
-                    </div>
+                    </div>-->
 
-                     <div class="form-group{{ $errors->has('orgCity') ? ' has-error' : '' }}">
+                     <!--<div class="form-group{{ $errors->has('orgCity') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
                             City
                         </label>
@@ -132,17 +135,31 @@
                                 </span>
                             @endif
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="form-group{{ $errors->has('orgPhone') ? ' has-error' : '' }}">
+                    <!--<div class="form-group{{ $errors->has('orgPhone') ? ' has-error' : '' }}">
                         <label class="col-sm-3 control-label">
                             Address
                         </label>
                         <div class="col-sm-7">
-                            <textarea cols="4" rows="3" class="form-control" id="orgAddress" name="orgAddress">{{ old('orgAddress') }}</textarea>
+                            <input class="form-control" id="orgAddress" name="orgAddress" value="{{ old('orgAddress') }}" />
                             @if ($errors->has('orgAddress'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('orgAddress') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>-->
+
+                    <div class="form-group{{ $errors->has('orgDesc') ? ' has-error' : '' }}">
+                        <label class="col-sm-3 control-label">
+                            Organization Description
+                        </label>
+                        <div class="col-sm-7">
+                            <textarea cols="4" rows="3" class="form-control" id="orgDesc" name="orgDesc">{{ old('orgDesc') }}</textarea>
+                            @if ($errors->has('orgDesc'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('orgDesc') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -158,7 +175,7 @@
                 </div>
 
                 <div id="step-2">
-                    <h3 class="StepTitle">Personal Data</h3>
+                    <h4 class="StepTitle">Your Own Profile</h4>
                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                         <label class="col-md-3 control-label">
                             Full Name <span class="symbol required"></span>
@@ -196,12 +213,12 @@
                         </label>
                         <div class="col-sm-7">
                             <label class="radio-inline">
-                                <input type="radio" class="grey" value="Female" name="gender" id="gender_female" >
-                                Female
-                            </label>
-                            <label class="radio-inline">
                                 <input type="radio" class="grey" value="Male" name="gender"  id="gender_male">
                                 Male
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" class="grey" value="Female" name="gender" id="gender_female" >
+                                Female
                             </label>
                         </div>
                     </div>
@@ -221,7 +238,7 @@
                 </div>
              
                 <div id="step-3">
-                    <h3 class="StepTitle">Account</h3>
+                    <h4 class="StepTitle">Account</h4>
                     <div class="form-group">
                         <div class="form-group{{ $errors->has('userName') ? ' has-error' : '' }}">
                             <label class="col-md-3 control-label">
@@ -304,18 +321,8 @@
                 </div>
 
                 <div id="step-4">
-                    <h3 class="StepTitle">Summary</h3>
-                    <h3>Account</h3>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">
-                            Username
-                        </label>
-                        <div class="col-sm-7">
-                            <p class="form-control-static display-value" data-display="userName"></p>
-                        </div>
-                    </div>
-
-                    <h3>Organization</h3>
+                    <!--<h4 class="StepTitle">Summary</h4>-->
+                    <h4>Organization</h4>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
                             Name
@@ -324,8 +331,7 @@
                             <p class="form-control-static display-value" data-display="orgName"></p>
                         </div>
                     </div>
-
-                    <div class="form-group">
+                    <!--<div class="form-group">
                         <label class="col-sm-3 control-label">
                             Email
                         </label>
@@ -348,10 +354,16 @@
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="orgAddress"></p>
                         </div>
+                    </div>-->
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">
+                            Description
+                        </label>
+                        <div class="col-sm-7">
+                            <p class="form-control-static display-value" data-display="orgAddress"></p>
+                        </div>
                     </div>
-
-
-                    <h3>Personal</h3>
+                    <h4>Profile</h4>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
                             Full Name
@@ -362,25 +374,34 @@
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">
-                            Email
-                        </label>
-                        <div class="col-sm-7">
-                            <p class="form-control-static display-value" data-display="email"></p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">
                             Phone Number
                         </label>
                         <div class="col-sm-7">
                             <p class="form-control-static display-value" data-display="phone" | '-'></p>
                         </div>
                     </div>
+                    <h4>Account</h4>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">
+                            Username
+                        </label>
+                        <div class="col-sm-7">
+                            <p class="form-control-static display-value" data-display="userName"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">
+                            Email
+                        </label>
+                        <div class="col-sm-7">
+                            <p class="form-control-static display-value" data-display="email"></p>
+                        </div>
+                    </div>
                     <input type="hidden" name = "photo" value="anonymous.jpg"></input>
                     <div class="form-group">
                         <div class="col-md-2 col-md-offset-8">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-btn fa-user"></i>Register
+                            <button type="submit" class="btn btn-green pull-right">
+                                Register <i class="fa fa-arrow-circle-right"></i>
                             </button>
                         </div>
                     </div>
@@ -390,89 +411,6 @@
     </div>
 </div>
 
-
-<!--
-<div class="section section-regist">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-                        {!! csrf_field() !!}
-
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label class="col-md-3 control-label">Name</label>
-
-                            <div class="col-md-7">
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-3 control-label">E-Mail Address</label>
-
-                            <div class="col-md-7">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-3 control-label">Password</label>
-
-                            <div class="col-md-7">
-                                <input type="password" class="form-control" name="password">
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label class="col-md-3 control-label">Confirm Password</label>
-
-                            <div class="col-md-7">
-                                <input type="password" class="form-control" name="password_confirmation">
-
-                                @if ($errors->has('password_confirmation'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Register
-                                </button>
-                            </div>
-                        </div>
-
-
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
 @endsection
 
 @section('script')

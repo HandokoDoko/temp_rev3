@@ -220,7 +220,7 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top navbar-transparent" role="navigation">
+        <nav class="navbar navbar-default" role="navigation">
             <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
             <div class="container">
                 <div class="navbar-header">
@@ -276,13 +276,14 @@
             </div>
         </nav>
         <div class="wrapper margin-top-min20">
+            <div class="container">
+                
+                <!-- start: PAGE CONTENT -->
+                
+                @yield('content')
 
-            
-            <!-- start: PAGE CONTENT -->
-            
-            @yield('content')
-
-            <!-- end: PAGE CONTENT-->
+                <!-- end: PAGE CONTENT-->
+            </div>
             
             <footer class="footer footer-color-black">
                 <div class="container">
