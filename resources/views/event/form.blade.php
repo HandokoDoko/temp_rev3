@@ -48,7 +48,7 @@
     <div class="section section-regist">
         <div class="panel-body">
         {!! coolRowBox_Begin('Create Certificate','Form') !!}
-        <form action="{{ url('/event/create') }}" role="form" class="smart-wizard form-horizontal" id="form" method="POST" autocomplete="off">
+        <form action="{{ url('/event') }}" role="form" class="smart-wizard form-horizontal" id="form" method="POST" autocomplete="off">
             {!! csrf_field() !!}
             <div id="wizard" class="swMain row">
                 <ul class="col-sm-3" style="margin-top: 26px;">
@@ -92,7 +92,7 @@
                                 Event Name <span class="symbol required"></span>
                             </label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="eventName" name="eventName" value="{{ old('orgName') }}">
+                                <input type="text" class="form-control" id="eventName" name="eventName" value="{{ old('eventName') }}">
 
                                 @if ($errors->has('eventName'))
                                     <span class="help-block">
@@ -106,7 +106,7 @@
                                 Event Speaker <span class="symbol required"></span>
                             </label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="eventSpeaking" name="eventSpeaking" value="{{ old('orgName') }}">
+                                <input type="text" class="form-control" id="eventSpeaking" name="eventSpeaking" value="{{ old('eventSpeaking') }}">
 
                                 @if ($errors->has('eventSpeaking'))
                                     <span class="help-block">
@@ -120,7 +120,7 @@
                                 Event Date <span class="symbol required"></span>
                             </label>
                             <div class="col-sm-7">
-                                <input type="date" class="form-control" id="date" name="date" value="{{ old('orgName') }}">
+                                <input type="date" class="form-control" id="date" name="date" value="{{ old('date') }}">
 
                                 @if ($errors->has('date'))
                                     <span class="help-block">
@@ -135,8 +135,11 @@
                                 Enroll Key <span class="symbol required"></span>
                             </label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="enrollKey" name="enrollKey" value="{{ old('orgName') }} ">
-
+                                <input type="text" class="form-control" id="enrollKey" name="enrollKey" value="{{ old('enrollKey') }} ">
+                                <input type="hidden" class="form-control" id="idUser" name="idUser" value="{{ Auth::user()->id }}">
+                                <input type="hidden" class="form-control" id="token" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" class="form-control" id="signature" name="signature" value="225">
+                                <input type="hidden" class="form-control" id="template" name="template" value="225">
                                 @if ($errors->has('enrollKey'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('enrollKey') }}</strong>
@@ -189,75 +192,55 @@
 
                     <div id="step-4">
                         <h3 class="StepTitle">Summary</h3>
-                        <h3>Account</h3>
+                        <h3>Event Detail</h3>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">
-                                Username :
+                                Name 
                             </label>
                             <div class="col-sm-7">
-                                <p class="form-control-static display-value" data-display="userName"></p>
-                            </div>
-                        </div>
-
-                        <h3>Organization</h3>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">
-                                Name :
-                            </label>
-                            <div class="col-sm-7">
-                                <p class="form-control-static display-value" data-display="orgName"></p>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">
-                                Email :
-                            </label>
-                            <div class="col-sm-7">
-                                <p class="form-control-static display-value" data-display="orgEmail"></p>
+                                <p class="form-control-static display-value" data-display="eventName"></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">
-                                Phone Number :
+                                Speaker 
                             </label>
                             <div class="col-sm-7">
-                                <p class="form-control-static display-value" data-display="orgPhone"></p>
+                                <p class="form-control-static display-value" data-display="eventSpeaking"></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">
-                                Address :
+                                Date 
                             </label>
                             <div class="col-sm-7">
-                                <p class="form-control-static display-value" data-display="orgAddress"></p>
-                            </div>
-                        </div>
-
-
-                        <h3>Personal</h3>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">
-                                Full Name :
-                            </label>
-                            <div class="col-sm-7">
-                                <p class="form-control-static display-value" data-display="name"></p>
+                                <p class="form-control-static display-value" data-display="date"></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">
-                                Email :
+                                EnrollKey 
                             </label>
                             <div class="col-sm-7">
-                                <p class="form-control-static display-value" data-display="email"></p>
+                                <p class="form-control-static display-value" data-display="enrollKey"></p>
+                            </div>
+                        </div>
+                        <h3>Template</h3>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">
+                                Kode 
+                            </label>
+                            <div class="col-sm-7">
+                                <p class="form-control-static display-value" data-display="template"></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">
-                                Phone Number :
+                                Review
                             </label>
                             <div class="col-sm-7">
-                                <p class="form-control-static display-value" data-display="phone"></p>
+                                <img src="{{ asset('') }}assets/img/cth1.png" style="width: 70%; margin:0 auto;" data-src="holder.js" class="img-thumbnail" alt="template">
+                               
                             </div>
                         </div>
                         <div class="form-group">
