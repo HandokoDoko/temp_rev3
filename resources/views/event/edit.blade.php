@@ -33,7 +33,7 @@
                 </div>
                 <div class="panel-body">
                     <!-- detail evnt isi disini -->
-                    <form action="#" role="form" id="form">
+                    <form action="/event/{{$events->id}}" role="form" id="form" method="post">
                         <div class="row">
                             <div class="col-md-12">
                                 <h3>Event Info</h3>
@@ -50,7 +50,7 @@
                                     <label class="control-label">
                                         Event Speaker
                                     </label>
-                                    <input type="text" placeholder="Speaker" value="{{$events->eventSpeaking}}" class="form-control" id="eventSpeaker" name="eventSpeaker">
+                                    <input type="text" placeholder="Speaker" value="{{$events->eventSpeaking}}" class="form-control" id="eventSpeaking" name="eventSpeaking">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -64,7 +64,7 @@
                                     <label class="control-label">
                                         Enroll Key
                                     </label>
-                                    <input type="email" placeholder="Enroll Key" value="{{$events->enrollKey}}" class="form-control" id="enrollkey" name="enrollkey">
+                                    <input type="text" placeholder="Enroll Key" value="{{$events->enrollKey}}" class="form-control" id="enrollkey" name="enrollKey">
                                 </div>                                
                             </div>
                         </div>
@@ -92,8 +92,14 @@
                                 </a>
                             </div>
                             <div class="col-md-4">
-                                <button class="btn btn-green btn-block" type="submit">
+                                <button class="btn btn-green btn-block" type="submit" onclick="$(this).closest('form').submit()">
+                                    <input type="hidden" class="form-control" id="token" name="_token" value="{{ csrf_token() }}">
+                                    <input type="hidden" name="_method" value="put">
+                                    <input type="hidden" name="template" value="{{$events->template}}">
+
+                                    
                                     Update <i class="fa fa-arrow-circle-right"></i>
+
                                 </button>
                             </div>
                         </div>

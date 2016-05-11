@@ -61,4 +61,15 @@ class EventController extends Controller
         }
         return view('event.edit')->with('events',$events);
     }
+    public function update(Request $request, $id){
+        $event=Home::find($id);
+        $event->eventName=$request->eventName;
+        $event->eventSpeaking=$request->eventSpeaking;
+        $event->date=$request->date;
+        $event->enrollKey=$request->enrollKey;
+        $event->template=$request->template;
+        $event->save();
+        return redirect('/event');
+
+    }
 }
