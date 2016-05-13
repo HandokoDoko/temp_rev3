@@ -55,8 +55,12 @@
                             </th>
                             <th>
                                 <p>
-                                    <a class="btn btn-red" href="#"><i class="fa fa-times fa fa-white" width="10"></i></a>
-                                    <a class="btn btn-blue" href="event/{{ $event->id}}/edit"><i class="fa fa-pencil"></i></a>
+                                    <form action="event/{{ $event->id}}" method="post">
+                                        <input type="hidden" class="form-control" id="token" name="_token" value="{{ csrf_token() }}">
+                                        <input type="hidden" name="_method" value="delete">
+                                        <a class="btn btn-red" href="#" onclick="$(this).closest('form').submit()"><i class="fa fa-times fa fa-white" width="10"></i></a>
+                                        <a class="btn btn-blue" href="event/{{ $event->id}}/edit"><i class="fa fa-pencil"></i></a>
+                                    </form>
                                 </p>
                             </th>
 
