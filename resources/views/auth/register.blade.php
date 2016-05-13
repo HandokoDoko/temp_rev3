@@ -2,7 +2,7 @@
 
 
 @section('content')
-<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
     <!-- start: LOGIN BOX -->
     <div class="box-login">
         <h3>Sign Up</h3>
@@ -407,6 +407,12 @@
                     </div>
                 </div>
             </div>
+                    <div class="new-account text-right">
+                        Already have account? Please 
+                        <a href="{{ url('/register') }}" class="register">
+                            Sign In
+                        </a>
+                    </div>
         </form>
     </div>
 </div>
