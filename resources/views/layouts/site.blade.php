@@ -51,6 +51,7 @@
         <link href="{{ asset('') }}assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
         <link href="{{ asset('') }}assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
 
+        
         <style>
             .section-header .separator {
                 margin: 0em auto 2em;
@@ -224,58 +225,78 @@
             <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
             <div class="container">
                 <div class="navbar-header">
-                    <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar bar1"></span>
-                    <span class="icon-bar bar2"></span>
-                    <span class="icon-bar bar3"></span>
-                    </button>
-                    <a href="{{ url('/') }}" class="navbar-brand">
-                    Certivy
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" >
-                    <ul class="nav navbar-nav navbar-right navbar-uppercase">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li>
-                            <a href="{{ url('/register') }}" data-scroll="true">
-                            Sign Up
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/login') }}" data-scroll="true">
-                            Login
-                            </a>
-                        </li>
-                    @else
-                        <li class="dropdown current-user">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
 
-                                <img width="40px" height="40px" src="{{ asset('') }}images/{{ Auth::user()->photo  }}"  class="img-circle" alt="">
-                                <span class="username hidden-xs">{{ Auth::user()->name }}</span> 
-                                <i class="fa fa-caret-down "></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-dark">
-                                <li>
-                                    <a href="{{ url('/home') }}">
-                                        My Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('/logout') }}">
-                                        Log Out
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                    @if (Auth::guest())
+                        <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                        </button>
                     @endif
-                    </ul>
+
+                    <a href="{{ url('/') }}" class="navbar-brand">
+                        Certivy
+                    </a>
+
+
+                    <!-- Authentication Links -->
+                    @if (!Auth::guest())
+                    <div class="topbar-tools pull-right">
+                        <!-- start: TOP NAVIGATION MENU -->
+                        <ul class="nav navbar-right">
+                            <!-- start: USER DROPDOWN -->
+                            <li class="dropdown current-user">
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                                    <img src="{{ asset('') }}images/anonymous.jpg" class="img-circle" alt="" style="height: 45px;"> <span class="username hidden-xs">Peter Clark</span> <i class="fa fa-caret-down "></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ url('/home') }}">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Manage Account
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="{{ url('/logout') }}">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- end: USER DROPDOWN -->
+                        </ul>
+                        <!-- end: TOP NAVIGATION MENU -->
+                    </div>
+                    @endif
+
+    
+                    @if (Auth::guest())
+                    <div class="collapse navbar-collapse" style="min-height: 63px ! important;">
+                        <ul class="nav navbar-nav navbar-right navbar-uppercase">
+                            <li>
+                                <a href="{{ url('/register') }}" data-scroll="true">
+                                Sign Up
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url('/login') }}" data-scroll="true">
+                                Login
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                    @endif
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
         </nav>
-        <div class="wrapper margin-top-min20">
+        <div class="wrapper">
             <div class="container">
                 
                 <!-- start: PAGE CONTENT -->
@@ -362,8 +383,6 @@
     <script src="{{ asset('') }}assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
     <script src="{{ asset('') }}assets/plugins/jquery-mockjax/jquery.mockjax.js"></script>
     <script src="{{ asset('') }}assets/plugins/toastr/toastr.js"></script>
-    <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
-    <script src="{{ asset('') }}assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
     <script src="{{ asset('') }}assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
     <script src="{{ asset('') }}assets/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
     <script src="{{ asset('') }}assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
@@ -390,7 +409,6 @@
     <script>
         jQuery(document).ready(function() {
             Main.init();
-            PagesUserProfile.init();
         });
     </script>
     @yield('script')

@@ -2349,6 +2349,24 @@ td.small-width {
   top: -10px;
   left: 1px;
 }
+
+.dropdown-menu:after {
+  border-color: rgba(255,255,255,0);
+  border-style: solid;
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+  border-width: 10px;
+  content: "";
+  border-bottom-color: #FFF;
+  border-top-width: 0;
+  content: " ";
+  top: -10px;
+  right: 12px;
+  left: auto;
+}
+
 .dropdown-menu.dropdown-dark.pull-right:after {
   left: auto;
   right: 1px;
@@ -2446,6 +2464,10 @@ td.small-width {
 /* ---------------------------------------------------------------------- */
 .modal-backdrop {
   z-index: 1040 !important;
+  height: 100%;
+}
+.modal-scrollable {
+  z-index: 1050 !important;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -4532,12 +4554,6 @@ Social Icons
 /* ---------------------------------------------------------------------- */
 /*  User profile
 /* ---------------------------------------------------------------------- */
-@media (min-width: 900px){
-  .user-left {
-    border-right: 1px solid #DDDDDD;
-    padding-right: 15px;
-  }
-}
 
 .user-left a:hover, .user-left a:focus {
   text-decoration: none;
@@ -6837,4 +6853,30 @@ body.error-full-page {
 
 body > .wrapper > .container {
   min-height: 550px;
+}
+
+.navbar-header {
+  width: 100%;
+}
+
+.dropdown-menu {
+  border-radius:0px;
+  -moz-border-radius:0px;
+  webkit-border-radius:0px;
+}
+
+.dropdown-menu > li:first-child > a {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.dropdown-menu > li:last-child > a {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+@media(min-width:768px){
+  .navbar-collapse .navbar-right {
+  margin-top: 10px;
+  margin-right: 20px;
+  }
 }

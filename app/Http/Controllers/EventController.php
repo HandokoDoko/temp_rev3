@@ -25,14 +25,20 @@ class EventController extends Controller
         return view('event.index', ['events' => $events,'no' => $a]);
     }
 
+    public function detail($id){
+        return view('event.detail');
+    }
+
     public function create(){
         return view('event.form');
     }
+
     public function destroy($id){
         $events=Home::find($id);
         $events->delete();
         return redirect('/event');
     }
+
     public function store(Request $request)
     {
         /*$this->validate($request,[
@@ -54,6 +60,7 @@ class EventController extends Controller
         $event->save();
         return redirect('/event');
     }
+
     public function edit($id){
         $events=Home::find($id);
         if(!$events){
@@ -61,6 +68,7 @@ class EventController extends Controller
         }
         return view('event.edit')->with('events',$events);
     }
+
     public function update(Request $request, $id){
         $event=Home::find($id);
         $event->eventName=$request->eventName;
@@ -70,6 +78,5 @@ class EventController extends Controller
         $event->template=$request->template;
         $event->save();
         return redirect('/event');
-
     }
 }

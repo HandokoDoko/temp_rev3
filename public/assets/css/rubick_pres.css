@@ -97,7 +97,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   font-weight: 400;
   opacity: 0.8;
   filter: alpha(opacity=80);
-  padding: 8px 16px;
+  /*padding: 8px 16px;*/
   border-color: #888888;
   color: #888888;
 }
@@ -368,7 +368,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .navbar .navbar-brand {
   font-weight: 600;
-  margin: 5px 0px;
+  /*margin: 5px 0px;*/
   padding: 20px 15px;
   font-size: 20px;
   font-family: "Slim-Joe";
@@ -376,7 +376,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 .navbar .navbar-nav > li > a {
   padding: 10px 15px;
-  margin: 15px 3px;
+  /*margin: 15px 3px;*/
 }
 .navbar .navbar-nav > .social-links > a {
   padding: 10px 5px;
@@ -1037,7 +1037,7 @@ body > .navbar-collapse.has-image::after {
   -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   left: 0;
-  background-color: white;
+  background-color: #F8F8FA;
 }
 .wrapper.transition {
   -webkit-transform: translate3d(0px, 0, 0);
@@ -1964,7 +1964,8 @@ a:hover {
   border-width: 1px;
   font-family: "Verlag-Book","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 600;
-  line-height: 1;
+  /*line-height: 1;8*/
+  margin: auto 2px; 
 }
 
 .btn-lg {
